@@ -108,11 +108,64 @@ body {
       gap: 16px
     }
 
-    .project-image {
+    .project-image-img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       object-position: center;
+    }
+
+    
+
+    .project-image {
+      position: relative;
+    }
+    
+
+    .project-image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: #ffffff;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s;
+    }
+    
+    .project-image-overlay-blur {
+      backdrop-filter: blur(5px);
+    }
+    
+
+    
+    .project-image-overlay>* {
+      transform: translateY(20px);
+      transition: transform 0.25s;
+    }
+    
+    .project-image-overlay:hover {
+      opacity: 1;
+    }
+    
+    .project-image-overlay:hover>* {
+      transform: translateY(0);
+    }
+    
+    .project-image-title {
+      font-size: 2em;
+      font-weight: bold;
+    }
+    
+    .project-image-description {
+      font-size: 1.25em;
+      margin-top: 0.25em;
     }
 
 
