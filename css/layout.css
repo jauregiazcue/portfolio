@@ -59,6 +59,25 @@ body {
   flex-basis: 50%;
 }
 
+/*Link Section*/
+#link-text:link {
+  color: green;
+}
+
+/* visited link */
+.link-text:visited {
+  color: green;
+}
+
+/* mouse over link */
+.link-text:hover {
+  color: green;
+}
+
+/* selected link */
+.link-text:active {
+  color: green;
+}
 
 
 
@@ -287,7 +306,7 @@ body {
 /* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
   #main-content {
-    margin: 150px 50px;
+    margin: 150px 75px;
   }
 
   #portfolio-header {
@@ -302,7 +321,7 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and below) */
 @media only screen and (max-width: 600px) {
   #main-content {
-    margin: 125px 20px;
+    margin: 125px 75px;
   }
 
   .project-card {
