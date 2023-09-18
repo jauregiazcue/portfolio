@@ -66,7 +66,8 @@
 
         <div class="main-title">Born To Rise</div>
         <div class="body-text" style="color:#FF0000">Work In Progress</div>
-        <div class="body-text">A small description about the project goes here, get the reader hooked on the project and tell them why they should continue to read this page. Give it a sweet tagline.</div>
+        <div class="body-text">
+          Born To Rise is a 2.5 platformer game based on games like “Hollow Knight” and “Metroid Dread”  made in nine months by Racoons Making Games, a group of students from ESAT Valencia (Escuela Superior de Arte y Tecnología).</div>
 
           <div class="project-header-div" aling="center">
 
@@ -79,9 +80,9 @@
       <div id="project-details">
         <div class="subheader-text">Particles</div>
         <div class="project-details-content">
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
+          <div class="body-text">Working together with the art and design department, having one person from each to tell me where they would like to have particles and how they should look, I was responsible for all the VFXs of the project, creating, inserting and enhancing them.</div>
           <img class="project-header-image" src="./../assets/gifs/allparticles.gif" alt="AllParticles">
-          <div class="body-text">Vitae justo eget magna fermentum. Imperdiet nulla malesuada pellentesque elit eget gravida. Aliquet nec ullamcorper sit amet. Aliquet sagittis id consectetur purus. Ac tortor dignissim convallis aenean. Enim neque volutpat ac tincidunt vitae. Lobortis feugiat vivamus at augue. Platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Viverra orci sagittis eu volutpat. Massa tincidunt nunc pulvinar sapien et ligula. Donec enim diam vulputate ut.</div>
+          <div class="body-text">In the last month of the project, another artist was inserted on the particles team to improve upon what I made while I continued inserting them through the code, while I was helping her due to not having previous experience on the Niagara Particle System.</div>
         </div>
       </div>
 
@@ -89,7 +90,18 @@
         <div class="subheader-text">Masilla Enemy</div>
         <div class="project-details-content">
           <img class="project-header-image" src="./../assets/images/btr_masilla.png" alt="MasillaEnemy">
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
+          <div class="body-text">The masilla enemy is the first enemy you encounter in the game, and is the first task I had in the project. I worked in the movement of this enemy up until they gave the enemy to another programmer and I was assigned to VFXs, but the movement I made for it has not changed.</div>
+          <div class="body-text">The platforms has four points on top right, top left, bottom right and bottom left, the masilla takes these points and if it is a floor masilla it will only use the top ones, making it move on the platform left to right, and if it is a common masilla he will move in the walls and never move in the other direction.</div>
+          <div class="body-text">A mechanic that never was shown with the masilla is that it can also go in movable platforms, not only normal platforms.</div>
+        
+        
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Rotable Platform</div>
+        <div class="project-details-content">
+          <div class="body-text">The rotatable platform is just a simple platform that when you step on it after a set amount of time it would rotate, and after another set of time it would rotate back to normal.</div>
         </div>
       </div>
 
@@ -101,14 +113,44 @@
             <img class="project-header-multiple-image" src="./../assets/gifs/vertical elevator.gif" alt="AllParticles">
           </div>
           
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
+          <div class="body-text">The movable platform can be use in a variety of ways. First of all, this platform can move vertically and horizontally, from the start point to the finish point, but it has three types of options of how it will behave. </div>
+          
+          <div class="body-text">The basic behaviour : when you are on it the platform will move, if you get out, it will go back to the start point, when it reaches the finish point it will not move anymore. </div>
+
+          <div class="body-text">The return behaviour : it is the same as the basic behaviour but when it reaches the finish point and you get out it will go back to the start point.</div>
+
+          <div class="body-text">The go to point behaviour : the difference with the basic one is that even if you step out of platform, it will continue to the finish point. </div>
+
+          <div class="body-text">The bidirectional behaviour : this one is a very specific one, it is only used once in all the game, and it is a fusion of the return and go to point behaviour. The designer of the level wanted a platform that could go down like a go to point behaviour, but if you step in it after it went all the way down, it would become a return one, making the start point the point that is down and the finish point the top point. </div>
+        
         </div>
       </div>
 
       <div id="project-details">
-        <div class="subheader-text">Rotable Platform</div>
+        <div class="subheader-text">Acid Elevator Hazard</div>
         <div class="project-details-content">
-          <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Sed id semper risus in hendrerit gravida. Placerat duis ultricies lacus sed. Id neque aliquam vestibulum morbi blandit cursus risus. Elit pellentesque habitant morbi tristique senectus et netus et. Elementum tempus egestas sed sed risus pretium quam. Nibh ipsum consequat nisl vel pretium lectus quam id leo. Vitae congue mauris rhoncus aenean vel elit.</div>
+          <div class="body-text">This hazard is the same as the common acid hazard, when you hit it you will be sent to a spawn point of the acid and will take one point of damage, but when you enter on its trigger this one will start moving. It has the same movement code as the basic mode of the movable platform, but this time when it is moving the damage changes to kill the player in touch and when it reaches the finish point the damage will return back to normal, and the spawn point will change to a better location.</div>
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Dialogue System</div>
+        <div class="project-details-content">
+          <div class="body-text">I created the dialogue system for all the types of dialogues in the game.</div>
+
+          <div class="body-text">The first one is at the start of the game, in the animation the text that appears is changing using a timer per sentence, so that the designers could make the text appear as long as needed. </div>
+          
+          <div class="body-text">The second one is when you talk to the bird, where the input of the player is stopped, the protagonist makes an animation, and then you have a sentence that can be changed using a button.</div>
+         
+          <div class="body-text">The third one is the conversation pick up, it does the same as the second one, without the animation.</div>
+
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Controller Feedback Vibration</div>
+        <div class="project-details-content">
+          <div class="body-text">I also implemented all the code for when the controller vibrates to give feedback to the player.</div>
         </div>
       </div>
 
