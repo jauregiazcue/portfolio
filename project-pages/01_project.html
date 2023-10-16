@@ -57,6 +57,7 @@
         </div>
       </a>
     </div>
+    
 
     <!-- MAIN PAGE CONTENT -->
     <div id="main-content">
@@ -65,35 +66,37 @@
       <div id="project-header">
 
         <div class="main-title">Born To Rise</div>
-        <div class="body-text" style="color:#FF0000">Work In Progress</div>
+        <div class="main-second-title">C++ Unreal 4 Perforce</div>
+        
         <div class="body-text">
           Born To Rise is a 2.5 platformer game based on games like “Hollow Knight” and “Metroid Dread”  made in nine months by Racoons Making Games, a group of students from ESAT Valencia (Escuela Superior de Arte y Tecnología).</div>
-
+          
           <div class="project-header-div" aling="center">
 
-            <iframe class="project-header-video" src="https://www.youtube.com/embed/T7aY_brAGaw"></iframe>
+            
           </div>
-          
       </div>
-
+      <div class="project-header-video-container"><iframe class="project-header-video" src="https://www.youtube.com/embed/T7aY_brAGaw"></iframe></div>
+      
 
       <div id="project-details">
         <div class="subheader-text">Particles</div>
         <div class="project-details-content">
           <div class="body-text">Working together with the art and design department, having one person from each to tell me where they would like to have particles and how they should look, I was responsible for all the VFXs of the project, creating, inserting and enhancing them.</div>
-          <img class="project-header-image" src="./../assets/gifs/allparticles.gif" alt="AllParticles">
+          
           <div class="body-text">In the last month of the project, another artist was inserted on the particles team to improve upon what I made while I continued inserting them through the code, while I was helping her due to not having previous experience on the Niagara Particle System.</div>
+          <img class="project-header-image" src="./../assets/0_born_to_rise/allparticles.gif" alt="AllParticles">
         </div>
       </div>
 
       <div id="project-details">
         <div class="subheader-text">Masilla Enemy</div>
         <div class="project-details-content">
-          <img class="project-header-image" src="./../assets/images/btr_masilla.png" alt="MasillaEnemy">
+          
           <div class="body-text">The masilla enemy is the first enemy you encounter in the game, and is the first task I had in the project. I worked in the movement of this enemy up until they gave the enemy to another programmer and I was assigned to VFXs, but the movement I made for it has not changed.</div>
           <div class="body-text">The platforms has four points on top right, top left, bottom right and bottom left, the masilla takes these points and if it is a floor masilla it will only use the top ones, making it move on the platform left to right, and if it is a common masilla he will move in the walls and never move in the other direction.</div>
           <div class="body-text">A mechanic that never was shown with the masilla is that it can also go in movable platforms, not only normal platforms.</div>
-        
+          <img class="project-header-image" src="./../assets/0_born_to_rise/btr_masilla.png" alt="MasillaEnemy">
         
         </div>
       </div>
@@ -102,16 +105,14 @@
         <div class="subheader-text">Rotable Platform</div>
         <div class="project-details-content">
           <div class="body-text">The rotatable platform is just a simple platform that when you step on it after a set amount of time it would rotate, and after another set of time it would rotate back to normal.</div>
+          <img class="project-header-image" src="./../assets/0_born_to_rise/rotablePlatform.gif" alt="RotablePlatform">
         </div>
       </div>
 
       <div id="project-details">
         <div class="subheader-text">Movable Platform</div>
         <div class="project-details-content">
-          <div class="project-header-multiple-parent"> 
-            <img class="project-header-multiple-image" src="./../assets/gifs/elevator.gif" alt="AllParticles">
-            <img class="project-header-multiple-image" src="./../assets/gifs/vertical elevator.gif" alt="AllParticles">
-          </div>
+          
           
           <div class="body-text">The movable platform can be use in a variety of ways. First of all, this platform can move vertically and horizontally, from the start point to the finish point, but it has three types of options of how it will behave. </div>
           
@@ -122,20 +123,27 @@
           <div class="body-text">The go to point behaviour : the difference with the basic one is that even if you step out of platform, it will continue to the finish point. </div>
 
           <div class="body-text">The bidirectional behaviour : this one is a very specific one, it is only used once in all the game, and it is a fusion of the return and go to point behaviour. The designer of the level wanted a platform that could go down like a go to point behaviour, but if you step in it after it went all the way down, it would become a return one, making the start point the point that is down and the finish point the top point. </div>
-        
+          <div class="project-header-multiple-parent"> 
+            <img class="project-header-multiple-image" src="./../assets/0_born_to_rise/elevator.gif" alt="AllParticles">
+            <img class="project-header-multiple-image" src="./../assets/0_born_to_rise/vertical elevator.gif" alt="AllParticles">
+          </div>
         </div>
       </div>
 
       <div id="project-details">
         <div class="subheader-text">Acid Elevator Hazard</div>
         <div class="project-details-content">
+          
           <div class="body-text">This hazard is the same as the common acid hazard, when you hit it you will be sent to a spawn point of the acid and will take one point of damage, but when you enter on its trigger this one will start moving. It has the same movement code as the basic mode of the movable platform, but this time when it is moving the damage changes to kill the player in touch and when it reaches the finish point the damage will return back to normal, and the spawn point will change to a better location.</div>
+          <img class="project-header-image" src="./../assets/0_born_to_rise/acidElevator.gif" alt="AcidElevator">
         </div>
       </div>
 
       <div id="project-details">
         <div class="subheader-text">Dialogue System</div>
         <div class="project-details-content">
+
+          
           <div class="body-text">I created the dialogue system for all the types of dialogues in the game.</div>
 
           <div class="body-text">The first one is at the start of the game, in the animation the text that appears is changing using a timer per sentence, so that the designers could make the text appear as long as needed. </div>
@@ -143,7 +151,7 @@
           <div class="body-text">The second one is when you talk to the bird, where the input of the player is stopped, the protagonist makes an animation, and then you have a sentence that can be changed using a button.</div>
          
           <div class="body-text">The third one is the conversation pick up, it does the same as the second one, without the animation.</div>
-
+          <img class="project-header-image" src="./../assets/0_born_to_rise/btr_dialoge.png" alt="DialogueSystem">
         </div>
       </div>
 

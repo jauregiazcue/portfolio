@@ -22,6 +22,12 @@ body {
   font-weight: 700;
 }
 
+.main-second-title {
+  margin-left: 2%;
+  font-size: 20px;
+  font-weight: 600;
+}
+
 .subheader-text {
   font-size: 20px;
   font-weight: 700;
