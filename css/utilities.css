@@ -38,14 +38,15 @@ a.icon-link:hover {
   left: 0;
 }
 
-.nav-title-link {
-  color: white;
-  text-decoration: none;
-}
+.nav-title-link:link { color: white; text-decoration: none;}
+.nav-title-link:visited { color: white; }
+.nav-title-link:hover { color: white; }
+.nav-title-link:active { color: white; }
 
-.nav-title-link:hover {
-  text-decoration: underline;
-}
+a:link { color: green; }
+a:visited { color: green; }
+a:hover { color: rgb(61, 156, 61); }
+a:active { color: green; }
 
 /* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {

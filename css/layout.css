@@ -59,25 +59,9 @@ body {
   flex-basis: 50%;
 }
 
-/*Link Section*/
-#link-text:link {
-  color: green;
-}
 
-/* visited link */
-.link-text:visited {
-  color: green;
-}
 
-/* mouse over link */
-.link-text:hover {
-  color: green;
-}
 
-/* selected link */
-.link-text:active {
-  color: green;
-}
 
 
 
