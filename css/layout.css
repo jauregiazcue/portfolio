@@ -11,7 +11,9 @@ html {
 
 body {
   margin: 0;
-  background-color: #132809;
+  background-color: #162936;
+  background-image: url("../assets/images/try1.png");
+  background-repeat: repeat; 
   color : white;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

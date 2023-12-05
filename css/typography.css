@@ -4,7 +4,15 @@ body {
 
 .nav-title {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 64px;
+
+  background-color: #eabe71;
+  background-image: linear-gradient(45deg, #eabe71, #2f6568);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  -moz-text-fill-color: transparent;
 }
 
 .button-text {
@@ -18,26 +26,30 @@ body {
 }
 
 .main-title {
-  font-size: 39px;
+  font-size: 50px;
   font-weight: 700;
+  color : #c38a37;
+  align-self: center;
 }
 
 .main-second-title {
-  margin-left: 2%;
+  align-self: center;
+  color: #eabe71;
   font-size: 20px;
   font-weight: 600;
 }
 
 .subheader-text {
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 700;
+  color: #c38a37;
 }
 
 .body-text {
-  align-self: center;
+  
   width : 90%;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .project-card-text {
@@ -55,3 +67,4 @@ body {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
 }
+
