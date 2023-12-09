@@ -29,14 +29,27 @@ a.icon-link:hover {
 .navbar {
   width: 100%;
   padding: 30px 50px;
-  background-image: linear-gradient(black 40%, rgba(22, 41, 54,0));
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  top: 0;
-  left: 0;
+
+}
+
+.navbar-main {
+  width: 100%;
+  padding: 30px 50px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(black 40%, rgba(22, 41, 54,0));
+}
+
+.title-background {
+  padding-bottom: 70px;
+  margin-bottom: -50px;
+  background-image: linear-gradient(black 70%, rgba(22, 41, 54,0));
 }
 
 .nav-title-link:link { color: white; text-decoration: none;}
@@ -81,6 +94,10 @@ ul li:before {
 /* Small devices (portrait tablets and large phones, 800px and below) */
 @media only screen and (max-width: 800px) {
   .navbar {
+    padding: 20px 20px;
+
+  }
+  .navbar-main {
     padding: 20px 20px;
 
   }

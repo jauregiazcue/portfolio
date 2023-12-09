@@ -15,6 +15,8 @@ body {
   -moz-text-fill-color: transparent;
 }
 
+
+
 .button-text {
   font-size: 14px;
   font-weight: 700;
@@ -30,11 +32,19 @@ body {
   font-weight: 700;
   color : #c38a37;
   align-self: center;
+  
 }
 
 .main-second-title {
   align-self: center;
   color: #eabe71;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.main-third-title {
+  align-self: center;
+  color: #22474f;
   font-size: 20px;
   font-weight: 600;
 }
@@ -43,6 +53,12 @@ body {
   font-size: 30px;
   font-weight: 700;
   color: #c38a37;
+}
+
+.subheader-second-text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #eabe71;
 }
 
 .body-text {
