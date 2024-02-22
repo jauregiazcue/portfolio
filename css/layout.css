@@ -118,9 +118,9 @@ body {
       height: 200px;
       object-fit: cover;
       object-position: center;
+      border: 5px solid #2f6568;
+      border-radius: 5px;
     }
-
-    
 
     .project-image {
       position: relative;
@@ -142,13 +142,12 @@ body {
       justify-content: center;
       opacity: 0;
       transition: opacity 0.25s;
+      
     }
     
     .project-image-overlay-blur {
       backdrop-filter: blur(5px);
     }
-    
-
     
     .project-image-overlay>* {
       transform: translateY(20px);
@@ -173,6 +172,18 @@ body {
       font-size: 1.25em;
       margin-top: 0.25em;
     }
+
+    .best-project-image-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: center;
+      border: 5px solid #eabe71;
+      border-radius: 5px;
+    }
+
+
+
 
 
 
