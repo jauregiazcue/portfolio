@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+     <link rel="icon" href="../assets/images/myImage.png" />
+     <title>Kai Jauregi</title>
+    <meta name="description" content="A portfolio template for the Unemployables community.">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <div class="title-background">
+      <!-- NAVBAR -->
+      <div class="navbar">
+        <a class="nav-title-link" href="../index.html">
+        
+          <span class="nav-title">Kai Jauregi</span>
+          <div class="button">
+          
+            <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jauregiazcue/">
+              <image src="../assets/icons/linkedin.svg" class="footer-icon"/>
+            </a>
+          
+            <a class="icon-link" target="_blank" href="https://twitter.com/jauregiazcue">
+              <image src="../assets/icons/twitter.svg" class="footer-icon"/>
+            </a>
+          
+            <a class="icon-link" href="mailto:jauregiazcue@gmail.com">
+              <image src="../assets/icons/mail.svg" class="footer-icon"/>
+            </a>
+          </div>
+        </a>
+      </div>
+
+      <!-- PROJECT HEADER -->
+      <div id="project-header">
+      
+        <div class="main-title">LoreNomicon</div>
+          <div class="main-second-title">PS5 C++ GitHub <a style="color: white">•</a> <a style="color: #2f6568">Jan 2024 - May 2024</a> </div>
+          <div class="main-third-title">Turn Base Horror Puzzle made in Fortress Engine by me and 5 teammates in Sheffield Hallam University</div>
+
+      </div>
+
+    </div>
+
+    <!-- MAIN PAGE CONTENT -->
+    <div id="main-content">
+
+      <div id="project-details"> 
+        <div class="subheader-text">What I did</div>
+      <ul>
+        <li>Created the starting engine (Fortress Engine)</li>
+        <li>Level Editor made in OpenGL that change the same Json file that the PS5 game uses to generate levels</li>
+        <li>Level Generation using Json files, fix passes for colour coded doors, levers and pressure plates</li>
+        <li>Tile interactions : Door open close, pressure and levers activation of other tiles, pilar object taking...</li>
+        <li>Player : Movement, Inventory System</li>
+        <li>Enemy : Random Movement, A* movement, Weaknesses, State Machine system</li>
+        <li>Flashlight activation, deactivation, battery functionality and interaction with enemies</li>
+        <li>Meat : Can be thrown and interacts with some enemies</li>
+        <li>Book : Open / Close, adding pages and change of active page</li>
+        <li>UI : Simple UI and Text Boxes for narrative</li>
+      </ul>
+    </div>
+    <div class="project-header-video-container"><iframe class="project-header-video" src="https://www.youtube.com/embed/hvTNwx6izd8?si=C9sTU6hFTTzgoBlM"></iframe></div>
+      
+    
+    <div id="project-details">
+      <div class="subheader-text">Level Editor</div>
+      <div class="project-details-content">
+        <div class="body-text">The inventory can store up to four items, but just by changing an integer it would be able to store more or less if that is what we wanted. The objects in the inventory can be a book, a flashlight and a meat.</div>
+        
+        <img class="project-header-image" src="./../assets/images/LevelEditor.png" alt="LevelEditor">
+      </div>
+    </div>
+
+    <div id="project-details">
+      <div class="subheader-text">Inventory & Objects</div>
+      <div class="project-details-content">
+        <div class="body-text">On the level editor you are able to create and delete levels, apart from changing them. The good thing is that the file that is changed in the level editor is the same file the game uses for then loading the levels. In the level editor you are able to change all tiles into any tile type, having also extra information inside for the movable, pressure and lever tiles. You can also change the player's position, turns and other data, such as the enemies type, position,  if it will move when the game starts and escape root (I will talk about this later in the enemies point).</div>
+        <div class="body-text">By pressing X the book will open and will let you see the pages that you have collected (starting with only one).  It can also be a flashlight, that has x batteries that will be taken out if the flashlight stays active in the enemies turns and can also stunt the golem. And we also have the meat, that can be thrown three tiles away, that will make the curse hunter go into the meat instead of hunting the player.</div>
+
+      </div>
+    </div>
+
+    <div id="project-details">
+      <div class="subheader-text">Interface</div>
+      <div class="project-details-content">
+        <div class="body-text">The interface in the game are gameobjects that are attached to the camera. We have the players and enemies turns, the inventory, the flashlight battery, the win, lose and pause states, with their texts and also with the controls and credits (in the case of the pause stay).</div>
+        <div class="body-text">The object that is in the hand of the player is also an interface object, but it does not use the same shader.</div>
+
+      </div>
+    </div>
+
+    <div id="project-details">
+      <div class="subheader-text">Player</div>
+      <div class="project-details-content">
+        <div class="body-text">The player has three movements per turn, the movement only counts when it moves to a different tile, so the player can rotate all they want. The player can also interact with pressure plates, levers and pillars, one of them stepping in it, the other pressing the circle. They can also use the inventory objects, and go to the pause menu. The player's mission in the game is to collect pages that will inform them about how to fight the enemies, and go to the end level tile to go to the next level.</div>
+      </div>
+    </div>
+
+    <div id="project-details">
+      <div class="subheader-text">Enemies</div>
+      <div class="project-details-content">
+        <div class="body-text">The enemies hunt the player or scape from it using the A* algorithm. We have four different enemies, the mushling, that will scape to a set position in the level when it sees the player and when he reaches to that point it will stop moving, the golem and the angel that will try hunting the player but one of them can be stop while you look at him and the other is the same but you also need to have the flashlight active, and the last enemy is the curse hunter, that will hunt the player but if there is any meat in the level it will go towards that instead of the player. They can also move randomly, or not move at all, this is always until they see the player, in which case they will hunt or escape.</div>
+      </div>
+    </div>
+
+    <div id="project-details">
+      <div class="subheader-text">Grid & Tiles</div>
+      <div class="project-details-content">
+        <div class="body-text">The grid is generated using a json file that has all the information of the levels. It first creates all the different tiles of the level. After that it generates the player and all enemies, and with that it is capable to create all the interface (it is done this way to do the turns of these entities). Finally, it adds an extra wall on top of the wall types tiles, it rotates the doors and levers to make them be rotated correctly for the level taking in consideration the walls that surrounds those tiles, and it colour coded the doors with the levers and pressure plate that will change the doors states in the future.</div>
+
+        <div class="body-text"><span style="color:#b48b5f">Common Tile · </span>This one is the floor tile, it does not have any interactions with the entities.</div>
+        <div class="body-text"><span style="color:#b48b5f">Movable Tile · </span>The movable tile moves into an empty tile that is adjacent to the movable tile. What it actually does is change the empty tile to a movable tile, and the movable tile into an empty tile, changing the entities position into the new movable tile. </div>
+        <div class="body-text"><span style="color:#b48b5f">Open Door Tile · </span> The Open Door tile can be changed by other tiles into a closed door, apart from that it acts like a floor tile with a different obj and textures.</div>
+        <div class="body-text"><span style="color:#b48b5f">Pressure Tile · </span> Is the pressure plate tile, if an entity goes into this tile, it will update the tiles that this tile has inside (different kinds of doors or movable tiles).</div>
+        <div class="body-text"><span style="color:#b48b5f">End Level Tile · </span> The end level tile is a tile with an open door obj and texture, so that whenever the player enters on it the level will be finished and it will go to the Win State. The enemies are not able to walk into this tile due to them also being able to make the level be finished.</div>
+        <div class="body-text"><span style="color:#b48b5f">Wall Tile · </span> The Wall Tile is the first tile that the entities are not able to move into. For the checking of the entities if they are able to move into the tiles it checks if the enum is bigger than the wall tile (the order of the tiles here is the same as in the enum).</div>
+        <div class="body-text"><span style="color:#b48b5f">Empty Tile · </span> It is the same thing as the Wall, with a different obj and textures, with the only difference that the meat is able to go through these tiles.</div>
+        <div class="body-text"><span style="color:#b48b5f">Closed Door Tile · </span> It is the same thing as the Wall, with a different obj and textures, apart from other tiles being able to turn it into an open door.</div>
+        <div class="body-text"><span style="color:#b48b5f">Wall With Lever Tile · </span> If the player interacts with it from an adjacent tile it will update the tiles inside the same way as the pressure tile.</div>
+        <div class="body-text"><span style="color:#b48b5f">Pillar Tile · </span> This is the empty pillar, it is just a wall with different obj and textures.</div>
+        <div class="body-text"><span style="color:#b48b5f">Pillar With Book / Flashlight / Meat Tile · </span> If this tile is interacted with the same way as a lever, the object will be added into the inventory and the pillar will become an empty pillar.</div>
+        <div class="body-text"><span style="color:#b48b5f">Pillar With Page Tile · </span> Same thing as the other pillar but instead of adding an object into the inventory it will add a page into the book.</div>      
+      </div>
+    </div>
+
+    </div>
+    <!-- FOOTER -->
+    <div id="footer">
+      <p align = "center">© Kai Jauregi Azcue. All rights reserved.</p>
+     </div>
+	</body>
+</html>
