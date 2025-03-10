@@ -8,7 +8,9 @@
   --hover: lightgray;
 }
 
+
 body {
+  font-family: "Roboto Flex", sans-serif;
   background-color: var(--background);
   color: var(--text);
 }
@@ -268,10 +270,9 @@ textarea {
   border-radius: 100%;
   border-width: 5px;
   border-color: var(--strongPrimary);
-  background-color: lightslategray;
+  background-color: var(--background);
 }
 .betterBorder img:hover{
-  border-color: var(--strongPrimary);
   background-color: var(--strongSecondary); 
 }
 
