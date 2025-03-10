@@ -221,6 +221,16 @@ textarea {
   }
 }
 
+.borderSpacer a {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.borderSpacer h1 { 
+  margin-bottom: 0;
+}
+
+
 
 .experience h1,
 h2,

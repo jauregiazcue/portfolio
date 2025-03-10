@@ -179,3 +179,8 @@
 .selection button:hover {
     color: var(--weakPrimary);
 }
+
+
+.selection button:active {
+    background-color: var(--weakSecondary);
+}
