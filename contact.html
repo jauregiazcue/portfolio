@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Get the style from styles.css -->
+	<link rel="stylesheet" href="css/styles.css">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+	<!--Author and Description of the Web-->
+	<meta name="author" content="Kai Jauregi">
+	<meta name="description" content="Game developer looking forward to specialize in Gameplay and Tools programming">
+
+	<!--The character codification-->
+	<meta charset="UTF-8">
+
+	<!--Adapt to the size of the device-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!--Title of the web-->
+	<title>Contact</title>
+</head>
+
+<body>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(function () {
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<div id="header"></div>
+
+	<main class="mainIndex">
+		<section>
+			<form>
+				<fieldset>
+					<legend>Contact Us!</legend>
+					<div>
+						<label for="name">Name:</label>
+						<br>
+						<input type="text" id="name" name="name" required>
+					</div>
+					<div>
+						<label for="email">Email:</label>
+						<br>
+						<input type="email" id="email" name="email" required>
+					</div>
+					<div>
+						<label for="message">Comment:</label>
+						<br>
+						<textarea name="message" rows="10" cols="30"></textarea>
+					</div>
+					<div class="formButtons">
+						<button type="submit">Send</button>
+						<button type="reset">Clean</button>
+					</div>
+				</fieldset>
+
+
+			</form>
+
+		</section>
+
+	</main>
+	<hr>
+	<footer id="footer"></footer>
+</body>
+
+</html>

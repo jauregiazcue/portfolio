@@ -1,230 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
 
-    <link rel="icon" href="./assets/images/myImage.png" />
-		<title>Kai Jauregi</title>
-    <meta name="description" content="A portfolio">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+	<!-- Get the style from styles.css -->
+	<link rel="stylesheet" href="css/styles.css">
 
-		<link rel="stylesheet" href="./css/layout.css">
-    <link rel="stylesheet" href="./css/typography.css">
-    <link rel="stylesheet" href="./css/utilities.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+		integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-		<script defer src="./js/script.js"></script>
-	</head>
-	<body>
-    <!-- NAVBAR -->
-    <div class="navbar-main">
-      <a class="nav-title-link" href="./index.html">
-        <span class="nav-title">Kai Jauregi</span>
-        <div class="button">
+	<!--Author and Description of the Web-->
+	<meta name="author" content="Kai Jauregi">
+	<meta name="description" content="Game developer looking forward to specialize in Gameplay and Tools programming">
 
-          <a class="icon-link" target="_blank" href="https://www.linkedin.com/in/jauregiazcue/">
-            <image src="./assets/icons/linkedin.svg" class="footer-icon"/>
-          </a>
+	<!--The character codification-->
+	<meta charset="UTF-8">
 
-          <a class="icon-link" target="_blank" href="https://twitter.com/jauregiazcue">
-            <image src="./assets/icons/twitter.svg" class="footer-icon"/>
-          </a>
+	<!--Adapt to the size of the device-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-          <a class="icon-link" href="mailto:jauregiazcue@gmail.com">
-            <image src="./assets/icons/mail.svg" class="footer-icon"/>
-          </a>
-        </div>
-      </a>
-    </div>
+	<!--Title of the web-->
+	<title>Portfolio</title>
+</head>
 
-    <div id="main-content">
+<body>
+	<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(function () {
+			$("#header").load("header.html");
+			$("#footer").load("footer.html");
+		});
+	</script>
+	<div id="header"></div>
 
-      <!-- PROJECTS -->
-      <div id="my-work-section">
-        <!--<div class="body-text">Hello, I am Kai Jauregi, and this is a showcase of my best projects. </div>-->
+	<main class="mainIndex">
 
-        <span class="subheader-text">Headline Projects</span>
-        <div class="projects-container">
+		<section class="borderSpacer">
 
-          <!--  1 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/bornToRise.html">
-              <div class="project-image">
-                <img class="best-project-image-img" src="./assets/gifs/borntorise.gif" alt="BornToRise">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Born to rise</div>
-                  <p class="project-image-description">Unreal Engine 4 <br> 2.5 Platformer</p>  
-                   
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!--  2 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/loreNomicon.html">
-              <div class="project-image">
-                <img class="best-project-image-img" src="./assets/gifs/LoreNomiconGif.gif" alt="SecondProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">LoreNomicon</div>
-                  <p class="project-image-description">
-                    PS5 C++
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>         
-
-          <!--  3 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/palaceEngine.html">
-              <div class="project-image">
-                <img class="best-project-image-img" src="./assets/gifs/PalaceEngine.gif" alt="SecondProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Palace Engine</div>
-                  <p class="project-image-description">
-                    Graphics, C++, OpenGL 
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-        <b></b>
-          <span class="subheader-text">Other Projects</span>
-          <div class="projects-container">
-          <!--  9 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/castleEngine.html">
-              <div class="project-image">
-                <img class="project-image-img" src="./assets//gifs/ps5.gif" alt="ThirdProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Castle Engine</div>
-                  <p class="project-image-description">
-                    PS5, Level Editor, C++
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!--  4 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/fortressEngine.html">
-              <div class="project-image">
-                <img class="project-image-img" src="./assets//gifs/FortressEngine.gif" alt="ThirdProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Fortress Engine</div>
-                  <p class="project-image-description">
-                    Graphics, C++, OpenGL,Voxelization
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!--  5 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/multiagentSystem.html">
-              <div class="project-image">
-                <img class="project-image-img" src="./assets/gifs/IAFirstProject.gif" alt="FourthProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Multiagent System</div>
-                  <p class="project-image-description">
-                    C++, AI
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!--  6 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/proceduralWorld.html">
-              <div class="project-image">
-                <img class="project-image-img" src="./assets/images/IAProject.png" alt="FithProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Procedural World </div>
-                  <div class="project-image-title">Generation </div>
-                  <p class="project-image-description">
-                    C++, AI, Palace Engine
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!--  7 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/meteorShower.html">
-              <div class="project-image">
-                <img class="project-image-img" src="./assets/gifs/ScapeBox.gif" alt="SixProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Meteor Shower</div>
-                  <p class="project-image-description">
-                    Unity,C#
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <!--  8 PROJECT -->
-          <div class="project-card">
-            <a  href="./project-pages/spaceShock.html">
-              <div class="project-image">
-                <img class="project-image-img" src="./assets/gifs/SpaceShock.gif" alt="SevenProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Space Shock</div>
-                  <p class="project-image-description">
-                    Unity,C#
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-         <!-- <div class="project-card">
-            <a  href="./project-pages/teseoBros.html">
-              <div class="project-image">
-                <img class="best-project-image-img" src="./assets/gifs/TeseoBros.gif" alt="SecondProject">
-                <div class="project-image-overlay project-image-overlay-blur">
-                  <div class="project-image-title">Teseo Bros</div>
-                  <p class="project-image-description">
-                    Unreal Engine 4<br> Online Multiplayer
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>   -->
+			<img alt="Profile Picture of Kai Jauregi" class="profilePicture" , src="assets/images/Profile.png">
+			<section>
+				<h1>Gameplay and Tools Programmer</h1>
+				<p>Game developer looking forward to specialize in artificial
+					intelligence and gameplay programming. Since the first console my family gave me when
+					I was a child, I was always thinking “how in the world are these videogames created ?”.</p>
+				<p>Due to my desire for knowledge, at 13 I started taking courses
+					to learn how to create videogames using different engines.</p>
+				<p>From that point onward I never stopped, that is why I went
+					to ESAT to study how to properly program, I am in Sheffield Hallam University to improve
+					my skills and I am eager to learn from industry workers and improve even more.</p>
+			</section>
 
 
-        </div>
-      </div>
+		</section>
+		<article class="experienceAndEducation">
+			<section class="experience">
+				<h1>Education</h1>
+				<br>
+				<h2>Full Stack Development</h2>
+				<h3>The Bridge <span class="extraInformation">| mar. 2025 - now | Bilbao</span></h3>
+				<br>
+				<h2>Machine Learning Specialization</h2>
+				<h3>Tokio School <span class="extraInformation">| feb. 2025 - now | Online</span></h3>
+				<br>
+				<h2>BSc (Honours) in Computer Science for Games</h2>
+				<h3>Sheffield Hallam University <span class="extraInformation">| sep. 2023 - may. 2024 |
+						Sheffield</span></h3>
+				<p>In SHU I enhanced my gameplay coding abilities and my collaborative
+					skills by making a first person horror puzzle game for PS5, in a team of
+					six, using my own level editor and entity component architecture base PS5 engine.</p>
+				<br>
+				<h2>Higher National Diploma in Computing</h2>
+				<h3>ESAT |<span class="extraInformation"> oct. 2020 - jul. 2023 | Valencia</span></h3>
+				<p>ESAT is the institution where I learned to work with Unreal Engine 4 and Unity,
+					apart from acquiring a strong knowledge in standardised Artificial Intelligence
+					techniques such as A* or Behaviour Trees and I have grown a solid base in graphics
+					programming creating my own engine in C++ using OpenGL.</p>
+
+			</section>
+
+			<section class="experience">
+				<h1>Professional Experience</h1>
+				<br>
+				<h2>Tools Programmer</h2>
+				<h3>Zarautz Police Department <span class="extraInformation">| sep. 2024 - jan. 2025 |
+						Zarautz</span></h3>
+				<p>Developed a program aimed at showcasing traffic accidents. For this purpose the user can
+					draw,
+					add images and text, customize the previous functionalities and take screenshots. </p>
+				<br>
+				<h2>Gameplay Programmer</h2>
+				<h3>Raccoons Making Games <span class="extraInformation">| sep. 2022 - jul. 2023 |
+						Valencia</span></h3>
+				<p>As the responsible for all VFXs in
+					<a target="_blank" href="https://store.steampowered.com/app/2432460/Born_to_Rise/?l=english">
+						Born to Rise</a>,
+					working together with the art and design department, I have created,
+					inserted and enhanced all particles for the game, apart from implementing
+					most of the platforms and making the dialogue system.
+				</p>
+
+			</section>
 
 
-      <div id="about-section">
-        <span class="subheader-text">About Me</span>
-        <div class="about-section-content">
-          <div class="body-text"><a href="./assets/Kai Jauregi CV.pdf" download="Kai_Jauregi_CV" target="_blank">Here you can download my CV.</a></div>
-          <div class="body-text">Game developer looking forward to specialize in artificial intelligence and gameplay programming. Since the first console my family gave me when I was a child, I was always thinking “how in the world are these videogames created ?”. </div>
-          <div class="body-text">Due to my desire for knowledge, at 13 I started taking courses to learn how to create videogames using different engines.</div>
-          <div class="body-text">From that point onward I never stopped, that is why I went to ESAT to study how to properly program, I am in Sheffield Hallam University to improve my skills and I am eager to learn from industry workers and improve even more.</div>
-          <ul>
-            <li><b>Email :</b> jauregiazcue@gmail.com</li>
-            <li><b>Linkedin :</b> <a href="https://www.linkedin.com/in/jauregiazcue/" target="_blank">https://www.linkedin.com/in/jauregiazcue/</a></li>
-  
-          </ul>
-        </div>
-      </div>
+		</article>
 
+	</main>
+	<hr>
+	<footer id="footer"></footer>
 
-    </div>
+</body>
 
-     <!-- FOOTER -->
-     <div id="footer">
-      <p align = "center">© Kai Jauregi Azcue. All rights reserved.</p>
-     </div>
-
-    
-	</body>
 </html>

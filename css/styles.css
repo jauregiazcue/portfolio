@@ -1,0 +1,419 @@
+:root {
+  --text: white;
+  --background: black;
+  --strongPrimary: #c38a37;
+  --weakPrimary: #eabe71;
+  --strongSecondary: #2f6568;
+  --weakSecondary: #7d9ea2;
+  --hover: lightgray;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+}
+
+h1 {
+  color: var(--strongPrimary);
+}
+
+h2 {
+  color: var(--weakPrimary);
+
+}
+
+h3 {
+  color: var(--strongSecondary);
+}
+
+.extraInformation {
+  color: var(--weakSecondary);
+}
+
+
+.mainHeader {
+  display: flex;
+}
+
+.mainHeader h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mainHeader table {
+  width: 100%;
+}
+
+.mainHeader a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+/* visited link */
+.mainHeader a:visited {
+  color: var(--text);
+}
+
+/* mouse over link */
+.mainHeader a:hover {
+  color: var(--hover);
+}
+
+/* selected link */
+.mainHeader a:active {
+  color: var(--hover);
+}
+
+.mainIndex {
+  width: 70%;
+  min-height: 70vh;
+  margin: 0 auto;
+}
+
+main a {
+  color: var(--weakSecondary);
+}
+
+/* visited link */
+main a:visited {
+  color: var(--weakSecondary);
+}
+
+/* mouse over link */
+main a:hover {
+  color: var(--strongSecondary);
+}
+
+/* selected link */
+main a:active {
+  color: var(--strongSecondary);
+}
+
+footer {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2vh;
+}
+
+footer li {
+  display: inline;
+  font-size: 2em;
+}
+
+footer ul {
+  margin-bottom: 0;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+::selection {
+  background-color: var(--text);
+  color: var(--background);
+}
+
+form {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+
+}
+
+fieldset {
+  width: 80%;
+  border-radius: 5px;
+  border-width: 5px;
+  border-style: solid;
+
+}
+
+input,
+textarea {
+  width: 100%;
+  border-radius: 25px;
+}
+
+textarea {
+  resize: none;
+  height: 50%;
+  max-height: 50vh;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.formButtons button {
+  width: 100%;
+  height: 5vh;
+  border-radius: 100px;
+}
+
+.loader {
+  display: block;
+  width: 84px;
+  height: 84px;
+  position: relative;
+  transform-origin: 0%, -50%;
+}
+
+.loader:before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: white;
+  animation: fireAnimation 2s infinite linear;
+}
+
+.loader:after {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--strongPrimary);
+  transform: translate(0%, 25%);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(85, 85, 85);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hover);
+}
+
+@keyframes fireAnimation {
+  0% {
+    transform: translate(0%, 25%) scale(1);
+    background: var(--strongPrimary);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) scale(0);
+    background: var(--weakPrimary);
+  }
+}
+
+
+.experience h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.experience h2 {
+  font-size: large;
+}
+
+.experience h3 {
+  font-size: medium;
+}
+
+@media only screen and (min-width: 1440px) {
+  .profilePicture {
+    width: 25%;
+    height: 25%;
+    border-radius: 20%;
+
+  }
+
+  .borderSpacer {
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+  }
+
+  .borderSpacer section {
+    padding-left: 2%;
+  }
+
+}
+
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  height: 250px;
+  top: 0;
+  right: 0;
+  background-color: var(--background);
+  overflow-x: hidden;
+  transition: 0.5s;
+
+  height: 100%;
+}
+
+.sidepanel button {
+  position: absolute;
+  right: 0;
+  margin-top: 30px;
+  margin-right: 10px;
+}
+
+.sidepanel div {
+  padding: 50% 0 50% 0;
+}
+
+.sidepanel a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--hover);
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidepanel a:hover {
+  color: var(--text);
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+
+}
+
+
+
+@media only screen and (max-width: 1440px) and (min-width: 768px) {
+  .profilePicture {
+    width: 141px;
+    height: 141px;
+    border-radius: 20%;
+
+  }
+
+  .borderSpacer {
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+  }
+
+  .openbtn {
+    display: none;
+  }
+
+  .mainHeader ul {
+    display: flex;
+    height: 2vh;
+    justify-content: flex-end;
+  }
+
+  .mainHeader li {
+    display: block;
+    float: right;
+    margin-right: 5%;
+    font-size: xx-large;
+    justify-content: flex-end;
+  }
+
+  .borderSpacer section {
+    padding-left: 2%;
+  }
+
+}
+
+@media only screen and (max-width: 768px) {
+  .profilePicture {
+    width: 50%;
+    height: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 20%;
+    align-self: center;
+  }
+
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--text);
+    padding: 10px 15px;
+    border: none;
+    float: right;
+  }
+
+  .openbtn:hover {
+    background-color: transparent;
+  }
+
+  .mainHeader ul {
+    display: none;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 768px) {
+  .experienceAndEducation {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+  }
+
+  .experience {
+    width: 50%;
+    vertical-align: top;
+    height: 100%;
+  }
+
+  .openbtn {
+    display: none;
+  }
+
+  .mainHeader ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .mainHeader li {
+    display: block;
+    float: right;
+    margin-right: 5%;
+    font-size: xx-large;
+    justify-content: flex-end;
+  }
+
+  .borderSpacer {
+    padding-right: 5%;
+    display: flex;
+    align-items: center;
+  }
+
+  .borderSpacer section {
+    padding-left: 2%;
+  }
+}

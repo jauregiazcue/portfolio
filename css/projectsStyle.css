@@ -1,0 +1,181 @@
+.projectsMain h1 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+.projectsMain h2 {
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.firstUl ul {
+    display: inline-block;
+    margin: 0 0;
+    list-style: none;
+}
+
+.toBigUL ul {
+    list-style: none;
+}
+
+.firstUl {
+    display: inline-block;
+    margin: 7% 7%;
+    list-style: none;
+
+}
+
+.projectsMain li {
+    margin-bottom: 5%;
+}
+
+.projectsMain li:before {
+    content: '';
+    display: inline-block;
+    padding: 10px 10px 5px 15px;
+    background-image: url('../assets/images/liPointer.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -35px;
+}
+
+.toBigUL {
+    display: inline-block;
+    margin: 0 7px;
+    list-style: none;
+
+}
+
+.PS5 {
+    display: block;
+}
+
+.UnrealEngine {
+    display: block;
+}
+
+.Unity {
+    display: block;
+}
+
+.OpenGL {
+    display: block;
+}
+
+.AI {
+    display: block;
+}
+
+.All {
+    display: block;
+}
+
+.projectsMain aside {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsMain main {
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectsMain iframe {
+    width: 90%;
+    height: 90%;
+    border-style: solid;
+    border-radius: 5%;
+    border-width: 5px;
+    border-color: var(--text);
+}
+
+.projectsMain img {
+    width: 90%;
+    height: 90%;
+    border-style: solid;
+    border-radius: 5%;
+    border-width: 5px;
+}
+
+@media only screen and (min-width: 768px) {
+    .projectsMain main {
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    .projectsMain section {
+        width: 40%;
+
+    }
+
+    .projectsMain aside {
+        width: 50%;
+        margin: auto auto;
+        align-items: center;
+    }
+
+    .toBigUL {
+        display: inline-block;
+        margin: 0 7px;
+        list-style: none;
+        height: 86vh;
+        overflow-y: scroll;
+
+
+    }
+
+    .projectsMain iframe {
+        width: 50vw;
+        height: 50vh;
+        border-radius: 5%;
+        border-width: 5px;
+        border-color: var(--text);
+    }
+
+    .projectsMain img {
+        width: 50vw;
+        height: 50vh;
+        border-style: solid;
+        border-radius: 5%;
+        border-width: 5px;
+    }
+}
+
+.selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+.selection article {
+    display: flex;
+    background-color: var(--background);
+    border-style: solid;
+    border-radius: 5px;
+    border-color: var(--strongPrimary);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.selection button {
+    font-size: large;
+    background-color: var(--background);
+    border: none;
+    color: var(--strongPrimary);
+}
+
+.selection button:hover {
+    color: var(--weakPrimary);
+}
