@@ -100,21 +100,36 @@ footer {
   height: 2vh;
 }
 
-footer li {
+.myLinks {
+  padding-left: 0;
+}
+
+.myLinks li {
+  margin: 0;
+  padding: 0;
   display: inline;
   font-size: 2em;
 }
 
-footer ul {
-  margin-bottom: 0;
+.myLinks ul {
+  margin: 0;
+  padding: 0;
 }
 
-footer a {
+.myLinks a {
   color: var(--text);
   text-decoration: none;
 }
 
-footer p {
+.myLinks a:visited {
+ color: var(--text);
+}
+
+.myLinks a:hover {
+  color: var(--hover);
+}
+
+.myLinks p {
   margin-top: 0;
 }
 
