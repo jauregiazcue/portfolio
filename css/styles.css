@@ -226,9 +226,50 @@ textarea {
   margin-bottom: 0;
 }
 
-.borderSpacer h1 { 
+.borderSpacer h1 {
   margin-bottom: 0;
 }
+
+.indexProjectShowcase {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+}
+
+.indexProjectShowcase div {
+  margin: auto auto;
+  width: 25%;
+  height: 20vh;
+  text-align: center;
+}
+
+.indexProjectShowcase img {
+  width: 15vw;
+  height: 15vh;
+  border-radius: 20%;
+  background-color: white;
+}
+
+
+
+.betterBorder  img{
+  margin-top: 10px;
+  width: 10vw;
+  height: 10vh;
+  border-style: solid;
+  border-radius: 100%;
+  border-width: 5px;
+  border-color: var(--weakSecondary);
+  background-color: var(--weakSecondary);
+}
+.betterBorder  img:hover{
+  border-color: var(--strongSecondary);
+  background-color: var(--strongSecondary);
+}
+
 
 
 
