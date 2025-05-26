@@ -1,0 +1,83 @@
+:root {
+  --main-background-color: black;
+  --main-background: #1f1f1f;
+  --second-background: #cac8b9;
+  --main-color: #3a4d5f;
+
+  --second-color: rgba(255, 255, 255, 0.87);
+  --footer-color: rgb(13, 13, 20);
+
+  --hover-color: #314150;
+
+  --main-height: 80vh;
+
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  background: var(--main-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#root {
+  color: var(--second-color);
+  margin: 0, 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.main {
+  margin: 0;
+  padding: 0;
+  min-height: var(--main-height);
+}
+
+.footer {
+  min-height: 10vh;
+  background-color: var(--footer-color);
+
+  & p {
+    margin: 0;
+  }
+}
+
+.h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  text-transform: uppercase;
+  font-style: oblique;
+  font-size: xx-large;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  align-self: center;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+  #root {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  body {
+    padding-top: 0%;
+
+  }
+}
