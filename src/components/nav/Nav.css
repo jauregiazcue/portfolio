@@ -30,6 +30,7 @@
             padding-left: 2em;
             padding-right: 2em;
             overflow: hidden;
+            transition-duration: .5s;
         }
     }
 }
@@ -57,7 +58,6 @@ li:has(.nav__a--active) {
     color: white;
     background-color: var(--nav-active-background);
     overflow: hidden;
-
     border-radius: 50px;
 }
 

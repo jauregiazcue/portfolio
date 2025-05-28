@@ -37,6 +37,7 @@
   & h2 {
     margin: 0;
     padding: 0;
+    color: var(--secondary-color);
   }
 
   & img {
@@ -52,7 +53,7 @@
   transform: translate(-50%, -50%);
   width: 200%;
   height: 200%;
-  background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, black 50%);
+  background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, black 30%);
   transition-duration: .2s;
   z-index: 1;
 }
