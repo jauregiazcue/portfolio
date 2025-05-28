@@ -14,6 +14,7 @@ function Root() {
         <Outlet />
       </main>
 
+      <Footer/>
     </div>
   );
 }

@@ -6,10 +6,10 @@ function Header({ route }) {
     return (
         <header className="header">
             
-            <Nav classNames="button" vertical={false} myItem={[
-                { text: "Work", myClass: (route === "home" ? "active" : ""), newRoute: "" },
-                { text: "Archive", myClass: (route === "services" ? "active" : ""), newRoute: "/es/servicio" },
-                { text: "About", myClass: (route === "city" ? "active" : ""), newRoute: "/es/ciudad" } ]}
+            <Nav vertical={false} myItem={[
+                { text: "Home", myClass: (route === "home" ? "active" : ""), newRoute: "" },
+                { text: "Projects", myClass: (route === "services" ? "active" : ""), newRoute: "/es/servicio" },
+                { text: "Contact", myClass: (route === "city" ? "active" : ""), newRoute: "/es/ciudad" } ]}
             />
         </header>
     );

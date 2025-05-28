@@ -1,10 +1,9 @@
 import { NavLink } from 'react-router-dom';
-import Button from '../button/Button.jsx';
 
 import './Nav.css'
-function NavBar({classNames= "button",myItem, vertical = false }) {
+function NavBar({myItem}) {
     return (
-        <nav className= {vertical ? "nav--vertical" : "nav"}>
+        <nav className=  "nav">
             <ul>
 
                 {myItem.map(item => (
@@ -16,12 +15,11 @@ function NavBar({classNames= "button",myItem, vertical = false }) {
                             to={item.newRoute}
                             target={item.target ? item.target : ""}
                             className={({ isActive }) => {
-                                let classNames = isActive ? 'link active' : 'link';
-                                classNames += vertical ? "" : " nav__a";
+                                let classNames = isActive ? 'nav__a nav__a--active' : 'nav__a';
                                 return classNames;
                             }}
                         >
-                            <Button classNames={classNames}>{item.text}</Button>
+                            {item.text}
                         </NavLink>
 
                     </li>
