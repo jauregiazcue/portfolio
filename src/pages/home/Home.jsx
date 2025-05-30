@@ -2,6 +2,7 @@ import './Home.css'
 import Profile from "../../assets/Profile.png"
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Project from '../project/Project';
 
 function Home() {
     const projectsContainer = useRef(null);
@@ -44,7 +45,7 @@ function Home() {
                 </article>
             </section>
             <section ref={projectsContainer} id="projects" className='section--projects'>
-                <p>Juan Ramon</p>
+                <Project/>
             </section>
         </>
 

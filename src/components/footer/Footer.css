@@ -12,6 +12,19 @@
   }
 }
 
+.footer__section--merger {
+  height: 5em;
+  background-color: var(--second-background);
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  border-bottom: 0;
+  transform: rotate(180deg);
+}
+
+.footer__section--info {
+  height: 15em;
+}
+
 .footer__img {
   height: 6em;
   display: block;

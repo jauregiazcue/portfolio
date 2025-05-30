@@ -4,7 +4,9 @@ function Footer() {
 
   return (
     <footer id="contact" className="footer">
-      © 2025 Mi App
+      <section className='footer__section--merger'></section>
+      <section className='footer__section--info'>© 2025 Mi App</section>
+      
     </footer>
   );
 }

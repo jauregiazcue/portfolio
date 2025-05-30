@@ -10,11 +10,10 @@ function Root() {
       <Header />
 
       <main className="main">
-
         <Outlet />
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }

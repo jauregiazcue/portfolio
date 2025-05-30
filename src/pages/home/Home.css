@@ -10,7 +10,7 @@
       transparent calc(100% - 1px),
       var(--line-background) calc(100% - 1px));
   background-size: 5vw 5vw;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .section__article--presentation {
@@ -23,6 +23,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
+
   & h1 {
     text-transform: uppercase;
     font-style: oblique;
@@ -48,7 +49,7 @@
 }
 
 .cursor {
-  position:relative;
+  position: relative;
 
   transform: translate(-50%, -50%);
   width: 200%;
@@ -59,10 +60,8 @@
 }
 
 .section--projects {
-  height: 100vh;
-  width: 100%;
   background: var(--second-background);
-  ;
+  padding-block: 5vh;
 }
 
 

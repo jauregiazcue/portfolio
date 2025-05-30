@@ -1,0 +1,11 @@
+.project {
+  width: 90%;
+  display: flex;
+  /* Can be in percentage also. */
+  height: 90vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: black;
+
+  border-radius: 10px;
+}
