@@ -1,5 +1,5 @@
 import './Home.css'
-import Profile from "../../assets/Profile.png"
+import Profile from "../../assets/Profile.jpg"
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Project from '../project/Project';
@@ -16,15 +16,14 @@ function Home() {
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
-                // you can find out easily if target is intersecting by inspecting `isIntersecting` property
                 if (entry.isIntersecting) {
-                    console.log(entry.target.id);
                     navigate("/#" + entry.target.id);
                 }
             });
         }, { threshold: 0.5 });
         observer.observe(projectsContainer.current);
         observer.observe(homeContainer.current);
+         setMousePosition({ left: window.outerWidth / 2, top: window.outerHeight / 2 });
     }, [navigate, projectsContainer]);
 
     function handleMouseMove(ev) {
@@ -33,7 +32,7 @@ function Home() {
 
     return (
         <>
-            <section ref={homeContainer} id="top" className='section--presentation' onMouseMove={handleMouseMove}>
+            <section ref={homeContainer} id="top" className='section--presentation' /*onMouseMove={handleMouseMove}*/>
                 <div className='cursor'
                     style={{ left: MousePosition.left, top: MousePosition.top }} />
                 <article className='section__article--presentation'>

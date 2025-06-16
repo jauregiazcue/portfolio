@@ -1,5 +1,31 @@
 .project__list {
   width: 30%;
   height: 90vh;
-  border-left: 2px solid white;
+  border-left: 2px solid var(--second-background);
+  overflow-y: scroll;
+}
+
+.project__list__card {
+  width: 100%;
+  border-bottom: 2px solid var(--second-background);
+  & h1 {
+    padding: 0;
+    margin: 0;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-size: xx-large;
+    
+  } 
+
+  & p {
+    padding: 0;
+    margin: 0;
+    padding-left: 2.5em;
+    padding-bottom: 2em;
+    font-size: large;
+    color: var(--secondary-color);
+  }
+
+  &:hover {
+  }
 }
