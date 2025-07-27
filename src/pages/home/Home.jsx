@@ -14,6 +14,13 @@ function Home() {
     })
 
     useEffect(() => {
+        const handleResize = () => {
+            setMousePosition({ left: window.innerWidth / 2, top: window.innerHeight / 2 });
+        };
+
+        window.addEventListener("resize", handleResize);
+
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -23,7 +30,11 @@ function Home() {
         }, { threshold: 0.5 });
         observer.observe(projectsContainer.current);
         observer.observe(homeContainer.current);
-         setMousePosition({ left: window.outerWidth / 2, top: window.outerHeight / 2 });
+        setMousePosition({ left: window.innerWidth / 2, top: window.innerHeight / 2 });
+
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
     }, [navigate, projectsContainer]);
 
     function handleMouseMove(ev) {
@@ -32,7 +43,7 @@ function Home() {
 
     return (
         <>
-            <section ref={homeContainer} id="top" className='section--presentation' /*onMouseMove={handleMouseMove}*/>
+            <section ref={homeContainer} id="top" className='section--presentation' onMouseMove={handleMouseMove}>
                 <div className='cursor'
                     style={{ left: MousePosition.left, top: MousePosition.top }} />
                 <article className='section__article--presentation'>
@@ -44,7 +55,7 @@ function Home() {
                 </article>
             </section>
             <section ref={projectsContainer} id="projects" className='section--projects'>
-                <Project/>
+                <Project />
             </section>
         </>
 

@@ -15,6 +15,7 @@ function ProjectList({ setActiveObjectId, projects }) {
         <section className='project__list' >
             {projects.map(({ title, smallDescription }, index) => {
                 return <ProjectListCard key={title} title={title} description={smallDescription} handleClick={() => { 
+                        console.clear();
                         setActiveObjectId(index)}
                     } />;
             })}

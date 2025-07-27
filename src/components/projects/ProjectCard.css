@@ -1,4 +1,47 @@
 .project__card {
   width: 70%;
   height: 90vh;
+  display: flex;
+  align-items: center;
+}
+
+.project__card--right {
+  width: 60%;
+  height: 90vh;
+  margin: auto;
+  overflow-y: auto;
+
+  & h1 {
+    padding: 0;
+    margin: 0;
+    padding-left: .5em;
+    padding-top: 1em;
+
+    font-size: 3vw;
+
+  }
+
+  & p {
+    padding: 0;
+    margin: 0;
+    padding-left: 1.5em;
+    padding-bottom: 1em;
+    font-size: 1.5vw;
+    color: var(--secondary-color);
+  }
+
+}
+
+.project__card--left {
+  width: 40%;
+  height: 90vh;
+  margin: auto;
+  overflow: hidden;
+  & img {
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 90%;
+  }
 }

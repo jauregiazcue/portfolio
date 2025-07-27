@@ -13,7 +13,7 @@
     margin: 0;
     padding-left: 1em;
     padding-top: 1em;
-    font-size: xx-large;
+    font-size: 2vw;
     
   } 
 
@@ -22,10 +22,8 @@
     margin: 0;
     padding-left: 2.5em;
     padding-bottom: 2em;
-    font-size: large;
+    font-size: 1.3vw;
     color: var(--secondary-color);
   }
 
-  &:hover {
-  }
 }
