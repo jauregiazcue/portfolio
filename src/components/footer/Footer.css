@@ -1,14 +1,28 @@
 .footer__ul {
+  width: fit-content;
   display: flex;
   flex-flow: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
   list-style-type: none;
-  padding-bottom: 4em;
-  margin: 0;
+  margin: auto auto;
+  text-align: center;
 
   & li {
-    padding: 0 2em;
+    font-size: xx-large;
+    padding-left: .25em;
+    padding-right: .25em;
+
+    & a {
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    & a:visited {
+      color: var(--text);
+    }
+
+    & a:hover {
+      color: var(--hover);
+    }
   }
 }
 
@@ -23,6 +37,7 @@
 
 .footer__section--info {
   height: 15em;
+  text-align: center;
 }
 
 .footer__img {
