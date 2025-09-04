@@ -27,8 +27,13 @@ function ProjectCard({ project }) {
                     })}
                 </ul>
                 <section>
-                    <button>Github</button>
-                    <button>View Project</button>
+                    {project.buttons.map((b) => {
+                        return <>
+                            <a target="_blank" href={b[1]} >{b[0]}</a>
+                            <br/>
+                        </>
+
+                    })}
                 </section>
             </div>
 

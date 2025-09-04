@@ -13,6 +13,16 @@
             "Dialogue System for the Intro, Lore pickup and Conversation",
             "Controller Vibration Feedback",
             "Credits"
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -22,6 +32,16 @@
         "image": "./TerraVista.png",
         "listOfTasks": [
             "As the final project, the Full Stack department, collaborating with the teams from Data Science, Cybersecurity and Marketing, needed to develop a website for feedback management called Terra Vista for the company Terra. Check it out here : https://lnkd.in/dpu3adVt \nThis semi-professional experience was aimed to emulate the work environment of a real company. This experience continues to show to me the importance of time management and the communication both between members of the same department and between teams. \nOn this project I worked mostly on the backend (even though we all touched all the areas) and I developed most of the controllers such as the user, project and task, while my teammate Sandra Fernandez Menendez was connecting our backend with the Data team backend and with Click Up and Anaís Cabado and Dalila Cabrera worked on the frontend.\nIt has been a really interesting project, thanks to the Full Stack team for being the best, and to the other departments for working this well with us."
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -29,14 +49,34 @@
         "description": "React JS MySQL • May 2025 - 1 week ",
         "smallDescription": "React JS MySQL",
         "image": "./Zarautz.png",
-        "listOfTasks": []
+        "listOfTasks": [],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
+        ]
     },
     {
         "title": "Harpocrates",
         "description": "Fetch JS • Apr 2025 - 1 week",
         "smallDescription": "Fetch JS",
         "image": "./Harpocrates.png",
-        "listOfTasks": []
+        "listOfTasks": [],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
+        ]
     },
     {
         "title": "LoreNomicon",
@@ -113,6 +153,16 @@
                     "Book UI"
                 ]
             ]
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -145,6 +195,16 @@
                 "Change Enemy position and direction",
                 "Change where the Enemy would go if scaping"
             ]
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -158,6 +218,16 @@
             "Entity-Component-System architecture",
             "Lighting system : Directional Light, Spot Light and Point Light",
             "Shadow Mapping"
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -173,6 +243,16 @@
                 "Add, Update, Save and Delete Scenes",
                 "Add, Update, Save and Delete GameObjects"
             ]
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -187,6 +267,16 @@
             "Collision detection",
             "Octrees",
             "Threads"
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -211,6 +301,16 @@
                     "Change Movement System",
                     "Stop or Activate all or any unit"
                 ]
+            ]
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
             ]
         ]
     },
@@ -250,6 +350,16 @@
                 "Plants Growth",
                 "Tiles Update"
             ]
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -284,6 +394,16 @@
                 ]
             ],
             "Music"
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
+            ]
         ]
     },
     {
@@ -325,6 +445,16 @@
                     "Combo Meter",
                     "Points"
                 ]
+            ]
+        ],
+        "buttons": [
+            [
+                "Github",
+                "https://github.com/jauregiazcue"
+            ],
+            [
+                "View Project",
+                "https://github.com/jauregiazcue"
             ]
         ]
     }
