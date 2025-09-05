@@ -45,7 +45,7 @@ body {
 
 .footer {
   min-height: 10vh;
-  background-color: var(--footer-color);
+  background-color: black;
 
   & p {
     margin: 0;

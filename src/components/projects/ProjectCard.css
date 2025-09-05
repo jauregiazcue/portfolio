@@ -37,11 +37,38 @@
   height: 90vh;
   margin: auto;
   overflow: hidden;
+
   & img {
     margin: auto;
     display: block;
     object-fit: cover;
     height: 100%;
     width: 90%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .project__card--left {
+    display: none;
+  }
+
+  .project__card--right {
+    width: 100%;
+    overflow-y: visible;
+    height: fit-content;
+
+    & h1 {
+      font-size: large;
+
+    }
+
+    & p {
+      font-size: medium;
+    }
+  }
+
+  .project__card {
+    width: 100%;
+    height: fit-content;
   }
 }

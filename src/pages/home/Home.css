@@ -94,10 +94,9 @@
     & h2 {
       font-size: medium;
     }
-
-   
-
-
   }
-
+  .section--projects {
+  background: black;
+  padding-block: 5vh;
+}
 }

@@ -27,3 +27,11 @@
   }
 
 }
+
+
+@media only screen and (max-width: 768px) {
+  .project__list {
+    display: none;
+  }
+
+}
