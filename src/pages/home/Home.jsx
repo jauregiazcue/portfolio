@@ -3,7 +3,7 @@ import Profile from "../../assets/Profile.jpg"
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Project from '../project/Project';
-import { SealWarning } from "@phosphor-icons/react";
+import { SealWarningIcon } from "@phosphor-icons/react";
 
 function Home() {
     const projectsContainer = useRef(null);
@@ -53,7 +53,7 @@ function Home() {
                     <h2>Gameplay & Tools Programmer</h2>
                     <h2>Full stack Developer</h2>
                     <div className='div--warning'>
-                        <SealWarning color={"red"} size={32} />
+                        <SealWarningIcon color={"red"} size={32} />
                         <p>Portfolio Page In Development</p>
                     </div>
                     

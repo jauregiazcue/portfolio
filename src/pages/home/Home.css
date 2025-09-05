@@ -55,6 +55,7 @@
   text-align: center;
   width: fit-content;
   margin: auto;
+
   & p {
     margin-left: .5em;
     color: red;
@@ -82,6 +83,21 @@
 @media only screen and (max-width: 768px) {
   .home__article {
     width: 100%;
+  }
+
+  .section__article--presentation {
+    width: 90%;
+    & h1 {
+      font-size: large;
+    }
+
+    & h2 {
+      font-size: medium;
+    }
+
+   
+
+
   }
 
 }
