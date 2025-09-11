@@ -3,7 +3,7 @@
         "title": "Born To Rise",
         "description": "Unreal Engine 4 C++ Perforce • Sep 2022 - Jul 2023",
         "smallDescription": "Unreal Engine 4 C++",
-        "image": "./BornToRise.jpg",
+        "image": "./react_portfolio/BornToRise.jpg",
         "listOfTasks": [
             "Create, Insert and Enhanced all the particles",
             "Masilla Enemy Movement System",
@@ -29,7 +29,7 @@
         "title": "Terra Vista",
         "description": "React MongoDB NodeMailer TS... • Jun 2025 - 2 weeks",
         "smallDescription": "React MongoDB NodeMailer TS...",
-        "image": "./TerraVista.png",
+        "image": "./react_portfolio/TerraVista.png",
         "listOfTasks": [
             "As the final project, the Full Stack department, collaborating with the teams from Data Science, Cybersecurity and Marketing, needed to develop a website for feedback management called Terra Vista for the company Terra. Check it out here : https://lnkd.in/dpu3adVt \nThis semi-professional experience was aimed to emulate the work environment of a real company. This experience continues to show to me the importance of time management and the communication both between members of the same department and between teams. \nOn this project I worked mostly on the backend (even though we all touched all the areas) and I developed most of the controllers such as the user, project and task, while my teammate Sandra Fernandez Menendez was connecting our backend with the Data team backend and with Click Up and Anaís Cabado and Dalila Cabrera worked on the frontend.\nIt has been a really interesting project, thanks to the Full Stack team for being the best, and to the other departments for working this well with us."
         ],
@@ -48,7 +48,7 @@
         "title": "Zarautz Lost and Found",
         "description": "React JS MySQL • May 2025 - 1 week ",
         "smallDescription": "React JS MySQL",
-        "image": "./Zarautz.png",
+        "image": "./react_portfolio/Zarautz.png",
         "listOfTasks": [],
         "buttons": [
             [
@@ -65,7 +65,7 @@
         "title": "Harpocrates",
         "description": "Fetch JS • Apr 2025 - 1 week",
         "smallDescription": "Fetch JS",
-        "image": "./Harpocrates.png",
+        "image": "./react_portfolio/Harpocrates.png",
         "listOfTasks": [],
         "buttons": [
             [
@@ -82,7 +82,7 @@
         "title": "LoreNomicon",
         "description": "PS5 C++ GitHub • Jan 2024 - May 2024",
         "smallDescription": "PS5 C++",
-        "image": "./LoreNomicon.png",
+        "image": "./react_portfolio/LoreNomicon.png",
         "listOfTasks": [
             "Created the starting engine (Fortress Engine)",
             "Level Generation",
@@ -169,7 +169,7 @@
         "title": "LoreNomicon Level Editor",
         "description": "OpenGL C++ GitHub • Jan 2024 - May 2024",
         "smallDescription": "OpenGL C++",
-        "image": "./LevelEditor.png",
+        "image": "./react_portfolio/LevelEditor.png",
         "listOfTasks": [
             "Made in OpenGL",
             "Changes the Json file used to generate levels in the PS5 Game",
@@ -211,7 +211,7 @@
         "title": "Palace Engine",
         "description": "OpenGL C++ GitHub • Sep 2022 - May 2023",
         "smallDescription": "OpenGL C++",
-        "image": "./default.jpg",
+        "image": "./react_portfolio/default.jpg",
         "listOfTasks": [
             "Abstraction of the OpenGL Library",
             "Deferred rendering",
@@ -234,7 +234,7 @@
         "title": "Castle Engine",
         "description": "PS5 C++ GitHub • Sep 2023 - Dic 2023",
         "smallDescription": "PS5 C++",
-        "image": "./default.jpg",
+        "image": "./react_portfolio/default.jpg",
         "listOfTasks": [
             "Model Loader with Json",
             "Texture Loader with Json",
@@ -259,7 +259,7 @@
         "title": "Fortress Engine",
         "description": "OpenGL C++ GitHub • Sep 2023 - Dec 2023",
         "smallDescription": "OpenGL C++",
-        "image": "./default.jpg",
+        "image": "./react_portfolio/default.jpg",
         "listOfTasks": [
             "World Generation",
             "Culling",
@@ -283,7 +283,7 @@
         "title": "Multiagent System",
         "description": "ESAT Engine C++ IA GitHub • Sep 2022 - Dec 2023",
         "smallDescription": "ESAT Engine C++ IA",
-        "image": "./default.jpg",
+        "image": "./react_portfolio/default.jpg",
         "listOfTasks": [
             "Units Creations",
             "Units Movement System",
@@ -318,7 +318,7 @@
         "title": "Procedural World Generation",
         "description": "Palace Engine C++ IA GitHub • Jan 2023 - May 2023",
         "smallDescription": "Palace Engine C++ IA",
-        "image": "./default.jpg",
+        "image": "./react_portfolio/default.jpg",
         "listOfTasks": [
             "World generation using Cellular Automata",
             [
@@ -366,7 +366,7 @@
         "title": "Meteor Shower",
         "description": "Unity C# GitHub • Apr 2022 - May 2022",
         "smallDescription": "Unity C#",
-        "image": "./default.jpg",
+        "image": "./react_portfolio/default.jpg",
         "listOfTasks": [
             "Enemy Wave System",
             "Enemy",
@@ -410,7 +410,7 @@
         "title": "Space Shock",
         "description": "Unity C# GitHub • Nov 2021 - Dic 2021",
         "smallDescription": "Unity C#",
-        "image": "./SpaceShock.png",
+        "image": "./react_portfolio/SpaceShock.png",
         "listOfTasks": [
             "Enemy Wave System",
             "Enemies",
