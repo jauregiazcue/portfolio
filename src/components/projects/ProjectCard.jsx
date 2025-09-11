@@ -26,10 +26,10 @@ function ProjectCard({ project }) {
                         return getListTask(task);
                     })}
                 </ul>
-                <section>
+                <section className='project__card--links'>
                     {project.buttons.map((b) => {
                         return <>
-                            <a target="_blank" href={b[1]} >{b[0]}</a>
+                            <a className="project__link" target="_blank" href={b[1]} >{b[0]}</a>
                             <br/>
                         </>
 

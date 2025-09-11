@@ -47,6 +47,31 @@
   }
 }
 
+.project__card--links {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project__link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: large;
+  border-radius: 5em;
+  padding: 1em;
+
+  background-color: rgb(255 255 255 / 30%);
+  backdrop-filter: blur(10px);
+
+  &:visited {
+    color: var(--text);
+  }
+
+  &:hover {
+    color: black;
+    background-color: var(--nav-active-background);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .project__card--left {
     display: none;
