@@ -3,11 +3,14 @@ import Profile from "../../assets/Profile.jpg"
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Project from '../project/Project';
+
+import Footer from "../../components/footer/Footer.jsx";
 import { SealWarningIcon } from "@phosphor-icons/react";
 
 function Home() {
     const projectsContainer = useRef(null);
     const homeContainer = useRef(null);
+    const footerContainer = useRef(null);
     let navigate = useNavigate();
     const [MousePosition, setMousePosition] = useState({
         left: 0,
@@ -31,12 +34,13 @@ function Home() {
         }, { threshold: 0.5 });
         observer.observe(projectsContainer.current);
         observer.observe(homeContainer.current);
+        observer.observe(footerContainer.current);
         setMousePosition({ left: window.innerWidth / 2, top: window.innerHeight / 2 });
 
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [navigate, projectsContainer]);
+    }, [navigate, projectsContainer,homeContainer,footerContainer]);
 
     function handleMouseMove(ev) {
         setMousePosition({ left: ev.pageX, top: ev.pageY });
@@ -56,11 +60,14 @@ function Home() {
                         <SealWarningIcon color={"red"} size={32} />
                         <p>Portfolio Page In Development</p>
                     </div>
-                    
+
                 </article>
             </section>
             <section ref={projectsContainer} id="projects" className='section--projects'>
                 <Project />
+            </section>
+            <section ref={footerContainer} id="contact" >
+                <Footer />
             </section>
         </>
 
