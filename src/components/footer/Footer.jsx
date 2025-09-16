@@ -12,13 +12,13 @@ function Footer() {
               <p>Contact Me · kai.jauregi@proton.me</p>
             </a>
             <a target="_blank" href="https://www.linkedin.com/in/jauregiazcue/">
-              <i class="fa-brands fa-linkedin"></i>
+              <i className="fa-brands fa-linkedin"></i>
             </a>
             <a target="_blank" href="https://github.com/jauregiazcue">
-                <i class="fa-brands fa-square-github"></i>
-              </a>
+              <i className="fa-brands fa-square-github"></i>
+            </a>
           </section>
-         
+
           <hr />
           <p>© Kai Jauregi Azcue. All rights reserved.</p>
         </div>
