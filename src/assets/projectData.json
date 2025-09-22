@@ -16,12 +16,8 @@
         ],
         "buttons": [
             [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
+                "Steam",
+                "https://store.steampowered.com/app/2432460/Born_to_Rise/"
             ]
         ]
     },
@@ -35,12 +31,8 @@
         ],
         "buttons": [
             [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
+                "Showcase",
+                "https://www.youtube.com/watch?v=cLsBnYXa_Zg"
             ]
         ]
     },
@@ -51,14 +43,7 @@
         "image": "./react_portfolio/Zarautz.png",
         "listOfTasks": [],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+            
         ]
     },
     {
@@ -70,11 +55,11 @@
         "buttons": [
             [
                 "Github",
-                "https://github.com/jauregiazcue"
+                "https://github.com/jauregiazcue/harpocrates"
             ],
             [
                 "View Project",
-                "https://github.com/jauregiazcue"
+                "https://jauregiazcue.github.io/harpocrates/"
             ]
         ]
     },
@@ -156,12 +141,8 @@
         ],
         "buttons": [
             [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
+                "Showcase",
+                "https://www.youtube.com/watch?v=hvTNwx6izd8"
             ]
         ]
     },
@@ -197,14 +178,7 @@
             ]
         ],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+            
         ]
     },
     {
@@ -221,12 +195,8 @@
         ],
         "buttons": [
             [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
                 "View Project",
-                "https://github.com/jauregiazcue"
+                "https://www.youtube.com/watch?v=IxGubT8ZGrg"
             ]
         ]
     },
@@ -245,14 +215,7 @@
             ]
         ],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+           
         ]
     },
     {
@@ -271,11 +234,7 @@
         "buttons": [
             [
                 "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
+                "https://github.com/jauregiazcue/FortressEngine"
             ]
         ]
     },
@@ -304,14 +263,7 @@
             ]
         ],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+          
         ]
     },
     {
@@ -352,14 +304,7 @@
             ]
         ],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+            
         ]
     },
     {
@@ -396,14 +341,7 @@
             "Music"
         ],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+            
         ]
     },
     {
@@ -448,14 +386,7 @@
             ]
         ],
         "buttons": [
-            [
-                "Github",
-                "https://github.com/jauregiazcue"
-            ],
-            [
-                "View Project",
-                "https://github.com/jauregiazcue"
-            ]
+           
         ]
     }
 ]
