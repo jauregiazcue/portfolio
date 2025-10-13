@@ -27,7 +27,10 @@
         "smallDescription": "React MongoDB NodeMailer TS...",
         "image": "./react_portfolio/TerraVista.png",
         "listOfTasks": [
-            "As the final project, the Full Stack department, collaborating with the teams from Data Science, Cybersecurity and Marketing, needed to develop a website for feedback management called Terra Vista for the company Terra. Check it out here : https://lnkd.in/dpu3adVt \nThis semi-professional experience was aimed to emulate the work environment of a real company. This experience continues to show to me the importance of time management and the communication both between members of the same department and between teams. \nOn this project I worked mostly on the backend (even though we all touched all the areas) and I developed most of the controllers such as the user, project and task, while my teammate Sandra Fernandez Menendez was connecting our backend with the Data team backend and with Click Up and Anaís Cabado and Dalila Cabrera worked on the frontend.\nIt has been a really interesting project, thanks to the Full Stack team for being the best, and to the other departments for working this well with us."
+            "Controllers, Models and routes for project and user",
+            "Backend register and login",
+            "Option to add images to backend",
+            "Help with extra stuff in frontend "
         ],
         "buttons": [
             [
@@ -41,17 +44,39 @@
         "description": "React JS MySQL • May 2025 - 1 week ",
         "smallDescription": "React JS MySQL",
         "image": "./react_portfolio/Zarautz.png",
-        "listOfTasks": [],
-        "buttons": [
-            
-        ]
+        "listOfTasks": [
+            "Frontend",
+            [
+                "Introduction Page",
+                "Lost and found Page",
+                "Lost and Found edit page",
+                "Request page"
+            ],
+            "Backend",
+            [
+                "Controllers, Models and Routes for objects",
+                "Controllers, Models and Routes for object categories",
+                "Controllers, Models and Routes for requests",
+                "Controllers, Models and Routes for users",
+                "Option to add images"
+            ]
+        ],
+        "buttons": []
     },
     {
         "title": "Harpocrates",
         "description": "Fetch JS • Apr 2025 - 1 week",
         "smallDescription": "Fetch JS",
         "image": "./react_portfolio/Harpocrates.png",
-        "listOfTasks": [],
+        "listOfTasks": [
+            "QR Code Generator using an API",
+            "Caesar Ciphering",
+            "Atbash Ciphering",
+            "A1Z26 Ciphering",
+            "Vigenere Ciphering",
+            "Search",
+            "Favorite Saving"
+        ],
         "buttons": [
             [
                 "Github",
@@ -177,9 +202,7 @@
                 "Change where the Enemy would go if scaping"
             ]
         ],
-        "buttons": [
-            
-        ]
+        "buttons": []
     },
     {
         "title": "Palace Engine",
@@ -214,9 +237,7 @@
                 "Add, Update, Save and Delete GameObjects"
             ]
         ],
-        "buttons": [
-           
-        ]
+        "buttons": []
     },
     {
         "title": "Fortress Engine",
@@ -262,9 +283,7 @@
                 ]
             ]
         ],
-        "buttons": [
-          
-        ]
+        "buttons": []
     },
     {
         "title": "Procedural World Generation",
@@ -303,9 +322,7 @@
                 "Tiles Update"
             ]
         ],
-        "buttons": [
-            
-        ]
+        "buttons": []
     },
     {
         "title": "Meteor Shower",
@@ -340,9 +357,7 @@
             ],
             "Music"
         ],
-        "buttons": [
-            
-        ]
+        "buttons": []
     },
     {
         "title": "Space Shock",
@@ -385,8 +400,6 @@
                 ]
             ]
         ],
-        "buttons": [
-           
-        ]
+        "buttons": []
     }
 ]
