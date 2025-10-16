@@ -9,6 +9,7 @@ function Header({ route }) {
             <Nav vertical={false} myItem={[
                 { text: "Home", myClass: (route === "home" ? "active" : ""), newRoute: "/#top" },
                 { text: "Projects", myClass: (route === "projects" ? "active" : ""), newRoute: "/#projects" },
+                { text: "Experience", myClass: (route === "experience" ? "active" : ""), newRoute: "/#experience" },
                 { text: "Contact", myClass: (route === "city" ? "active" : ""), newRoute: "/#contact" } ]}
             />
         </header>

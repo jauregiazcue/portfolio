@@ -6,9 +6,11 @@ import Project from '../project/Project';
 
 import Footer from "../../components/footer/Footer.jsx";
 import { SealWarningIcon } from "@phosphor-icons/react";
+import Experience from '../../components/experience/Experience.jsx';
 
 function Home() {
     const projectsContainer = useRef(null);
+    const referenceContainer = useRef(null);
     const homeContainer = useRef(null);
     const footerContainer = useRef(null);
     let navigate = useNavigate();
@@ -33,6 +35,7 @@ function Home() {
             });
         }, { threshold: 0.5 });
         observer.observe(projectsContainer.current);
+        observer.observe(referenceContainer.current);
         observer.observe(homeContainer.current);
         observer.observe(footerContainer.current);
         setMousePosition({ left: window.innerWidth / 2, top: window.innerHeight / 2 });
@@ -40,7 +43,7 @@ function Home() {
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [navigate, projectsContainer,homeContainer,footerContainer]);
+    }, [navigate, projectsContainer,homeContainer,referenceContainer,footerContainer]);
 
     function handleMouseMove(ev) {
         setMousePosition({ left: ev.pageX, top: ev.pageY });
@@ -65,6 +68,9 @@ function Home() {
             </section>
             <section ref={projectsContainer} id="projects" className='section--projects'>
                 <Project />
+            </section>
+            <section ref={referenceContainer} id="experience" className='section--experience'>
+                <Experience />
             </section>
             <section ref={footerContainer} id="contact" >
                 <Footer />

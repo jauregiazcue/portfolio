@@ -1,0 +1,52 @@
+.experience {
+  width: 90%;
+  display: flex;
+  /* Can be in percentage also. */
+  height: 90vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: black;
+
+  border-radius: 10px;
+}
+
+.positions {
+  width: 50%;
+  padding: 1em;
+
+  & h1 {
+    margin-bottom: 0;
+  }
+
+  & h2 {
+    margin: 0 0;
+    color: var(--main-color);
+
+    & em {
+      color: var(--secondary-color);
+      
+    }
+  }
+
+  & p {
+    
+  }
+}
+
+.positions--title {
+  font-size: 50px;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  .experience {
+    width: 100%;
+    height: fit-content;
+    flex-direction: column;
+  }
+
+  .positions {
+    width: 100%;
+  }
+}

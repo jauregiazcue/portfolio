@@ -78,6 +78,11 @@
   padding-block: 5vh;
 }
 
+.section--experience {
+  background: var(--second-background);
+  padding-block: 5vh;
+}
+
 
 
 @media only screen and (max-width: 768px) {
@@ -87,6 +92,7 @@
 
   .section__article--presentation {
     width: 90%;
+
     & h1 {
       font-size: large;
     }
@@ -95,8 +101,15 @@
       font-size: medium;
     }
   }
+
   .section--projects {
-  background: black;
-  padding-block: 5vh;
-}
+    background: black;
+    padding-block: 5vh;
+  }
+
+  .section--experience {
+    background: black;
+    padding-block: 5vh;
+  }
+
 }
