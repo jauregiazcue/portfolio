@@ -9,6 +9,6 @@ const router = createBrowserRouter([
             { path: "", element: <Home /> },
         ],
     },
-], {basename: "/react_portfolio"});
+], {basename: "/portfolio"});
 
 export default router;
