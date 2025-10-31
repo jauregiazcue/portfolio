@@ -16,7 +16,7 @@ function ProjectCard({ project }) {
     return (
         <section className='project__card'>
             <div className='project__card--left'>
-                <img src={project.image} />
+                <img src={project.image + "?raw=true"} />
             </div>
             <div className='project__card--right'>
                 <h1>{project.title}</h1>
