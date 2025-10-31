@@ -3,7 +3,7 @@
         "title": "Born To Rise",
         "description": "Unreal Engine 4 C++ Perforce • Sep 2022 - Jul 2023",
         "smallDescription": "Unreal Engine 4 C++",
-        "image": "./react_portfolio/BornToRise.jpg",
+        "image": "./portfolio/BornToRise.jpg",
         "listOfTasks": [
             "Create, Insert and Enhanced all the particles",
             "Masilla Enemy Movement System",
@@ -25,7 +25,7 @@
         "title": "Terra Vista",
         "description": "React MongoDB NodeMailer TS... • Jun 2025 - 2 weeks",
         "smallDescription": "React MongoDB NodeMailer TS...",
-        "image": "./react_portfolio/TerraVista.png",
+        "image": "./portfolio/TerraVista.png",
         "listOfTasks": [
             "Controllers, Models and routes for project and user",
             "Backend register and login",
@@ -43,7 +43,7 @@
         "title": "Zarautz Lost and Found",
         "description": "React JS MySQL • May 2025 - 1 week ",
         "smallDescription": "React JS MySQL",
-        "image": "./react_portfolio/Zarautz.png",
+        "image": "./portfolio/Zarautz.png",
         "listOfTasks": [
             "Frontend",
             [
@@ -67,7 +67,7 @@
         "title": "Harpocrates",
         "description": "Fetch JS • Apr 2025 - 1 week",
         "smallDescription": "Fetch JS",
-        "image": "./react_portfolio/Harpocrates.png",
+        "image": "./portfolio/Harpocrates.png",
         "listOfTasks": [
             "QR Code Generator using an API",
             "Caesar Ciphering",
@@ -92,7 +92,7 @@
         "title": "LoreNomicon",
         "description": "PS5 C++ GitHub • Jan 2024 - May 2024",
         "smallDescription": "PS5 C++",
-        "image": "./react_portfolio/LoreNomicon.png",
+        "image": "./portfolio/LoreNomicon.png",
         "listOfTasks": [
             "Created the starting engine (Fortress Engine)",
             "Level Generation",
@@ -175,7 +175,7 @@
         "title": "LoreNomicon Level Editor",
         "description": "OpenGL C++ GitHub • Jan 2024 - May 2024",
         "smallDescription": "OpenGL C++",
-        "image": "./react_portfolio/LevelEditor.png",
+        "image": "./portfolio/LevelEditor.png",
         "listOfTasks": [
             "Made in OpenGL",
             "Changes the Json file used to generate levels in the PS5 Game",
@@ -208,7 +208,7 @@
         "title": "Palace Engine",
         "description": "OpenGL C++ GitHub • Sep 2022 - May 2023",
         "smallDescription": "OpenGL C++",
-        "image": "./react_portfolio/default.jpg",
+        "image": "./portfolio/default.jpg",
         "listOfTasks": [
             "Abstraction of the OpenGL Library",
             "Deferred rendering",
@@ -227,7 +227,7 @@
         "title": "Castle Engine",
         "description": "PS5 C++ GitHub • Sep 2023 - Dic 2023",
         "smallDescription": "PS5 C++",
-        "image": "./react_portfolio/default.jpg",
+        "image": "./portfolio/default.jpg",
         "listOfTasks": [
             "Model Loader with Json",
             "Texture Loader with Json",
@@ -243,7 +243,7 @@
         "title": "Fortress Engine",
         "description": "OpenGL C++ GitHub • Sep 2023 - Dec 2023",
         "smallDescription": "OpenGL C++",
-        "image": "./react_portfolio/default.jpg",
+        "image": "./portfolio/default.jpg",
         "listOfTasks": [
             "World Generation",
             "Culling",
@@ -263,7 +263,7 @@
         "title": "Multiagent System",
         "description": "ESAT Engine C++ IA GitHub • Sep 2022 - Dec 2023",
         "smallDescription": "ESAT Engine C++ IA",
-        "image": "./react_portfolio/default.jpg",
+        "image": "./portfolio/default.jpg",
         "listOfTasks": [
             "Units Creations",
             "Units Movement System",
@@ -289,7 +289,7 @@
         "title": "Procedural World Generation",
         "description": "Palace Engine C++ IA GitHub • Jan 2023 - May 2023",
         "smallDescription": "Palace Engine C++ IA",
-        "image": "./react_portfolio/default.jpg",
+        "image": "./portfolio/default.jpg",
         "listOfTasks": [
             "World generation using Cellular Automata",
             [
@@ -328,7 +328,7 @@
         "title": "Meteor Shower",
         "description": "Unity C# GitHub • Apr 2022 - May 2022",
         "smallDescription": "Unity C#",
-        "image": "./react_portfolio/default.jpg",
+        "image": "./portfolio/default.jpg",
         "listOfTasks": [
             "Enemy Wave System",
             "Enemy",
@@ -363,7 +363,7 @@
         "title": "Space Shock",
         "description": "Unity C# GitHub • Nov 2021 - Dic 2021",
         "smallDescription": "Unity C#",
-        "image": "./react_portfolio/SpaceShock.png",
+        "image": "./portfolio/SpaceShock.png",
         "listOfTasks": [
             "Enemy Wave System",
             "Enemies",
