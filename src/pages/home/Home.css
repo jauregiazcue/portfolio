@@ -85,12 +85,22 @@
 
 
 @media only screen and (max-width: 768px) {
+  .cursor {
+    position: relative;
+
+    transform: translate(-55%, -53%);
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, black 30%);
+    z-index: 1;
+  }
+
   .home__article {
     width: 100%;
   }
 
   .section__article--presentation {
-    width: 90%;
+    min-width: 100%;
 
     & h1 {
       font-size: large;
@@ -102,13 +112,20 @@
   }
 
   .section--projects {
+    width: 100%;
     background: black;
     padding-block: 5vh;
   }
 
   .section--experience {
+    width: 100%;
     background: black;
     padding-block: 5vh;
+  }
+
+  .aux {
+    max-width: min-content;
+    margin: auto;
   }
 
 }

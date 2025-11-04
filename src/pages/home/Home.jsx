@@ -50,7 +50,7 @@ function Home() {
     }
 
     return (
-        <>
+        <div className='aux'>
             <section ref={homeContainer} id="top" className='section--presentation' onMouseMove={handleMouseMove}>
                 <div className='cursor'
                     style={{ left: MousePosition.left, top: MousePosition.top }} />
@@ -75,7 +75,7 @@ function Home() {
             <section ref={footerContainer} id="contact" >
                 <Footer />
             </section>
-        </>
+        </div>
 
     );
 }

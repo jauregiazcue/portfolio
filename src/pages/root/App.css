@@ -52,15 +52,7 @@ body {
   }
 }
 
-@media only screen and (max-width: 768px) {
-
-  #root {
-    width: 100%;
-    border-radius: 0;
-  }
-
-  body {
-    padding-top: 0%;
-
-  }
+.firstAux {
+  max-width: 100%;
+  background-color: black;
 }

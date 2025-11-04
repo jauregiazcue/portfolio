@@ -5,7 +5,7 @@ import { Outlet } from 'react-router-dom';
 import './App.css'
 function Root() {
   return (
-    <div>
+    <div className="firstAux">
       <Header />
 
       <main className="main">
