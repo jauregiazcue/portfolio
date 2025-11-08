@@ -12,7 +12,7 @@ function ProjectCard({ project }) {
         }
 
     }
-    console.clear();
+    
     return (
         <section className='project__card'>
             <div className='project__card--left'>
