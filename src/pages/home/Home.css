@@ -58,7 +58,20 @@
 
   & p {
     margin-left: .5em;
-    color: red;
+    color: var(--text);
+  }
+
+  & a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  & a:visited {
+    color: var(--text);
+  }
+
+  & a:hover {
+    color: var(--hover);
   }
 }
 

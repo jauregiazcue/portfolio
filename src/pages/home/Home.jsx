@@ -5,7 +5,6 @@ import { useNavigate } from 'react-router-dom';
 import Project from '../project/Project';
 
 import Footer from "../../components/footer/Footer.jsx";
-import { SealWarningIcon } from "@phosphor-icons/react";
 import Experience from '../../components/experience/Experience.jsx';
 
 function Home() {
@@ -43,7 +42,7 @@ function Home() {
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }, [navigate, projectsContainer,homeContainer,referenceContainer,footerContainer]);
+    }, [navigate, projectsContainer, homeContainer, referenceContainer, footerContainer]);
 
     function handleMouseMove(ev) {
         setMousePosition({ left: ev.pageX, top: ev.pageY });
@@ -60,8 +59,13 @@ function Home() {
                     <h2>Gameplay & Tools Programmer</h2>
                     <h2>Full stack Developer</h2>
                     <div className='div--warning'>
-                        <SealWarningIcon color={"red"} size={32} />
-                        <p>Portfolio Page In Development</p>
+                        <a href="/portfolio/Kai_Jauregi_Full_Stack_en.pdf"  
+                        download="Kai_Jauregi_CV.pdf" target="_blank">
+                            Download CV</a>
+                            <p> |&nbsp;&nbsp; </p>
+                        <a href="/portfolio/Kai_Jauregi_Full_Stack_es.pdf" 
+                        download="Kai_Jauregi_CV.pdf" target="_blank">
+                            Download CV in spanish</a>
                     </div>
 
                 </article>
