@@ -1,7 +1,7 @@
 {
   "name": "vite-react-typescript-starter",
   "homepage": "https://jauregiazcue.github.io/new-portfolio/",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
