@@ -1,0 +1,34 @@
+@use "@style/vars.scss" as *;
+
+@mixin stack() {
+  width: 100%;
+  &--body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+    &>* {
+      margin: $measure;
+    }
+  }
+
+  background-color: getColor(e, "light");
+  body.dark-mode & {
+    background-color: getColor(d, "dark");
+    color: getColor(a, "dark");
+  }
+}
+
+.stack-a {
+  @include stack();
+
+  &--body {
+    width: 80%;
+    padding: $measure * 2;
+  }
+}
+
+.stack-b {
+  @include stack();
+}

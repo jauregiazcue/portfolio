@@ -1,0 +1,91 @@
+@use "@style/vars.scss" as *;
+@use "@style/media.scss" as *;
+
+
+
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding-top: $measure;
+
+
+  & a {
+    width: max-content;
+    margin-right: $measure * 5;
+    transition: .7s;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.link-a {
+  position: fixed;
+  top: 50%;
+  left: 1em;
+  transform: translate(0, -50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  border-radius: $border-radius-b;
+  border: $measure *.25 solid transparent;
+  z-index: 2;
+  text-align: center;
+
+  width: fit-content;
+  overflow: hidden;
+
+  background-color: getColor(b, "light");
+
+  body.dark-mode & {
+    background-color: getColor(b, "dark");
+    color: getColor(a,"dark");
+    border-color: getColor(b,"dark");
+  }
+
+  & a {
+
+    width: fit-content;
+    min-width: 100%;
+    padding-top: $measure * 2;
+    padding-bottom: $measure * 2;
+    margin-right: $measure * 5;
+    transition: .7s;
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: getColor(a, "light");
+      color: getColor(b, "light");
+
+      body.dark-mode & {
+        background-color: getColor(a, "dark");
+        color: getColor(b, "dark");
+      }
+    }
+
+  }
+
+  @include mobile {
+    flex-direction: row;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    & a {
+      width: fit-content;
+      min-width: 0;
+
+      padding-top: $measure;
+      padding-bottom: $measure;
+      margin-right: $measure * 2;
+    }
+  }
+}

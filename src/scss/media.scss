@@ -1,0 +1,41 @@
+@use "sass:map";
+@use "vars.scss" as *;
+
+@mixin desktop {
+  @media only screen and 
+  (min-width: map.get($breakpoints-grid, desktop)) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (max-width: map.get($breakpoints-grid, desktop)) {
+    @content;
+  }
+}
+
+@mixin tablet-large {
+  @media only screen and (max-width: map.get($breakpoints-grid, laptop)) {
+    @content;
+  }
+}
+
+@mixin tablet-medium {
+  @media only screen and (max-width: map.get($breakpoints-grid, tabletl)) {
+    @content;
+  }
+}
+
+@mixin tablet-small {
+  @media only screen and (max-width: map.get($breakpoints-grid, tabletm)) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media only screen and 
+  (max-width: map.get($breakpoints-grid, tablets)) {
+    @content;
+  }
+}
+

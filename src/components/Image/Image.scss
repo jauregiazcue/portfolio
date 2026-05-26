@@ -1,0 +1,24 @@
+@use "@style/vars.scss" as *;
+@use "@style/media.scss" as *;
+
+.image {
+  width: 20%;
+  block-size: auto;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: top center;
+  border-radius: $border-radius-a;
+  transition: .5s;
+
+  block-size: auto;
+
+  &:hover {
+    transform: scale(1.1);
+    border-radius: 0;
+    padding-bottom: $measure * 4;
+  }
+
+  @include mobile {
+    width: 70%;
+  }
+}

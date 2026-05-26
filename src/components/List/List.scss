@@ -1,0 +1,69 @@
+@use "@style/vars.scss" as *;
+
+.list {
+  margin: $measure;
+  border-radius: $border-radius-b;
+
+  & .card {
+    max-height: none;
+    width: 70vw;
+  }
+
+  & li {
+    $borderSize : $measure * .5;
+    $paddingSize : $measure * 2;
+    $paddingCircle: -($borderSize + $measure * 1.2);
+
+
+    $decorColor : getColor(b, "dark");
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    padding-left: $paddingSize;
+    padding-bottom: $measure * 2;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: $paddingCircle;
+      top: 0;
+      display: inline-block;
+      color: transparent;
+      height: $measure * 2;
+      width: $measure * 2;
+      background: getColor(c, "dark");
+
+      border-radius: 100%;
+      margin-top: $measure * 2.5;
+      border: $borderSize solid $decorColor;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: $paddingCircle * .25;
+      top: 0;
+      display: inline-block;
+      color: transparent;
+      height: 110%;
+      background: getColor(c, "dark");
+
+      border: $borderSize * .5 solid $decorColor ;
+    }
+
+    &:first-child::before {
+      margin-top: $measure * 3;
+    }
+
+    &:last-child {
+      margin-right: 0;
+      flex-grow: 0;
+
+      &::before {
+        border: none;
+      }
+    }
+  }
+}

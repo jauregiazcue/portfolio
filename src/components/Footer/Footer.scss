@@ -1,0 +1,35 @@
+@use "@style/vars.scss" as *;
+@use "@style/media.scss" as *;
+
+
+
+.footer {
+  min-height: 0;
+  height: 30vh;
+
+  &--head {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &--body {
+    width: 50%;
+    height: 20vh;
+    text-align: center;
+  }
+
+  body.dark-mode & {
+    background-color: getColor(e, "dark");
+    color: getColor(a, "dark");
+  }
+}
+
+
+
+.footer--merger {
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+}
