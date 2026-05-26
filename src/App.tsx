@@ -1,13 +1,13 @@
-import Hero, { HeroType } from "@components/Hero/Hero";
+/* import Hero, { HeroType } from "@components/Hero/Hero";
 import HeroImage from "@assets/Profile.jpg";
-import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
+import Link, { type LinkPayload, LinkType } from "@components/Links/Link"; */
 import "@style/vars.scss";
-import CardGenerator from "./components/CardGenerator/CardGenerator";
+/* import CardGenerator from "./components/CardGenerator/CardGenerator";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import List from "./components/List/List";
-import type { CardPayload } from "./components/Card/Card";
-function App() {
+import type { CardPayload } from "./components/Card/Card"; */
+/*function App() {
   const [isActive, setActive] = useState(true);
   const handleToggle = () => {
     if (!isActive) {
@@ -87,7 +87,6 @@ function App() {
 
   return (
     <>
-      {/** NAV BAR */}
       <Link type={LinkType.navbar} list={[
         { href: "#hero", textClassname: "fa-solid fa-house" },
         { href: "#project", textClassname: "fa-solid fa-file" },
@@ -95,7 +94,7 @@ function App() {
         { href: "#contact", textClassname: "fa-solid fa-address-book" },
         { onClick: handleToggle, textClassname: "fa-solid fa-circle-half-stroke" }
       ]} />
-      {/** HERO */}
+
       <Hero title="Kai Jauregi" url={HeroImage}
         alt="Profile photo of Kai Jauregi" type={HeroType.centerFocus} id="hero">
         <h2> Gameplay & Tools Programmer </h2>
@@ -113,6 +112,10 @@ function App() {
         email={"kai.jauregi@proton.me"} />
     </>
   )
+}*/
+
+function App(){
+  return <h1> Test </h1>
 }
 
 export default App;
