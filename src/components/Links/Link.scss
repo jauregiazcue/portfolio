@@ -9,11 +9,16 @@
   justify-content: space-evenly;
   padding-top: $measure;
 
-
   & a {
     width: max-content;
     margin-right: $measure * 5;
     transition: .7s;
+
+    color: getColor(a, "light");
+
+    body.dark-mode & {
+      color: getColor(a, "dark");
+    }
 
     &:nth-last-child(1) {
       margin-right: 0;
@@ -43,12 +48,13 @@
   width: fit-content;
   overflow: hidden;
 
-  background-color: getColor(b, "light");
+  background-color: getColor(i, "light");
+  backdrop-filter: blur(10px);
 
   body.dark-mode & {
-    background-color: getColor(b, "dark");
-    color: getColor(a,"dark");
-    border-color: getColor(b,"dark");
+    background-color: getColor(i, "dark");
+    color: getColor(a, "dark");
+    border-color: getColor(b, "dark");
   }
 
   & a {
@@ -62,12 +68,21 @@
 
     &:hover {
       transform: scale(1.1);
-      background-color: getColor(a, "light");
+      background-color: getColor(i, "dark");
       color: getColor(b, "light");
 
+      & .fa-solid {
+        color: getColor(b, "light");
+      }
+
       body.dark-mode & {
-        background-color: getColor(a, "dark");
+        background-color: getColor(i, "light");
         color: getColor(b, "dark");
+
+        & .fa-solid {
+          color: getColor(b, "dark");
+        }
+
       }
     }
 

@@ -1,13 +1,14 @@
-/* import Hero, { HeroType } from "@components/Hero/Hero";
+import Hero, { HeroType } from "@components/Hero/Hero";
 import HeroImage from "@assets/Profile.jpg";
-import Link, { type LinkPayload, LinkType } from "@components/Links/Link"; */
+import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
 import "@style/vars.scss";
-/* import CardGenerator from "./components/CardGenerator/CardGenerator";
+import CardGenerator from "./components/CardGenerator/CardGenerator";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 import List from "./components/List/List";
-import type { CardPayload } from "./components/Card/Card"; */
-/*function App() {
+import type { CardPayload } from "./components/Card/Card"; 
+import Stack from "./components/Stack/Stack";
+function App() {
   const [isActive, setActive] = useState(true);
   const handleToggle = () => {
     if (!isActive) {
@@ -25,14 +26,14 @@ import type { CardPayload } from "./components/Card/Card"; */
     href: "/portfolio/Kai_Jauregi_Full_Stack_en.pdf",
     download: "",
     target: "_blank",
-    text: "Download Cv"
+    text: "Download CV"
   });
 
   data.push({
     href: "/portfolio/Kai_Jauregi_Full_Stack_en.pdf",
     download: "",
     target: "_blank",
-    text: "Download Cv in spanish"
+    text: "Download CV in spanish"
   });
 
   const footerData: LinkPayload[] = [];
@@ -102,9 +103,9 @@ import type { CardPayload } from "./components/Card/Card"; */
         <Link list={data} type={LinkType.simple} />
       </Hero>
       <CardGenerator id="project" />
-      <section>
+      <Stack id="experience">
         <List list={listData} />
-      </section>
+      </Stack>
 
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
@@ -112,10 +113,7 @@ import type { CardPayload } from "./components/Card/Card"; */
         email={"kai.jauregi@proton.me"} />
     </>
   )
-}*/
-
-function App(){
-  return <h1> Test </h1>
 }
+
 
 export default App;

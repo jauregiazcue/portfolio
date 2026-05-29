@@ -15,7 +15,7 @@
 
   background-color: getColor(e, "light");
   body.dark-mode & {
-    background-color: getColor(d, "dark");
+    background-color: getColor(b, "dark");
     color: getColor(a, "dark");
   }
 }

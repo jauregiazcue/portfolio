@@ -6,7 +6,7 @@
 .footer {
   min-height: 0;
   height: 30vh;
-
+  background-color: getColor(d, "light");
   &--head {
     width: 50%;
     display: flex;
@@ -25,6 +25,16 @@
     background-color: getColor(e, "dark");
     color: getColor(a, "dark");
   }
+
+  & hr {
+    border-style: none;
+    width: 70%;
+    border: $measure * .01 solid getColor(a, "light");
+    body.dark-mode & {
+      border: $measure * .01 solid getColor(a, "dark");
+    }
+  }
+ 
 }
 
 

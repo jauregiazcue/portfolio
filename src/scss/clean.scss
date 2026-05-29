@@ -107,7 +107,9 @@ section {
 body {
   line-height: 1;
 
-  &.dark-mode  {
+  background-color: getColor(d, "light");
+
+  &.dark-mode {
     background-color: getColor(e, "dark");
   }
 }
@@ -152,6 +154,14 @@ html {
 
 .fa-brands {
   font-size: xx-large;
+
+  body.dark-mode & {
+    color: getColor(a, "dark");
+  }
+}
+
+.fa-solid {
+  font-size: x-large;
 
   body.dark-mode & {
     color: getColor(a, "dark");

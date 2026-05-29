@@ -14,9 +14,8 @@
     $paddingSize : $measure * 2;
     $paddingCircle: -($borderSize + $measure * 1.2);
 
-
-    $decorColor : getColor(b, "dark");
-
+    $decorColor : getColor(a, "light");
+    $decorDarkColor : getColor(a, "dark");
     position: relative;
     display: flex;
     flex-direction: column;
@@ -33,11 +32,16 @@
       color: transparent;
       height: $measure * 2;
       width: $measure * 2;
-      background: getColor(c, "dark");
+      background: getColor(e, "light");
 
       border-radius: 100%;
       margin-top: $measure * 2.5;
       border: $borderSize solid $decorColor;
+
+      body.dark-mode & {
+        border: $borderSize solid $decorDarkColor;
+        background: getColor(b, "dark");
+      }
     }
 
     &::before {
@@ -48,9 +52,12 @@
       display: inline-block;
       color: transparent;
       height: 110%;
-      background: getColor(c, "dark");
 
-      border: $borderSize * .5 solid $decorColor ;
+      border: $borderSize * .5 solid $decorColor;
+
+      body.dark-mode & {
+        border: $borderSize * .5 solid $decorDarkColor;
+      }
     }
 
     &:first-child::before {
@@ -63,6 +70,10 @@
 
       &::before {
         border: none;
+
+        body.dark-mode & {
+          border: none;
+        }
       }
     }
   }
