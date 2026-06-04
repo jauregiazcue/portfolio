@@ -19,6 +19,11 @@
     height: $measure * 15;
     padding: $measure * 2;
     overflow: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
     &--head {
       display: flex;
