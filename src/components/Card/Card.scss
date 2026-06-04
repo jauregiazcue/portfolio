@@ -8,6 +8,7 @@
   background-color: getColor(d, "light");
   border-radius: $border-radius-b;
   overflow: hidden;
+  white-space: pre-line;
 
   &--header {
     min-height: $measure * 20;
@@ -17,6 +18,27 @@
 
   &--body {
     height: $measure * 15;
+    padding: $measure * 2;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &--head {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &--body-a {
+    //height: $measure * 15;
     padding: $measure * 2;
     overflow: scroll;
     overflow-x: hidden;

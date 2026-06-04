@@ -1,5 +1,5 @@
 import type { Payload } from "@interfaces/payload";
-import Card, { type CardPayload } from "@components/Card/Card";
+import Card, { CardType, type CardPayload } from "@components/Card/Card";
 import "./List.scss";
 
 
@@ -16,7 +16,8 @@ function List(payload: ListPayload) {
         {list.map((listObject: CardPayload, index: number) => {
           const { title, year, subtitle, description } = listObject;
           return <li key={index}>
-            <Card key={index} title={title}
+            <Card key={index} type={CardType.sizeless}
+              title={title}
               subtitle={subtitle}
               year={year}
               description={description} />

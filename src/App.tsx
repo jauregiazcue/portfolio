@@ -2,12 +2,10 @@ import Hero, { HeroType } from "@components/Hero/Hero";
 import HeroImage from "@assets/Profile.jpg";
 import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
 import "@style/vars.scss";
-import CardGenerator from "./components/CardGenerator/CardGenerator";
+import CardGenerator, { CardGenType } from "./components/CardGenerator/CardGenerator";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
-import List from "./components/List/List";
-import type { CardPayload } from "./components/Card/Card"; 
-import Stack from "./components/Stack/Stack";
+import type { CardPayload } from "./components/Card/Card";
 function App() {
   const [isActive, setActive] = useState(true);
   const handleToggle = () => {
@@ -102,10 +100,9 @@ function App() {
         <h2> Full stack Developer </h2>
         <Link list={data} type={LinkType.simple} />
       </Hero>
-      <CardGenerator id="project" />
-      <Stack id="experience">
-        <List list={listData} />
-      </Stack>
+      <CardGenerator id="project" csv='Portfolio_Data.csv' type={CardGenType.grid}/>
+      <CardGenerator id="experience" csv='Portfolio_Experience.csv' type={CardGenType.list}/>
+     
 
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
