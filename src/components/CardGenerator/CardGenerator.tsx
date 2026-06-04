@@ -14,7 +14,7 @@ export interface MyCardPayload extends CardPayload {
 function CardGenerator({id} : {id : string}) {
   const [objects, setObjects] = useState<MyCardPayload[]>([]);
   async function fetchCSV() {
-    const response = await fetch('@assets/Portfolio_Data.csv');
+    const response = await fetch('new-portfolio/src/assets/Portfolio_Data.csv');
     const reader = response.body?.getReader();
     const result = await reader?.read();
     const decoder = new TextDecoder('utf-8');
