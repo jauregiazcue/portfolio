@@ -13,11 +13,11 @@
   &--header {
     min-height: $measure * 20;
     overflow: hidden;
-
+    
   }
 
   &--body {
-    height: $measure * 15;
+    height: $measure * 17;
     padding: $measure * 2;
     overflow: scroll;
     overflow-x: hidden;
@@ -29,6 +29,7 @@
     &--head {
       display: flex;
       justify-content: space-between;
+      padding-bottom: $measure * 2;
     }
 
     & p {
@@ -38,7 +39,6 @@
   }
 
   &--body-a {
-    //height: $measure * 15;
     padding: $measure * 2;
     overflow: scroll;
     overflow-x: hidden;

@@ -36,7 +36,11 @@
 
 .hero-c {
   @include hero();
+
+
   $biColor : getColor(a, "dark");
+
+
 
   body.dark-mode & {
     $biColorDark : getColor(d, "light");
@@ -59,6 +63,16 @@
     transparent calc(100% - 1px),
     $biColor calc(100% - 1px));
 
+  @include mobile {
+    background-color: getColor(f, "dark");
+    background-image: none;
+
+    body.dark-mode & {
+      background-color: getColor(e, "dark");
+      background-image: none;
+    }
+  }
+
   background-size: 5vw 5vw;
   overflow: hidden;
 
@@ -68,7 +82,16 @@
     z-index: 1;
 
     @include mobile {
-      background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, black 60%);
+
+      & h1,
+      h2,
+      h3,
+      p,
+      i {
+        color: getColor(c, "light");
+      }
+
+      background: radial-gradient(circle at center, rgba(0, 0, 0, 0) 0%, black 90%);
     }
   }
 }

@@ -93,14 +93,18 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, 0);
-
     & a {
+      display: block;
       width: fit-content;
       min-width: 0;
-
+      padding: $measure;
       padding-top: $measure;
       padding-bottom: $measure;
       margin-right: $measure * 2;
+
+      &:first-child {
+        padding-left: $measure * 2;
+      }
     }
   }
 }

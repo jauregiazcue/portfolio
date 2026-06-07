@@ -100,10 +100,11 @@ function App() {
         <h2> Full stack Developer </h2>
         <Link list={data} type={LinkType.simple} />
       </Hero>
-      <CardGenerator id="project" csv='Portfolio_Data.csv' type={CardGenType.grid}/>
-      <CardGenerator id="experience" csv='Portfolio_Experience.csv' type={CardGenType.list}/>
-     
-
+      {/* <CardGenerator id="project" csv='Portfolio_Data.csv' type={CardGenType.grid} />
+      <CardGenerator id="experience" csv='Portfolio_Experience.csv' type={CardGenType.list} />
+ */}
+      <CardGenerator id="project" csv='new-portfolio/Portfolio_Data.csv' type={CardGenType.grid} />
+      <CardGenerator id="experience" csv='new-portfolio/Portfolio_Experience.csv' type={CardGenType.list} />
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
         owner={"Kai Jauregi Azcue"}

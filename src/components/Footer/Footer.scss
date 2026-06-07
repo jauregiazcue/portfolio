@@ -7,8 +7,14 @@
   min-height: 0;
   height: 30vh;
   background-color: getColor(d, "light");
+
   &--head {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
+
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -17,6 +23,11 @@
 
   &--body {
     width: 50%;
+
+    @include mobile {
+      width: 100%;
+    }
+
     height: 20vh;
     text-align: center;
   }
@@ -29,12 +40,18 @@
   & hr {
     border-style: none;
     width: 70%;
+
+    @include mobile {
+      width: 90%;
+    }
+
     border: $measure * .01 solid getColor(a, "light");
+
     body.dark-mode & {
       border: $measure * .01 solid getColor(a, "dark");
     }
   }
- 
+
 }
 
 
@@ -42,4 +59,9 @@
 .footer--merger {
   border-bottom-left-radius: 3%;
   border-bottom-right-radius: 3%;
+
+  @include mobile {
+    border-bottom-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
 }

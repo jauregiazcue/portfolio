@@ -9,7 +9,6 @@
 
   font-size: $size;
   font-family: $type;
-  font-weight: $weight;
   color: getColor($color, "light");
 
   body.dark-mode & {

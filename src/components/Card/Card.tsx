@@ -46,7 +46,7 @@ function Card(payload: CardPayload) {
       <h4>{subtitle}</h4>
       <p>{description}</p>
     </div>
-    {links && <div className="card--footer">
+    {links && links.list.length > 0 && <div className="card--footer">
       <Link list={links.list}
         type={links.type} />
     </div>}
