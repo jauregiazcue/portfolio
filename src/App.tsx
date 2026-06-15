@@ -3,12 +3,14 @@ import HeroImage from "@assets/Profile.jpg";
 import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
 import "@style/vars.scss";
 import CardGenerator, { CardGenType } from "./components/CardGenerator/CardGenerator";
+import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
+import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
 function App() {
   const [isActive, setActive] = useState(true);
   const debug = false;
-  const pathString = debug ? "new-portfolio/" : "/";
+  const pathString = debug ? "new-portfolio/" : "";
   const handleToggle = () => {
     if (!isActive) {
       document.body.classList.remove("dark-mode");
@@ -20,17 +22,15 @@ function App() {
     setActive(!isActive);
   };
   const data: LinkPayload[] = [];
-  const cvEnglish = `${pathString}Kai_Jauregi_Full_Stack_en.pdf`;
   data.push({
-    href: cvEnglish,
-    download: "Kai_Jauregi.pdf",
+    href: pdf_en,
+    download: "Kai_Jauregi_English.pdf",
     target: "_blank",
     text: "Download CV"
   });
 
-  const cvSpanish = `${pathString}Kai_Jauregi_Full_Stack_es.pdf`;
   data.push({
-    href: cvSpanish,
+    href: pdf_es,
     download: "Kai_Jauregi_Spanish.pdf",
     target: "_blank",
     text: "Download CV in spanish"
