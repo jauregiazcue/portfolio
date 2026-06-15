@@ -6,7 +6,6 @@
   ],
   "compilerOptions": {
     "composite":true,
-    "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
       "@style/*": ["./src/scss/*"],
