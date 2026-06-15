@@ -7,6 +7,7 @@ import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
 import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
 import { useState } from "react";
 import Footer from "./components/Footer/Footer";
+
 function App() {
   const [isActive, setActive] = useState(true);
   const debug = false;
@@ -63,9 +64,9 @@ function App() {
         <h2> Full stack Developer </h2>
         <Link list={data} type={LinkType.simple} />
       </Hero>
-      <CardGenerator id="project" csv={`${pathString}Portfolio_Data.csv`} type={CardGenType.grid} />
-      <CardGenerator id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
-
+      <CardGenerator title="Project" id="project" csv={`${pathString}Portfolio_Data.csv`} type={CardGenType.grid} />
+      <CardGenerator title="Experience" id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
+      <CardGenerator title="Studies" id="Studies" csv={`${pathString}Portfolio_Studies.csv`} type={CardGenType.list} />
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
         owner={"Kai Jauregi Azcue"}

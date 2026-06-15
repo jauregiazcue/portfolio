@@ -17,13 +17,13 @@ function Stack(payload: StackPayload) {
         {} : style;
 
   const classNam = fullPage ? "stack-b" : "stack-a";
-  return <section id={id ? id : ""}
+  return <div id={id ? id : ""}
     className={classNam + " " + className}
     style={style}>
     <div className= {classNam + "--body"}>
       {children}
     </div>
-  </section>;
+  </div>;
 }
 
 export default Stack;

@@ -1,19 +1,30 @@
 @use "@style/vars.scss" as *;
+@use "@style/media.scss" as *;
 
 @mixin stack() {
   width: 100%;
+
   &--body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     margin: auto;
+
     &>* {
       margin: $measure;
+    }
+
+    margin-top: 0;
+
+    @include mobile {
+      width: 100%;
+      padding: 0;
     }
   }
 
   background-color: getColor(e, "light");
+
   body.dark-mode & {
     background-color: getColor(b, "dark");
     color: getColor(a, "dark");
@@ -26,6 +37,11 @@
   &--body {
     width: 80%;
     padding: $measure * 2;
+
+    @include mobile {
+      width: 100%;
+      padding: 0;
+    }
   }
 }
 

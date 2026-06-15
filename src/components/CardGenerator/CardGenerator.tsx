@@ -6,6 +6,7 @@ import Card from '@components/Card/Card';
 import { LinkType, type LinkPayload } from '../Links/Link';
 import type { Payload } from '@/interfaces/payload';
 import List from '../List/List';
+import Title from '../Title/Title';
 
 
 export interface MyCardPayload extends CardPayload {
@@ -23,11 +24,12 @@ export { CardGenType };
 
 interface CardGeneratorPayload extends Payload {
   csv: string,
-  type: CardGenType
+  type: CardGenType,
+  title: string,
 }
 
 function CardGenerator(payload: CardGeneratorPayload) {
-  const { id, type } = payload;
+  const { id, type, title } = payload;
   const [objects, setObjects] = useState<MyCardPayload[]>([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function fetchCSV() {
@@ -68,16 +70,20 @@ function CardGenerator(payload: CardGeneratorPayload) {
 
 
   if (type == CardGenType.grid) {
-    return <Stack id={id} fullPage={false}>
-      {objects.map((object: MyCardPayload, index: number) => {
-        const { title, description, year, image, list } = setObject(object);
-        return <Card key={index} title={title}
-          year={year}
-          image={image}
-          links={{ list: list, type: LinkType.simple }}
-          description={description} />
-      })}
-    </Stack>
+    return <>
+      <Title id={id} title={title} />
+      <Stack fullPage={false}>
+        {objects.map((object: MyCardPayload, index: number) => {
+          const { title, description, year, image, list } = setObject(object);
+          return <Card key={index} title={title}
+            year={year}
+            image={image}
+            links={{ list: list, type: LinkType.simple }}
+            description={description} />
+        })}
+      </Stack>
+    </>
+
   }
 
 
@@ -86,9 +92,13 @@ function CardGenerator(payload: CardGeneratorPayload) {
     return newObject;
   });
 
-  return <Stack id={id}>
-    <List list={aux} />
-  </Stack>
+  return <>
+    <Title id={id} title={title} />
+    <Stack>
+      <List list={aux} />
+    </Stack>
+  </>
+
 
 
 }

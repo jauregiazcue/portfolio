@@ -1,4 +1,5 @@
 @use "@style/vars.scss" as *;
+@use "@style/media.scss" as *;
 
 .card {
   display: flex;
@@ -10,10 +11,15 @@
   overflow: hidden;
   white-space: pre-line;
 
+  @include mobile {
+    width: 100%;
+    max-height: none;
+  }
+
   &--header {
     min-height: $measure * 20;
     overflow: hidden;
-    
+
   }
 
   &--body {
@@ -30,11 +36,23 @@
       display: flex;
       justify-content: space-between;
       padding-bottom: $measure * 2;
+
+      @include mobile {
+        flex-direction: column;
+      }
     }
 
     & p {
       overflow: hidden;
       text-overflow: ellipsis;
+
+      @include mobile {
+        height: fit-content;
+      }
+    }
+
+    @include mobile {
+      height: auto;
     }
   }
 

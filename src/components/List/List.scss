@@ -1,12 +1,21 @@
 @use "@style/vars.scss" as *;
+@use "@style/media.scss" as *;
 
 .list {
   margin: $measure;
   border-radius: $border-radius-b;
 
+  @include mobile {
+    width: 100%;
+  }
+
   & .card {
     max-height: none;
     width: 70vw;
+
+    @include mobile {
+      width: 100%;
+    }
   }
 
   & li {
@@ -22,6 +31,11 @@
 
     padding-left: $paddingSize;
     padding-bottom: $measure * 2;
+
+    @include mobile {
+      width: 100%;
+      padding-left: 0;
+    }
 
     &::after {
       content: "";
@@ -42,6 +56,10 @@
         border: $borderSize solid $decorDarkColor;
         background: getColor(b, "dark");
       }
+
+      @include mobile {
+        display: none;
+      }
     }
 
     &::before {
@@ -51,12 +69,17 @@
       top: 0;
       display: inline-block;
       color: transparent;
-      height: 110%;
+      height: 130%;
 
       border: $borderSize * .5 solid $decorColor;
 
       body.dark-mode & {
         border: $borderSize * .5 solid $decorDarkColor;
+      }
+
+      @include mobile {
+        display: none;
+
       }
     }
 
