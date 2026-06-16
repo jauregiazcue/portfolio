@@ -10,7 +10,7 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isActive, setActive] = useState(true);
-  const debug = false;
+  const debug = true;
   const pathString = debug ? "new-portfolio/" : "";
   const handleToggle = () => {
     if (!isActive) {
@@ -27,16 +27,17 @@ function App() {
     href: pdf_en,
     download: "Kai_Jauregi_English.pdf",
     target: "_blank",
-    text: "Download CV"
+    text: "Download CV",
+    textClassname: "fi fi-gb",
   });
 
   data.push({
     href: pdf_es,
     download: "Kai_Jauregi_Spanish.pdf",
     target: "_blank",
-    text: "Download CV in spanish"
+    text: "Descargar CV",
+    textClassname: "fi fi-es",
   });
-
   const footerData: LinkPayload[] = [];
   footerData.push({
     href: "https://www.linkedin.com/in/jauregiazcue/",
@@ -77,3 +78,4 @@ function App() {
 
 
 export default App;
+

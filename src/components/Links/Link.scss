@@ -28,6 +28,24 @@
       transform: scale(1.1);
     }
   }
+
+  & div {
+    transition: .7s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:nth-last-child(1) {
+      margin-left: $measure * 2;
+    }
+  }
+
+
+
+  & span {
+    margin-right: $measure;
+  }
 }
 
 .link-a {
@@ -93,6 +111,7 @@
     top: 90%;
     left: 50%;
     transform: translate(-50%, 0);
+
     & a {
       display: block;
       width: fit-content;

@@ -30,8 +30,24 @@ function Link(payload: LinksPayload) {
       <>
         {list.map((link: LinkPayload, index: number) => {
           const { href, text, textClassname, onClick, ...props } = link;
-          if(onClick) return <a key={index} onClick={onClick} {...props}><i className={textClassname}>{text}</i></a>
+
+          if (textClassname != undefined && text != undefined) {
+            if (onClick) return <div>
+              <span className={textClassname} />
+              <a key={index} onClick={onClick} {...props}><i>{text}</i></a>
+            </div>
+            return <div>
+              <span className={textClassname} />
+              <a key={index} href={href} {...props}  {...props}><i>{text}</i></a>
+            </div>
+          }
+
+
+          if (onClick) return <a key={index} onClick={onClick} {...props}><i className={textClassname}>{text}</i></a>
           return <a key={index} href={href} {...props}><i className={textClassname}>{text}</i></a>
+
+
+
         })}
       </>
     </div>
