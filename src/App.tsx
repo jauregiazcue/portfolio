@@ -14,7 +14,7 @@ import { TitleType } from "./components/Title/Title";
 
 function App() {
   const [isActive, setActive] = useState(true);
-  const debug = true;
+  const debug = false;
   const pathString = debug ? "portfolio/" : "";
   const handleToggle = () => {
     if (!isActive) {
