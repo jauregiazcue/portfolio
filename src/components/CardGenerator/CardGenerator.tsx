@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react'
 import Papa from "papaparse"
-import Stack from '@components/Stack/Stack';
-import type { CardPayload } from '@components/Card/Card';
+
 import Card from '@components/Card/Card';
-import { LinkType, type LinkPayload } from '../Links/Link';
+import List from '@components/List/List';
+import Stack from '@components/Stack/Stack';
+import Title from '@components/Title/Title';
 import type { Payload } from '@/interfaces/payload';
-import List from '../List/List';
-import Title from '../Title/Title';
+import type { CardPayload } from '@components/Card/Card';
+import { LinkType, type LinkPayload } from '@components/Links/Link';
+
+
+
 
 
 export interface MyCardPayload extends CardPayload {

@@ -2,9 +2,6 @@ import type { PayloadWithChildren } from "@interfaces/payload";
 import Image from "@components/Image/Image";
 import "./Hero.scss";
 
-
-
-
 const HeroType = {
   center : 0,
   leftDown : 1,

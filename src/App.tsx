@@ -1,12 +1,15 @@
-import Hero, { HeroType } from "@components/Hero/Hero";
-import HeroImage from "@assets/Profile.jpg";
-import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
+import { useState } from "react";
+
 import "@style/vars.scss";
-import CardGenerator, { CardGenType } from "./components/CardGenerator/CardGenerator";
+
+import HeroImage from "@assets/Profile.jpg";
 import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
 import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
-import { useState } from "react";
-import Footer from "./components/Footer/Footer";
+
+import Hero, { HeroType } from "@components/Hero/Hero";
+import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
+import CardGenerator, { CardGenType } from "@/components/CardGenerator/CardGenerator";
+import Footer from "@/components/Footer/Footer";
 
 function App() {
   const [isActive, setActive] = useState(true);
