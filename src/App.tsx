@@ -40,7 +40,7 @@ function App() {
   });
   const footerData: LinkPayload[] = [];
   footerData.push({
-    href: "https://www.linkedin.com/in/jauregiazcue/",
+    href: "https://www.linkedin.com/in/kaijauregi/",
     target: "_blank",
     textClassname: "fa-brands fa-linkedin",
   });
