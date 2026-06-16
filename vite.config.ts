@@ -14,5 +14,5 @@ export default defineConfig({
       "@interfaces":  fileURLToPath(new URL('./src/interfaces', import.meta.url)),
     },
   },
-  base: "/new-portfolio",
+  base: "/portfolio",
 });

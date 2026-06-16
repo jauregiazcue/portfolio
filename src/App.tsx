@@ -10,8 +10,8 @@ import Footer from "./components/Footer/Footer";
 
 function App() {
   const [isActive, setActive] = useState(true);
-  const debug = true;
-  const pathString = debug ? "new-portfolio/" : "";
+  const debug = false;
+  const pathString = debug ? "portfolio/" : "";
   const handleToggle = () => {
     if (!isActive) {
       document.body.classList.remove("dark-mode");
