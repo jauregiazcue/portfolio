@@ -10,10 +10,11 @@ import Hero, { HeroType } from "@components/Hero/Hero";
 import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
 import CardGenerator, { CardGenType } from "@/components/CardGenerator/CardGenerator";
 import Footer from "@/components/Footer/Footer";
+import { TitleType } from "./components/Title/Title";
 
 function App() {
   const [isActive, setActive] = useState(true);
-  const debug = false;
+  const debug = true;
   const pathString = debug ? "portfolio/" : "";
   const handleToggle = () => {
     if (!isActive) {
@@ -41,6 +42,7 @@ function App() {
     text: "Descargar CV",
     textClassname: "fi fi-es",
   });
+
   const footerData: LinkPayload[] = [];
   footerData.push({
     href: "https://www.linkedin.com/in/kaijauregi/",
@@ -62,13 +64,15 @@ function App() {
         { href: "#contact", textClassname: "fa-solid fa-address-book" },
         { onClick: handleToggle, textClassname: "fa-solid fa-circle-half-stroke" }
       ]} />
+
       <Hero title="Kai Jauregi" url={HeroImage}
         alt="Profile photo of Kai Jauregi" type={HeroType.centerFocus} id="hero">
         <h2> Gameplay & Tools Programmer </h2>
         <h2> Full stack Developer </h2>
         <Link list={data} type={LinkType.simple} />
       </Hero>
-      <CardGenerator title="Project" id="project" csv={`${pathString}Portfolio_Data.csv`} type={CardGenType.grid} />
+
+      <CardGenerator title="Project" id="project" csv={`${pathString}Portfolio_Data.csv`} type={CardGenType.grid}  titleType={TitleType.preHero}/>
       <CardGenerator title="Experience" id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
       <CardGenerator title="Studies" id="Studies" csv={`${pathString}Portfolio_Studies.csv`} type={CardGenType.list} />
       <Footer id="contact"

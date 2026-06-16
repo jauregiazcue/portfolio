@@ -24,6 +24,7 @@
   }
 
   background-color: getColor(e, "light");
+  
 
   body.dark-mode & {
     background-color: getColor(b, "dark");

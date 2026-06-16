@@ -1,6 +1,11 @@
 @use "sass:map";
 @use "vars.scss" as *;
 
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url(ATLangGothicTrial-Bold.otf) format('otf');
+}
+
 @mixin title($size : 32px,
   $decoration: none,
   $weight : 100,
@@ -17,12 +22,12 @@
 }
 
 h1 {
-  @include title($size : clamp(2rem, 5vw, 4rem), $color : a);
+  @include title($size : clamp(2rem, 5vw, 4rem), $color : a, $type : $type-b);
 
 }
 
 h2 {
-  @include title($size : clamp(1.5rem, 3vw, 2.5rem), $color : a);
+  @include title($size : clamp(1.5rem, 3vw, 2.5rem), $color : a,  $type : $type-b);
 }
 
 h3 {

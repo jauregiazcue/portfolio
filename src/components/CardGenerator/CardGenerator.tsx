@@ -4,7 +4,7 @@ import Papa from "papaparse"
 import Card from '@components/Card/Card';
 import List from '@components/List/List';
 import Stack from '@components/Stack/Stack';
-import Title from '@components/Title/Title';
+import Title, { TitleType } from '@components/Title/Title';
 import type { Payload } from '@/interfaces/payload';
 import type { CardPayload } from '@components/Card/Card';
 import { LinkType, type LinkPayload } from '@components/Links/Link';
@@ -30,10 +30,11 @@ interface CardGeneratorPayload extends Payload {
   csv: string,
   type: CardGenType,
   title: string,
+  titleType?: TitleType
 }
 
 function CardGenerator(payload: CardGeneratorPayload) {
-  const { id, type, title } = payload;
+  const { id, type, title ,titleType} = payload;
   const [objects, setObjects] = useState<MyCardPayload[]>([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function fetchCSV() {
@@ -75,7 +76,7 @@ function CardGenerator(payload: CardGeneratorPayload) {
 
   if (type == CardGenType.grid) {
     return <>
-      <Title id={id} title={title} />
+      <Title id={id} title={title} type={titleType}/>
       <Stack fullPage={false}>
         {objects.map((object: MyCardPayload, index: number) => {
           const { title, description, year, image, list } = setObject(object);
@@ -97,7 +98,7 @@ function CardGenerator(payload: CardGeneratorPayload) {
   });
 
   return <>
-    <Title id={id} title={title} />
+    <Title id={id} title={title} type={titleType}/>
     <Stack>
       <List list={aux} />
     </Stack>

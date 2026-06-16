@@ -73,10 +73,14 @@ $colorbg-options: (
     @return map.get($color-options-dark, $color);
 }
 
-
+@font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(ATLangGothicTrial-Bold.otf) format('otf');
+}
 
 // * TYPOGRAPHY
 $type-a: 'Arial', sans-serif;
+$type-b: 'MyFont', monospace;
 
 // * LAYOUT
 $viewport-type: max-width;
