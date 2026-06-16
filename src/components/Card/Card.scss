@@ -20,7 +20,14 @@
   &--header {
     min-height: $measure * 20;
     overflow: hidden;
+    border: solid $measure * .25 getColor(d, "light");
+    border-top-left-radius: $border-radius-b;
+    border-top-right-radius: $border-radius-b;
+    border-bottom: none;
 
+    body.dark-mode & {
+      border-color: getColor(d, "dark");
+    }
   }
 
   &--body {
