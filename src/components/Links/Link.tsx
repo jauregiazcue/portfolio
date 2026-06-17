@@ -32,13 +32,13 @@ function Link(payload: LinksPayload) {
           const { href, text, textClassname, onClick, ...props } = link;
 
           if (textClassname != undefined && text != undefined) {
-            if (onClick) return <div>
+            if (onClick) return <div key={index}>
               <span className={textClassname} />
-              <a key={index} onClick={onClick} {...props}><i>{text}</i></a>
+              <a  onClick={onClick} {...props}><i>{text}</i></a>
             </div>
-            return <div>
+            return <div key={index}>
               <span className={textClassname} />
-              <a key={index} href={href} {...props}  {...props}><i>{text}</i></a>
+              <a href={href} {...props}  {...props}><i>{text}</i></a>
             </div>
           }
 

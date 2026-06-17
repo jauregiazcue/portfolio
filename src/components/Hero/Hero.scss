@@ -87,8 +87,12 @@
 
       & h1,
       h2,
-      h3,
-      p,
+      h3 {
+        color: getColor(c, "light");
+        padding-bottom: $measure * 1.5;
+      }
+
+      & p,
       i {
         color: getColor(c, "light");
       }

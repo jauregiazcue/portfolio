@@ -15,6 +15,7 @@
   font-size: $size;
   font-family: $type;
   color: getColor($color, "light");
+  text-align: center;
 
   body.dark-mode & {
     color: getColor($color, "dark");
