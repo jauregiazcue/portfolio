@@ -50,7 +50,7 @@ function App() {
     textClassname: "fa-brands fa-linkedin",
   });
   footerData.push({
-    href: "http://kaijauregi.com",
+    href: "https://github.com/jauregiazcue",
     target: "_blank",
     textClassname: "fa-brands fa-square-github",
   });
