@@ -125,5 +125,5 @@ $measure: 0.5rem;
 /* 0.5rem = 8px */
 
 // * border
-$border-radius-a: $measure;
+$border-radius-a: $measure * 5;
 $border-radius-b: $measure * 3;

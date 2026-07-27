@@ -14,5 +14,6 @@ export default defineConfig({
       "@interfaces":  fileURLToPath(new URL('./src/interfaces', import.meta.url)),
     },
   },
-  base: "",
+  // do /portfolio if github page, do "" if kaijauregi.com
+  base: "/portfolio",
 });

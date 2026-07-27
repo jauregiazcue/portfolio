@@ -15,11 +15,12 @@
 .title-a {
   text-align: center;
   padding: $measure * 8;
-
-  background-image: linear-gradient(to bottom, black 0%,getColor(e, "light") 30%);
+  background-color: getColor(e,"light");
+  //background-image: linear-gradient(to bottom, black 0%,getColor(e, "light") 50%);
+  
 
   body.dark-mode & {
-     background-image: linear-gradient(to bottom, black 0%,getColor(b, "dark") 30%);
+    background-color: getColor(b, "dark");
     color: getColor(a, "dark");
   }
 }
