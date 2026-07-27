@@ -15,7 +15,9 @@ import { TitleType } from "./components/Title/Title";
 function App() {
   const [isActive, setActive] = useState(true);
   const debug = false;
+  const githubPath = true;
   const pathString = debug ? "portfolio/" : "";
+  const dataPath = githubPath ? `${pathString}Portfolio_Data_github.csv` : `${pathString}Portfolio_Data_namecheap.csv`;
   const handleToggle = () => {
     if (!isActive) {
       document.body.classList.remove("dark-mode");
@@ -72,7 +74,7 @@ function App() {
         <Link list={data} type={LinkType.simple} />
       </Hero>
 
-      <CardGenerator title="Project" id="project" csv={`${pathString}Portfolio_Data.csv`} type={CardGenType.grid}  titleType={TitleType.preHero}/>
+      <CardGenerator title="Project" id="project" csv={dataPath} type={CardGenType.grid}  titleType={TitleType.preHero}/>
       <CardGenerator title="Experience" id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
       <CardGenerator title="Studies" id="Studies" csv={`${pathString}Portfolio_Studies.csv`} type={CardGenType.list} />
       <Footer id="contact"
