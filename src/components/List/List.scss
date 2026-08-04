@@ -23,8 +23,8 @@
     $paddingSize : $measure * 2;
     $paddingCircle: -($borderSize + $measure * 1.2);
 
-    $decorColor : getColor(a, "light");
-    $decorDarkColor : getColor(a, "dark");
+    $decorColor : getColor(h, "light");
+    $decorDarkColor : getColor(h, "dark");
     position: relative;
     display: flex;
     flex-direction: column;

@@ -8,30 +8,27 @@ $color-a: #0f0f0f;
 $color-b: rgba(255, 255, 255, 0.87);
 $color-c: #f7f8f4;
 
-
-/* Accent Color */
 $color-d: #cac8b9;
-$color-e: #45627c;
+$color-d-dark: #1f1f1f;
+$color-e: #162936;
 $color-f: #1985A1;
-$color-g: #fdb335;
-$color-h: #f76e4a;
-$color-i: rgb(255 255 255 / 30%);
+$color-g: rgb(255 255 255 / 30%);
+$color-g-dark: rgb(0 0 0 / 30%);
+$color-h: #FFA72B;
 
 
-$color-dark-d: #1f1f1f;
-$color-dark-e: #45627c;
-$color-dark-f: #1985A1;
-$color-dark-g: #fdb335;
-$color-dark-h: #1985A1;
-$color-dark-i: rgb(0 0 0 / 30%);
 
-$a : #1f1f1f;
-$b : #cac8b941;
-$c : #cac8b9;
-$d : #45627c;
-$e : #1985A1;
-$f : rgba(255, 255, 255, 0.87);
-$g : rgb(13, 13, 20);
+$font-options: (
+    a: $color-h,
+    b: $color-e,
+    c: $color-c,
+);
+
+$font-options-dark: (
+    a: $color-h,
+    b: $color-c,
+    c: $color-c,
+);
 
 $color-options: (
     a: $color-a,
@@ -42,28 +39,19 @@ $color-options: (
     f: $color-f,
     g: $color-g,
     h: $color-h,
-    i: $color-i,
 );
 
 $color-options-dark: (
     a: $color-b,
     b: $color-a,
     c: $color-c,
-    d: $color-dark-d,
-    e: $color-dark-e,
-    f: $color-dark-f,
-    g: $color-dark-g,
-    h: $color-dark-h,
-    i: $color-dark-i,
+    d: $color-d-dark,
+    e: $color-e,
+    f: $color-f,
+    g: $color-g-dark,
+    h: $color-h,
 );
 
-$colorbg-options: (
-    a: $color-a,
-    b: $color-b,
-    c: $color-c,
-    d: $color-d,
-    e: $color-e,
-);
 
 @function getColor($color, $theme : "light") {
     @if($theme =="light") {
@@ -73,14 +61,34 @@ $colorbg-options: (
     @return map.get($color-options-dark, $color);
 }
 
+@function getFontColor($color, $theme : "light") {
+    @if($theme =="light") {
+        @return map.get($font-options, $color);
+    }
+
+    @return map.get($font-options-dark, $color);
+}
+
 @font-face {
     font-family: 'MyFont';
     src: local('MyFont'), url(ATLangGothicTrial-Bold.otf) format('otf');
 }
 
+/* alexandria-latin-wght-normal */
+@font-face {
+    font-family: 'Alexandria Variable';
+    font-style: bold;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url(@fontsource-variable/alexandria/files/alexandria-latin-wght-normal.woff2) format(woff2) tech(variations);
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 // * TYPOGRAPHY
 $type-a: 'Arial', sans-serif;
-$type-b: 'MyFont', monospace;
+$type-b: 'Alexandria Variable', sans-serif;
+
+//font-family: 'Alexandria Variable', sans-serif;
 
 // * LAYOUT
 $viewport-type: max-width;

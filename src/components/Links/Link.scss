@@ -1,9 +1,9 @@
 @use "@style/vars.scss" as *;
 @use "@style/media.scss" as *;
 
+@use "@style/font.scss" as *;
 
-
-.link {
+@mixin link() {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
@@ -13,6 +13,13 @@
     width: max-content;
     margin-right: $measure * 5;
     transition: .7s;
+
+    & img {
+      width: $measure * 2;
+      height: $measure * 2;
+      border-radius: $border-radius-b;
+      object-fit: cover;
+    }
 
     color: getColor(a, "light");
 
@@ -48,6 +55,10 @@
   }
 }
 
+.link {
+  @include link();
+}
+
 .link-a {
   position: fixed;
   top: 50%;
@@ -66,11 +77,12 @@
   width: fit-content;
   overflow: hidden;
 
-  background-color: getColor(i, "light");
+  background-color: getColor(g, "light");
+
   backdrop-filter: blur(10px);
 
   body.dark-mode & {
-    background-color: getColor(i, "dark");
+    background-color: getColor(g, "dark");
     color: getColor(a, "dark");
     border-color: getColor(b, "dark");
   }
@@ -83,10 +95,11 @@
     padding-bottom: $measure * 2;
     margin-right: $measure * 5;
     transition: .7s;
+    color: getColor(a, "light");
 
     &:hover {
       transform: scale(1.1);
-      background-color: getColor(i, "dark");
+      background-color: getColor(g, "dark");
       color: getColor(b, "light");
 
       & .fa-solid {
@@ -94,7 +107,7 @@
       }
 
       body.dark-mode & {
-        background-color: getColor(i, "light");
+        background-color: getColor(g, "light");
         color: getColor(b, "dark");
 
         & .fa-solid {
@@ -126,4 +139,21 @@
       }
     }
   }
+}
+
+.link-b {
+  @include link();
+  width: 90%;
+  justify-content: space-between;
+
+  padding-bottom: $measure * 2;
+
+  & div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include title($size : 1.5rem, $color : e, $type : $type-b);
+  }
+
+
 }

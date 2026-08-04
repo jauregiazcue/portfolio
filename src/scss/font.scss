@@ -14,13 +14,14 @@
 
   font-size: $size;
   font-family: $type;
-  color: getColor($color, "light");
+  color: getFontColor($color, "light");
   text-align: center;
 
   body.dark-mode & {
-    color: getColor($color, "dark");
+    color: getFontColor($color, "dark");
   }
 }
+
 
 h1 {
   @include title($size : clamp(2rem, 5vw, 4rem), $color : a, $type : $type-b);
@@ -28,20 +29,18 @@ h1 {
 }
 
 h2 {
-  @include title($size : clamp(1.5rem, 3vw, 2.5rem), $color : a,  $type : $type-b);
+  @include title($size : clamp(1.5rem, 3vw, 2.5rem), $color : c,  $type : $type-b);
 }
 
 h3 {
-  font-size: 1.5rem;
+   @include title($size : 1.5rem, $color : b,  $type : $type-b);
 }
 
 & a:link,
 a:visited,
 a:hover,
 a:active {
-  color: white;
   text-decoration: none;
-  @include title($size : clamp(0.1rem, 5vw, 1rem), $color : a);
 
 }
 

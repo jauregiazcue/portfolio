@@ -34,7 +34,7 @@ interface CardGeneratorPayload extends Payload {
 }
 
 function CardGenerator(payload: CardGeneratorPayload) {
-  const { id, type, title ,titleType} = payload;
+  const { id, type, title, titleType } = payload;
   const [objects, setObjects] = useState<MyCardPayload[]>([]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   async function fetchCSV() {
@@ -59,7 +59,9 @@ function CardGenerator(payload: CardGeneratorPayload) {
       list.push({
         href: url,
         target: "_blank",
-        text: "Showcase"
+        text: "Learn More",
+        textClassname: "fa-solid fa-circle-up fa-rotate-by",
+        textstyle: { "--fa-rotate-angle": "45deg" } as React.CSSProperties
       });
     }
 
@@ -67,23 +69,24 @@ function CardGenerator(payload: CardGeneratorPayload) {
       list.push({
         href: url2,
         target: "_blank",
-        text: "Repo"
+        textClassname: "fa-brands fa-github",
       });
     }
+
     return { title, description, year, image, list };
   }
 
 
   if (type == CardGenType.grid) {
     return <>
-      <Title id={id} title={title} type={titleType}/>
+      <Title id={id} title={title} type={titleType} />
       <Stack fullPage={false}>
         {objects.map((object: MyCardPayload, index: number) => {
           const { title, description, year, image, list } = setObject(object);
           return <Card key={index} title={title}
             year={year}
             image={image}
-            links={{ list: list, type: LinkType.simple }}
+            links={{ list: list, type: LinkType.card }}
             description={description} />
         })}
       </Stack>
@@ -98,7 +101,7 @@ function CardGenerator(payload: CardGeneratorPayload) {
   });
 
   return <>
-    <Title id={id} title={title} type={titleType}/>
+    <Title id={id} title={title} type={titleType} />
     <Stack>
       <List list={aux} />
     </Stack>

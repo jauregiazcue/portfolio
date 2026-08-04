@@ -37,7 +37,9 @@
 .hero-c {
   @include hero();
   $biColor : getColor(a, "dark");
-
+  & i {
+    color: getColor(a, "dark") !important;
+  }
 
 
   body.dark-mode & {
