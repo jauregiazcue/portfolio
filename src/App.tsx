@@ -70,6 +70,7 @@ function App() {
 
       <Hero title="Kai Jauregi" url={HeroImage}
         alt="Profile photo of Kai Jauregi" type={HeroType.centerFocus} id="hero">
+          <h2>Change to test</h2>
         <h2> Gameplay & Tools Programmer </h2>
         <h2> Full stack Developer </h2>
         <Link list={data} type={LinkType.simple} />
