@@ -76,8 +76,8 @@ function App() {
       </Hero>
 
       <CardGenerator title="Project" id="project" csv={dataPath} type={CardGenType.grid}  titleType={TitleType.preHero}/>
-      <CardGenerator title="Experience" id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
-      <CardGenerator title="Studies" id="Studies" csv={`${pathString}Portfolio_Studies.csv`} type={CardGenType.list} />
+      {/* <CardGenerator title="Experience" id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
+      <CardGenerator title="Studies" id="Studies" csv={`${pathString}Portfolio_Studies.csv`} type={CardGenType.list} /> */}
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
         owner={"Kai Jauregi Azcue"}
