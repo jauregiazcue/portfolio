@@ -18,6 +18,7 @@ function App() {
   const githubPath = true;
   const pathString = debug ? "portfolio/" : "";
   const dataPath = githubPath ? `${pathString}Portfolio_Data_github.csv` : `${pathString}Portfolio_Data_namecheap.csv`;
+  
   const handleToggle = () => {
     if (!isActive) {
       document.body.classList.remove("dark-mode");
