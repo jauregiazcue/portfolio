@@ -18,6 +18,8 @@ function App() {
   const githubPath = true;
   const pathString = debug ? "portfolio/" : "";
   const dataPath = githubPath ? `${pathString}Portfolio_Data_github.csv` : `${pathString}Portfolio_Data_namecheap.csv`;
+  const experiencePath =`${pathString}Portfolio_Experience.csv`;
+  const studiesPath = `${pathString}Portfolio_Studies.csv`;
   
   const handleToggle = () => {
     if (!isActive) {
@@ -76,8 +78,8 @@ function App() {
       </Hero>
 
       <CardGenerator title="Project" id="project" csv={dataPath} type={CardGenType.grid}  titleType={TitleType.preHero}/>
-      {/* <CardGenerator title="Experience" id="experience" csv={`${pathString}Portfolio_Experience.csv`} type={CardGenType.list} />
-      <CardGenerator title="Studies" id="Studies" csv={`${pathString}Portfolio_Studies.csv`} type={CardGenType.list} /> */}
+      <CardGenerator title="Experience" id="experience" csv={experiencePath} type={CardGenType.list} />
+      <CardGenerator title="Studies" id="Studies" csv={studiesPath} type={CardGenType.list} />
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
         owner={"Kai Jauregi Azcue"}
