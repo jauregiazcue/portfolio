@@ -21,6 +21,7 @@ function App() {
   const experiencePath =`${pathString}Portfolio_Experience.csv`;
   const studiesPath = `${pathString}Portfolio_Studies.csv`;
   
+  
   const handleToggle = () => {
     if (!isActive) {
       document.body.classList.remove("dark-mode");
