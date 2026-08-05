@@ -15,5 +15,5 @@ export default defineConfig({
     },
   },
   // do /portfolio if github page, do "" if kaijauregi.com
-  base: "/portfolio",
+  base: "",
 });

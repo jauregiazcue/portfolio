@@ -15,13 +15,13 @@ import { TitleType } from "./components/Title/Title";
 function App() {
   const [isActive, setActive] = useState(true);
   const debug = false;
-  const githubPath = true;
+  const githubPath = false;
   const pathString = debug ? "portfolio/" : "";
   const dataPath = githubPath ? `${pathString}Portfolio_Data_github.csv` : `${pathString}Portfolio_Data_namecheap.csv`;
   const experiencePath =`${pathString}Portfolio_Experience.csv`;
   const studiesPath = `${pathString}Portfolio_Studies.csv`;
   
-  
+
   const handleToggle = () => {
     if (!isActive) {
       document.body.classList.remove("dark-mode");
