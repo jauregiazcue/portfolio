@@ -1,7 +1,7 @@
 @use "@style/vars.scss" as *;
 @use "@style/media.scss" as *;
 
-.card {
+@mixin card() {
   display: flex;
   flex-direction: column;
   max-height: $measure * 50;
@@ -64,25 +64,7 @@
     }
   }
 
-  &--body-a {
-    padding: $measure * 2;
-    overflow: scroll;
-    overflow-x: hidden;
 
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    &--head {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    & p {
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
-  }
 
   &--footer {
     display: flex;
@@ -98,5 +80,30 @@
   body.dark-mode & {
     background-color: getColor(d, "dark");
     color: getColor(a, "dark");
+  }
+}
+
+
+.card {
+  @include card();
+}
+
+.card-a {
+  @include card();
+  max-height:none;
+
+  &--body {
+    max-height:none;
+    height: fit-content;
+  }
+}
+
+.card-b {
+  @include card();
+  max-height:none;
+  width: 100%;
+  &--body {
+    max-height:none;
+    height: fit-content;
   }
 }

@@ -1,5 +1,4 @@
 import type { Payload } from "@interfaces/payload";
-import Link, { type LinksPayload } from "@components/Links/Link";
 
 import "./Card.scss";
 
@@ -7,25 +6,25 @@ import "./Card.scss";
 
 const CardType = {
   simple: 0,
-  sizeless: 1,
+  sizelessInHeight: 1,
+  sizeless:2
 }
 
 type CardType = (typeof CardType)[keyof typeof CardType];
 export { CardType };
 
 export interface CardPayload extends Payload {
-  title: string;
-  subtitle?: string;
-  description: string;
-  year: string;
   image?: string;
-  links?: LinksPayload,
   type?: CardType
+
+  head?: React.ReactNode,
+  body?: React.ReactNode,
+  footer?: React.ReactNode
 }
 
 
 function Card(payload: CardPayload) {
-  const { id, title, subtitle, year, image, description, links } = payload;
+  const { id,head,body,footer, image } = payload;
   let { type } = payload;
   const sectionStyle = image ? {
     backgroundImage: `url(${image})`,
@@ -34,21 +33,27 @@ function Card(payload: CardPayload) {
     backgroundRepeat: 'no-repeat'
   } : { display: "none" };
 
-  if (!type) type = CardType.simple;
-  return <div id={id} className="card">
+  function getType(type: CardType) {
+    switch(type){
+      default: return "card";
+      case CardType.sizelessInHeight : return "card-a";
+      case CardType.sizeless : return "card-b";
+    }
+  }
 
-    <div className="card--header" style={sectionStyle} />
-    <div className={type == CardType.simple ? "card--body" : "card--body-a"}>
-      <div className="card--body--head">
-        <h3>{title}</h3>
-        <h3>{year}</h3>
-      </div>
-      {subtitle && <h4>{subtitle}</h4>}
-      {description && <p>{description}</p>}
+  if (!type) type = CardType.simple;
+  const classType = getType(type);
+  return <div id={id} className={classType}>
+
+    {<div className={classType + "--header"} style={sectionStyle} />}
+    <div className={classType + "--body"}>
+      {head && <div className={classType + "--body--head"}>
+        {head}
+      </div>}
+      {body}
     </div>
-    {links && links.list.length > 0 && <div className="card--footer">
-      <Link list={links.list}
-        type={links.type} />
+    {footer && <div className={classType + "--footer"}>
+      {footer}
     </div>}
   </div>;
 }

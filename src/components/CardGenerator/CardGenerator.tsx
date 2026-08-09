@@ -1,21 +1,27 @@
 import { useState, useEffect } from 'react'
 import Papa from "papaparse"
 
-import Card from '@components/Card/Card';
+import Card, { CardType } from '@components/Card/Card';
 import List from '@components/List/List';
 import Stack from '@components/Stack/Stack';
 import Title, { TitleType } from '@components/Title/Title';
 import type { Payload } from '@/interfaces/payload';
 import type { CardPayload } from '@components/Card/Card';
-import { LinkType, type LinkPayload } from '@components/Links/Link';
+import Link, { LinkType, type LinkPayload } from '@components/Links/Link';
 
 
 
 
 
-export interface MyCardPayload extends CardPayload {
-  url?: string,
-  url2?: string
+export interface MyCardPayload {
+  title: string;
+  subtitle?: string;
+  description: string;
+  year: string;
+  image?: string;
+  type?: CardType;
+  url?: string;
+  url2?: string;
 }
 
 const CardGenType = {
@@ -73,7 +79,20 @@ function CardGenerator(payload: CardGeneratorPayload) {
       });
     }
 
-    return { title, description, year, image, list };
+    const head: React.ReactNode = <>
+      <h3>{title}</h3>
+      <h3>{year}</h3>
+    </>;
+
+    const body: React.ReactNode = <>
+      {description && <p>{description}</p>}
+    </>;
+
+    const footer: React.ReactNode = <Link list={list}
+      type={LinkType.card} />;
+
+
+    return { head, body, footer, image };
   }
 
 
@@ -82,12 +101,12 @@ function CardGenerator(payload: CardGeneratorPayload) {
       <Title id={id} title={title} type={titleType} />
       <Stack fullPage={false}>
         {objects.map((object: MyCardPayload, index: number) => {
-          const { title, description, year, image, list } = setObject(object);
-          return <Card key={index} title={title}
-            year={year}
-            image={image}
-            links={{ list: list, type: LinkType.card }}
-            description={description} />
+          const { head, body, footer, image } = setObject(object);
+          return <Card key={index}
+            head={head}
+            body={body}
+            footer={footer}
+            image={image} />
         })}
       </Stack>
     </>
@@ -97,6 +116,7 @@ function CardGenerator(payload: CardGeneratorPayload) {
 
   const aux: CardPayload[] = objects.map((object: MyCardPayload) => {
     const newObject: CardPayload = setObject(object);
+    console.log(newObject);
     return newObject;
   });
 
