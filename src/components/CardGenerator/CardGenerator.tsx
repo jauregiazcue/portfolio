@@ -116,7 +116,6 @@ function CardGenerator(payload: CardGeneratorPayload) {
 
   const aux: CardPayload[] = objects.map((object: MyCardPayload) => {
     const newObject: CardPayload = setObject(object);
-    console.log(newObject);
     return newObject;
   });
 
