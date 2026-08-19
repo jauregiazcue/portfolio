@@ -19,15 +19,17 @@ $color-h: #FFA72B;
 
 
 $font-options: (
-    a: $color-h,
-    b: $color-e,
-    c: $color-c,
+    a: $color-a,
+    b: $color-c,
+    c: $color-h,
+    d: $color-e,
 );
 
 $font-options-dark: (
-    a: $color-h,
-    b: $color-c,
-    c: $color-c,
+    a: $color-c,
+    b: $color-a,
+    c: $color-h,
+    d: $color-e,
 );
 
 $color-options: (
@@ -39,6 +41,7 @@ $color-options: (
     f: $color-f,
     g: $color-g,
     h: $color-h,
+    i: transparent
 );
 
 $color-options-dark: (
@@ -50,6 +53,7 @@ $color-options-dark: (
     f: $color-f,
     g: $color-g-dark,
     h: $color-h,
+    i: transparent
 );
 
 

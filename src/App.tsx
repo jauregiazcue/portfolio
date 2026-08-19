@@ -5,19 +5,25 @@ import HeroImage from "@assets/Profile.jpg";
 import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
 import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
 
-import Hero, { HeroType } from "@components/Hero/Hero";
-import Link, { type LinkPayload, LinkType } from "@components/Links/Link";
-import { CardGenType } from "@/components/CardGroups/CardGroup";
+import Hero from "@components/Hero/Hero";
+import Link from "@components/Links/Link";
 import Footer from "@/components/Footer/Footer";
-import { TitleType } from "./components/Title/Title";
-import ProjectCardGroup from "./components/CardGroups/ProjectCardGroup";
+import ProjectCardGroup from "./components/CardGroup/ProjectCardGroup";
+import {
+  CardGenType,
+  HeroType,
+  LinkType,
+  type LinkPayload
+} from "./utils/interfaces/payload";
 
 function App() {
   const [isActive, setActive] = useState(true);
   const debug = false;
   const githubPath = false;
   const pathString = debug ? "portfolio/" : "";
-  const dataPath = githubPath ? `${pathString}Portfolio_Data_github.csv` : `${pathString}Portfolio_Data_namecheap.csv`;
+  const dataPath = githubPath ?
+    `${pathString}Portfolio_Data_github.csv` :
+    `${pathString}Portfolio_Data_namecheap.csv`;
   const experiencePath = `${pathString}Portfolio_Experience.csv`;
   const studiesPath = `${pathString}Portfolio_Studies.csv`;
 
@@ -80,9 +86,15 @@ function App() {
         <Link list={data} type={LinkType.simple} />
       </Hero>
 
-      <ProjectCardGroup title="Project" id="project" csv={dataPath} type={CardGenType.grid} titleType={TitleType.preHero} />
-      <ProjectCardGroup title="Experience" id="experience" csv={experiencePath} type={CardGenType.list} />
-      <ProjectCardGroup title="Studies" id="Studies" csv={studiesPath} type={CardGenType.list} />
+      <ProjectCardGroup title="Project" id="project"
+        csv={dataPath} type={CardGenType.grid} />
+
+      <ProjectCardGroup title="Experience" id="experience"
+        csv={experiencePath} type={CardGenType.list} />
+
+      <ProjectCardGroup title="Studies" id="Studies"
+        csv={studiesPath} type={CardGenType.list} />
+
       <Footer id="contact"
         links={{ list: footerData, type: LinkType.simple }}
         owner={"Kai Jauregi Azcue"}

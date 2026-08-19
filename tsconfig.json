@@ -10,8 +10,9 @@
       "@/*": ["./src/*"],
       "@style/*": ["./src/scss/*"],
       "@assets/*": ["./src/assets/*"],
+      "@tools/*": ["./src/utils/tools/*"],
       "@components/*": ["./src/components/*"],
-      "@interfaces/*": ["./src/interfaces/*"]
+      "@interfaces/*": ["./src/utils/interfaces/*"]
     }
   }
 }

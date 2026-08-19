@@ -1,12 +1,16 @@
-import type { Payload } from "@interfaces/payload";
-import Card, { CardType, type CardPayload } from "@components/Card/Card";
+//-------------------------------------------------
+//---------------------IMPORTS---------------------
+//--react > interface > tools > components > scss--
+import {
+  CardType,
+  type CardPayload,
+  type ListPayload
+} from "@/utils/interfaces/payload";
+import Card from "@components/Card/Card";
+
 import "./List.scss";
 
-
-export interface ListPayload extends Payload {
-  list: CardPayload[]
-}
-
+//---------------------COMPONENT---------------------
 function List(payload: ListPayload) {
   const { list } = payload;
 

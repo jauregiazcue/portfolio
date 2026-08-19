@@ -1,15 +1,14 @@
-import type { PayloadWithChildren } from "@interfaces/payload";
+//-------------------------------------------------
+//---------------------IMPORTS---------------------
+//--react > interface > tools > components > scss--
+import type { StackPayload } from "@/utils/interfaces/payload";
 import "./Stack.scss";
 
-
-interface StackPayload extends PayloadWithChildren {
-  fullPage?: boolean,
-  backgroundColor?: string,
-  backgroundImage?: string,
-}
-
+//---------------------COMPONENT---------------------
 function Stack(payload: StackPayload) {
-  const { id, backgroundColor, backgroundImage, className, fullPage, children } = payload;
+  const { id, backgroundColor, backgroundImage,
+    className, fullPage, children } = payload;
+
   let { style } = payload;
   style = style == undefined ?
     backgroundImage ? { backgroundImage: `url(${backgroundImage})` } :
@@ -20,7 +19,7 @@ function Stack(payload: StackPayload) {
   return <div id={id ? id : ""}
     className={classNam + " " + className}
     style={style}>
-    <div className= {classNam + "--body"}>
+    <div className={classNam + "--body"}>
       {children}
     </div>
   </div>;

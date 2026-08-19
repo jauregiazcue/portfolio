@@ -1,31 +1,13 @@
-import type { Payload } from "@interfaces/payload";
+//-------------------------------------------------
+//---------------------IMPORTS---------------------
+//--react > interface > tools > components > scss--
 
+import { CardType, type CardPayload } from "@/utils/interfaces/payload";
 import "./Card.scss";
 
-
-
-const CardType = {
-  simple: "card",
-  bigImage: "card-c",
-  sizelessInHeight: "card-a",
-  sizeless:"card-b"
-}
-
-type CardType = (typeof CardType)[keyof typeof CardType];
-export { CardType };
-
-export interface CardPayload extends Payload {
-  image?: string;
-  type?: CardType
-
-  head?: React.ReactNode,
-  body?: React.ReactNode,
-  footer?: React.ReactNode
-}
-
-
+//---------------------COMPONENT---------------------
 function Card(payload: CardPayload) {
-  const { id,head,body,footer, image } = payload;
+  const { id, head, body, footer, image } = payload;
   let { type } = payload;
   const sectionStyle = image ? {
     backgroundImage: `url(${image})`,

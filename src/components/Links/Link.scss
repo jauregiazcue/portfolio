@@ -1,6 +1,6 @@
 @use "@style/vars.scss" as *;
 @use "@style/media.scss" as *;
-@use "@style/background.scss" as *;
+@use "@style/color.scss" as *;
 @use "@style/font.scss" as *;
 
 @mixin link() {
@@ -20,11 +20,7 @@
       object-fit: cover;
     }
 
-    color: getColor(a, "light");
-
-    body.dark-mode & {
-      color: getColor(a, "dark");
-    }
+    @include fontColor(a, a);
 
     &:nth-last-child(1) {
       margin-right: 0;
@@ -47,8 +43,6 @@
     }
   }
 
-
-
   & span {
     margin-right: $measure;
   }
@@ -66,6 +60,7 @@
   transform: translate(0, -50%);
 
   @include transparentBackground();
+  @include borderColor(i, b);
 
   display: flex;
   flex-direction: column;
@@ -77,13 +72,6 @@
   width: fit-content;
   overflow: hidden;
 
-
-  body.dark-mode & {
-    background-color: getColor(g, "dark");
-    color: getColor(a, "dark");
-    border-color: getColor(b, "dark");
-  }
-
   & a {
 
     width: fit-content;
@@ -92,26 +80,17 @@
     padding-bottom: $measure * 2;
     margin-right: $measure * 5;
     transition: .7s;
-    color: getColor(a, "light");
+    @include fontColor(a, a);
 
     &:hover {
       transform: scale(1.1);
-      background-color: getColor(g, "dark");
-      color: getColor(b, "light");
+      @include backgroundColor(g, g, true);
+      @include fontColor(b, b);
 
       & .fa-solid {
-        color: getColor(b, "light");
+        @include fontColor(b, b);
       }
 
-      body.dark-mode & {
-        background-color: getColor(g, "light");
-        color: getColor(b, "dark");
-
-        & .fa-solid {
-          color: getColor(b, "dark");
-        }
-
-      }
     }
 
   }
@@ -149,6 +128,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include title($size : 1.5rem, $color : e, $type : $type-b);
+    @include title($size : 1.5rem, $light : a, $dark: b, $type : $type-b);
   }
 }

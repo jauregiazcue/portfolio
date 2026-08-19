@@ -1,5 +1,6 @@
 @use "@style/vars.scss" as *;
 @use "@style/media.scss" as *;
+@use "@style/color.scss" as *;
 
 .list {
   margin: $measure;
@@ -23,8 +24,7 @@
     $paddingSize : $measure * 2;
     $paddingCircle: -($borderSize + $measure * 1.2);
 
-    $decorColor : getColor(h, "light");
-    $decorDarkColor : getColor(h, "dark");
+    
     position: relative;
     display: flex;
     flex-direction: column;
@@ -46,16 +46,12 @@
       color: transparent;
       height: $measure * 2;
       width: $measure * 2;
-      background: getColor(e, "light");
+      @include backgroundColor(e,b);
 
       border-radius: 100%;
       margin-top: $measure * 2.5;
-      border: $borderSize solid $decorColor;
-
-      body.dark-mode & {
-        border: $borderSize solid $decorDarkColor;
-        background: getColor(b, "dark");
-      }
+      border: $borderSize solid;
+      @include borderColor(h,h);
 
       @include mobile {
         display: none;
@@ -71,11 +67,8 @@
       color: transparent;
       height: 130%;
 
-      border: $borderSize * .5 solid $decorColor;
-
-      body.dark-mode & {
-        border: $borderSize * .5 solid $decorDarkColor;
-      }
+      border: $borderSize * .5 solid;
+      @include borderColor(h,h);
 
       @include mobile {
         display: none;

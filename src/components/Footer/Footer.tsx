@@ -1,18 +1,16 @@
-import { useEffect, useRef } from "react";
-import type { Payload } from "@interfaces/payload";
+//-------------------------------------------------
+//---------------------IMPORTS---------------------
+//--react > interface > tools > components > scss--
 
-import type { LinksPayload } from "@components/Links/Link";
+import { useEffect, useRef } from "react";
+
+import type { FooterPayload } from "@/utils/interfaces/payload";
+
 import Link from "@components/Links/Link";
 
 import "./Footer.scss";
 
-
-export interface FooterPayload extends Payload {
-  links: LinksPayload,
-  owner: string,
-  email: string
-}
-
+//---------------------COMPONENT---------------------
 function Footer(payload: FooterPayload) {
   const { id, email, owner, links } = payload;
 

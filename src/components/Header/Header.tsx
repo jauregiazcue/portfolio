@@ -1,15 +1,11 @@
-import type { Payload } from "@/interfaces/payload";
+//-------------------------------------------------
+//---------------------IMPORTS---------------------
+//--react > interface > tools > components > scss--
+
+import type { HeaderPayload } from "@/utils/interfaces/payload";
 import "./Header.scss";
 
-
-export interface HeaderPayload extends Payload {
-
-
-  left?: React.ReactNode,
-  center?: React.ReactNode,
-  right?: React.ReactNode
-}
-
+//---------------------COMPONENT---------------------
 function Header(payload: HeaderPayload) {
   const { id, left, center, right } = payload;
   return <div id={id} className="header">

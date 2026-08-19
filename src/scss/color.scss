@@ -1,0 +1,46 @@
+@use "vars.scss" as *;
+
+
+@mixin backgroundColor($light :a, $dark: a, $reverse: false) {
+
+  background-color: getColor($light, "dark");
+
+  body.dark-mode & {
+    background-color: getColor($dark, "light");
+  }
+
+  @if $reverse == false {
+    background-color: getColor($light, "light");
+
+    body.dark-mode & {
+      background-color: getColor($dark, "dark");
+    }
+  }
+}
+
+@mixin fontColor($light :a, $dark: a) {
+  color: getFontColor($light, "light");
+
+  body.dark-mode & {
+    color: getFontColor($dark, "dark");
+  }
+}
+
+@mixin borderColor($light :a, $dark: a) {
+  border-color: getColor($light, "light");
+
+  body.dark-mode & {
+    border-color: getColor($dark, "dark");
+  }
+}
+
+@mixin transparentBackground {
+  border-radius: $border-radius-b;
+  border: $measure *.25 solid transparent;
+
+  @include backgroundColor(g, g);
+  @include fontColor(a, a);
+
+  backdrop-filter: blur(10px);
+
+}
