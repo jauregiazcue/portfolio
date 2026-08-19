@@ -1,13 +1,12 @@
 @use "@style/vars.scss" as *;
 @use "@style/media.scss" as *;
-
+@use "@style/background.scss" as *;
 @use "@style/font.scss" as *;
 
 @mixin link() {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  padding-top: $measure;
 
   & a {
     width: max-content;
@@ -55,6 +54,7 @@
   }
 }
 
+
 .link {
   @include link();
 }
@@ -65,21 +65,18 @@
   left: 1em;
   transform: translate(0, -50%);
 
+  @include transparentBackground();
+
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
-  border-radius: $border-radius-b;
-  border: $measure *.25 solid transparent;
   z-index: 2;
   text-align: center;
 
   width: fit-content;
   overflow: hidden;
 
-  background-color: getColor(g, "light");
-
-  backdrop-filter: blur(10px);
 
   body.dark-mode & {
     background-color: getColor(g, "dark");
@@ -154,6 +151,4 @@
     align-items: center;
     @include title($size : 1.5rem, $color : e, $type : $type-b);
   }
-
-
 }

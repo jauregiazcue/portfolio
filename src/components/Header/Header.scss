@@ -1,0 +1,54 @@
+@use "@style/vars.scss" as *;
+@use "@style/background.scss" as *;
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  padding-top: $measure;
+  padding-bottom: $measure;
+  align-items: center;
+
+  @include transparentBackground();
+  border-radius: 0;
+
+  &--left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & h3 {
+      margin-left: $measure;
+    }
+
+    & img {
+      width: 10%;
+    }
+  }
+
+  &--center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 50%;
+
+  }
+
+  &--right {
+    & div {
+      display: flex;
+      align-items: center;
+      height: 100;
+
+      &>* {
+        height: 100%;
+      }
+    }
+  }
+}

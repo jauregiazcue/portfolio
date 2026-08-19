@@ -1,11 +1,6 @@
 @use "sass:map";
 @use "vars.scss" as *;
 
-@font-face {
-  font-family: 'MyFont';
-  src: local('MyFont'), url(ATLangGothicTrial-Bold.otf) format('otf');
-}
-
 @mixin title($size : 32px,
   $decoration: none,
   $weight : 100,

@@ -1,0 +1,14 @@
+
+@use "vars.scss" as *;
+
+@mixin transparentBackground {
+  border-radius: $border-radius-b;
+  border: $measure *.25 solid transparent;
+  background-color: getColor(g, "light");
+  backdrop-filter: blur(10px);
+
+  body.dark-mode & {
+    background-color: getColor(g, "dark");
+    color: getColor(a, "dark");
+  }
+}

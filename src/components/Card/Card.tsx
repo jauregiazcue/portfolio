@@ -5,9 +5,10 @@ import "./Card.scss";
 
 
 const CardType = {
-  simple: 0,
-  sizelessInHeight: 1,
-  sizeless:2
+  simple: "card",
+  bigImage: "card-c",
+  sizelessInHeight: "card-a",
+  sizeless:"card-b"
 }
 
 type CardType = (typeof CardType)[keyof typeof CardType];
@@ -33,26 +34,18 @@ function Card(payload: CardPayload) {
     backgroundRepeat: 'no-repeat'
   } : { display: "none" };
 
-  function getType(type: CardType) {
-    switch(type){
-      default: return "card";
-      case CardType.sizelessInHeight : return "card-a";
-      case CardType.sizeless : return "card-b";
-    }
-  }
 
   if (!type) type = CardType.simple;
-  const classType = getType(type);
-  return <div id={id} className={classType}>
+  return <div id={id} className={type}>
 
-    {<div className={classType + "--header"} style={sectionStyle} />}
-    <div className={classType + "--body"}>
-      {head && <div className={classType + "--body--head"}>
+    {<div className={type + "--header"} style={sectionStyle} />}
+    <div className={type + "--body"}>
+      {head && <div className={type + "--body--head"}>
         {head}
       </div>}
       {body}
     </div>
-    {footer && <div className={classType + "--footer"}>
+    {footer && <div className={type + "--footer"}>
       {footer}
     </div>}
   </div>;

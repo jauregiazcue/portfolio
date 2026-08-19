@@ -90,20 +90,50 @@
 
 .card-a {
   @include card();
-  max-height:none;
+  max-height: none;
 
   &--body {
-    max-height:none;
+    max-height: none;
     height: fit-content;
   }
 }
 
 .card-b {
   @include card();
-  max-height:none;
+  max-height: none;
+  min-width: 60vw;
   width: 100%;
+
   &--body {
-    max-height:none;
+    max-height: none;
     height: fit-content;
   }
+}
+
+.card-c {
+  @include card();
+
+  &--header {
+    min-height: $measure * 35;
+    overflow: hidden;
+    border: solid $measure * .75 getColor(d, "light");
+    border-top-left-radius: $border-radius-b;
+    border-top-right-radius: $border-radius-b;
+    border-bottom: none;
+
+    body.dark-mode & {
+      border-color: getColor(d, "dark");
+    }
+  }
+
+  &--body {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    & h3 {
+      font-size: 2rem;
+      width: 100%;
+    }
+  }
+
 }

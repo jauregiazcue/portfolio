@@ -69,11 +69,6 @@ $color-options-dark: (
     @return map.get($font-options-dark, $color);
 }
 
-@font-face {
-    font-family: 'MyFont';
-    src: local('MyFont'), url(ATLangGothicTrial-Bold.otf) format('otf');
-}
-
 /* alexandria-latin-wght-normal */
 @font-face {
     font-family: 'Alexandria Variable';
