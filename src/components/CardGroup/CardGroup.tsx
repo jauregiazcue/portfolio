@@ -17,17 +17,22 @@ import Card from '@components/Card/Card';
 import List from '@components/List/List';
 import Stack from '@components/Stack/Stack';
 import Title from '@components/Title/Title';
+import { Link as RouterLink } from 'react-router';
 
 //---------------------COMPONENT---------------------
 function CardGroup<T>(payload: CardGroupParentPayload) {
   const { setObject } = payload;
-  const { id, type, title, csv } = payload.payload;
+  const { id, type, title, csv, linkToMore } = payload.payload;
   const [objects, setObjects] = useState<T[]>([]);
-
+  const [quantity, setQuantity] = useState<number>(
+    (payload.payload.quantity != undefined ? payload.payload.quantity : 0));
 
   useEffect(() => {
-    fetchCSV<T>(csv, setObjects);
-  }, [csv]);
+    fetchCSV<T>(csv, setObjects).then(()=> {
+      if(quantity == 0) setQuantity(objects.length);
+    });
+    
+  }, [csv,quantity,objects]);
 
 
   if (type == CardGenType.grid) {
@@ -35,17 +40,19 @@ function CardGroup<T>(payload: CardGroupParentPayload) {
       <Title id={id} title={title} />
       <Stack fullPage={false}>
         {objects.map((object: T, index: number) => {
-          if (index < 8) {
+          if (index < quantity) {
             const { head, body, footer, image } = setObject(object);
             return <Card key={index}
               head={head} body={body}
               footer={footer} image={image} />
           }
-          if (index == 8) {
-            return <Card key={index}
+          if (index == quantity) {
+            return <RouterLink to={linkToMore ? linkToMore : "/missingLinkFromDeveloper"} key={index}>
+            <Card key={index}
               type={CardType.bigImage}
               body={<h3>Check Out More!</h3>}
               image={"./more.png"} />
+            </RouterLink>
           }
 
         })}

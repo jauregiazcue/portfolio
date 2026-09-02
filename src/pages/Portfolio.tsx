@@ -1,23 +1,28 @@
+//-------------------------------------------------
+//---------------------IMPORTS---------------------
+//--react > interface > tools > components > scss--
 import { useState } from "react";
 
-import "@style/vars.scss";
-import HeroImage from "@assets/Profile.jpg";
-import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
-import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
-
-import Hero from "@components/Hero/Hero";
-import Link from "@components/Links/Link";
-import Footer from "@/components/Footer/Footer";
-import ProjectCardGroup from "./components/CardGroup/ProjectCardGroup";
 import {
   CardGenType,
   HeroType,
   LinkType,
   type LinkPayload
-} from "./utils/interfaces/payload";
+} from "@/utils/interfaces/payload";
 
-function App() {
+import HeroImage from "@assets/Profile.jpg";
+import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
+import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
+
+import Hero from "@components/Hero/Hero";
+import Link from "@/components/Link/Link";
+import ProjectCardGroup from "@components/CardGroup/ProjectCardGroup";
+
+
+//---------------------COMPONENT---------------------
+function Portfolio() {
   const [isActive, setActive] = useState(true);
+
   const debug = false;
   const githubPath = false;
   const pathString = debug ? "portfolio/" : "";
@@ -86,7 +91,7 @@ function App() {
         <Link list={data} type={LinkType.simple} />
       </Hero>
 
-      <ProjectCardGroup title="Project" id="project"
+      <ProjectCardGroup title="Project" id="project" /* quantity={8} linkToMore="/about" */
         csv={dataPath} type={CardGenType.grid} />
 
       <ProjectCardGroup title="Experience" id="experience"
@@ -94,15 +99,10 @@ function App() {
 
       <ProjectCardGroup title="Studies" id="Studies"
         csv={studiesPath} type={CardGenType.list} />
-
-      <Footer id="contact"
-        links={{ list: footerData, type: LinkType.simple }}
-        owner={"Kai Jauregi Azcue"}
-        email={"kai.jauregi@proton.me"} />
     </>
   )
 }
 
 
-export default App;
+export default Portfolio;
 

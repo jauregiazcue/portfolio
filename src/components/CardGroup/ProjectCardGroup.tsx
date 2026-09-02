@@ -10,7 +10,7 @@ import {
   type ProjectCardPayload
 } from '@/utils/interfaces/payload';
 
-import Link from '@components/Links/Link';
+import Link from '@/components/Link/Link';
 import CardGroup from '@components/CardGroup/CardGroup';
 
 //---------------------COMPONENT---------------------

@@ -6,7 +6,7 @@ import { useEffect, useRef } from "react";
 
 import type { FooterPayload } from "@/utils/interfaces/payload";
 
-import Link from "@components/Links/Link";
+import Link from "@/components/Link/Link";
 
 import "./Footer.scss";
 

@@ -77,6 +77,8 @@ export interface MyCardPayload {
 export interface CardGroupPayload extends Payload {
   csv: string,
   type: CardGenType,
+  quantity?: number,
+  linkToMore?: string,
   title: string
 }
 
