@@ -8,8 +8,9 @@ import { RouterProvider } from "react-router/dom";
 import Portfolio from './pages/Portfolio';
 import { Link as RouterLink } from 'react-router';
 import Projects from './pages/Projects';
-import Page from './pages/Page';
-import PageHeader from './pages/PageHeader';
+import Page from './components/PageParents/Page';
+import PageHeader from './components/PageParents/PageHeader';
+import Maze from './pages/maze/Maze';
 
 const router = createBrowserRouter([
 
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/about/projects",
         element: <Projects />,
+      },
+      {
+        path: "/about/maze",
+        element: <Maze />,
       }]
     },
     ]

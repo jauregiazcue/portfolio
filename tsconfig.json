@@ -8,7 +8,7 @@
     "composite":true,
     "paths": {
       "@/*": ["./src/*"],
-      "@style/*": ["./src/scss/*"],
+      "@style/*": ["./src/PalacePackage/scss/*"],
       "@assets/*": ["./src/assets/*"],
       "@tools/*": ["./src/utils/tools/*"],
       "@components/*": ["./src/components/*"],

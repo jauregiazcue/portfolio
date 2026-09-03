@@ -7,11 +7,11 @@ import {
   type CardGroupParentPayload,
   type CardGroupPayload,
   type LinkPayload,
-  type ProjectCardPayload
-} from '@/utils/interfaces/payload';
+} from '@/PalacePackage/utils/interfaces/payload';
 
-import Link from '@/components/Link/Link';
-import CardGroup from '@components/CardGroup/CardGroup';
+import Link from '@/PalacePackage/components/Link/Link';
+import CardGroup from '@/PalacePackage/components/CardGroup/CardGroup';
+import type { ProjectCardPayload } from '@/utils/payload';
 
 //---------------------COMPONENT---------------------
 function ProjectCardGroup(payload: CardGroupPayload) {

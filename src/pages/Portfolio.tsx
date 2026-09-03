@@ -8,15 +8,17 @@ import {
   HeroType,
   LinkType,
   type LinkPayload
-} from "@/utils/interfaces/payload";
+} from "@/PalacePackage/utils/interfaces/payload";
 
 import HeroImage from "@assets/Profile.jpg";
 import pdf_en from "@assets/Kai_Jauregi_CV_en.pdf";
 import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
 
-import Hero from "@components/Hero/Hero";
-import Link from "@/components/Link/Link";
-import ProjectCardGroup from "@components/CardGroup/ProjectCardGroup";
+import Hero from "@/PalacePackage/components/Hero/Hero";
+import Link from "@/PalacePackage/components/Link/Link";
+import ProjectCardGroup from "@/components/CardGroup/ProjectCardGroup";
+import StudiesCardGroup from "@/components/CardGroup/StudiesCardGroup";
+import ExperiencesCardGroup from "@/components/CardGroup/ExperiencesCardGroup";
 
 
 //---------------------COMPONENT---------------------
@@ -24,11 +26,8 @@ function Portfolio() {
   const [isActive, setActive] = useState(true);
 
   const debug = false;
-  const githubPath = false;
   const pathString = debug ? "portfolio/" : "";
-  const dataPath = githubPath ?
-    `${pathString}Portfolio_Data_github.csv` :
-    `${pathString}Portfolio_Data_namecheap.csv`;
+  const dataPath = `${pathString}Portfolio_Data_namecheap.csv`;
   const experiencePath = `${pathString}Portfolio_Experience.csv`;
   const studiesPath = `${pathString}Portfolio_Studies.csv`;
 
@@ -91,13 +90,13 @@ function Portfolio() {
         <Link list={data} type={LinkType.simple} />
       </Hero>
 
-      <ProjectCardGroup title="Project" id="project" /* quantity={8} linkToMore="/about" */
+      <ProjectCardGroup title="Projects" id="project" quantity={8} linkToMore="/about/projects"
         csv={dataPath} type={CardGenType.grid} />
 
-      <ProjectCardGroup title="Experience" id="experience"
+      <ExperiencesCardGroup title="Professional Experiences" id="experience"
         csv={experiencePath} type={CardGenType.list} />
 
-      <ProjectCardGroup title="Studies" id="Studies"
+      <StudiesCardGroup title="Studies" id="Studies"
         csv={studiesPath} type={CardGenType.list} />
     </>
   )

@@ -1,0 +1,129 @@
+@use "@style/vars.scss" as *;
+
+.maze {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: $measure * 5;
+
+  & .card,
+  .card-a,
+  .card-b {
+    margin: $measure;
+    overflow-wrap: break-word;
+  }
+
+  & .card {
+    max-height: none;
+    width: 90%;
+    height: auto;
+    &--body {
+      height: auto;
+    }
+  }
+
+  & .maze--json {
+    width: 100%;
+
+    & button {
+      width: 100%;
+      padding: $measure;
+      margin-top: $measure * 2;
+    }
+  }
+
+  & .maze--form {
+    padding: 0 $measure * 2;
+
+    & h4 {
+      margin-top: $measure * 2;
+      text-align: left;
+    }
+
+    & input,
+    button,
+    select {
+      width: 100%;
+      padding: $measure;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+
+    & button {
+      margin-top: $measure * 2;
+      margin-bottom: $measure * 3;
+    }
+  }
+
+  & canvas {
+    margin: 20px;
+    
+    border: $measure * .25 solid getColor(d, "light");
+    border-radius: $border-radius-a;
+  }
+
+
+  & h3 {
+    width: 100%;
+  }
+}
+
+div#btn-container {
+  display: grid;
+  width: 50%;
+  aspect-ratio: 2/1;
+  margin-left: auto;
+  margin-right: auto;
+  place-items: center center;
+  row-gap: 0;
+  column-gap: 0;
+
+  & button {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+button#left {
+  & div {
+    transform: rotate(90deg);
+  }
+
+  width: 100%;
+  height: 100%;
+  grid-row-start: 2;
+  grid-column-start: 1;
+}
+
+button#up {
+  & div {
+    transform: rotate(-180deg);
+  }
+
+  width: 100%;
+  height: 100%;
+  grid-row-start: 1;
+  grid-column-start: 2;
+}
+
+button#down {
+  width: 100%;
+  height: 100%;
+  grid-row-start: 2;
+  grid-column-start: 2;
+}
+
+button#right {
+  & div {
+    transform: rotate(-90deg);
+  }
+
+  width: 100%;
+  height: 100%;
+  grid-row-start: 2;
+  grid-column-start: 3;
+}

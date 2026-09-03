@@ -1,0 +1,123 @@
+@use "@style/vars.scss" as *;
+@use "@style/color.scss" as *;
+@use "@style/media.scss" as *;
+
+@mixin card() {
+  display: flex;
+  flex-direction: column;
+  max-height: $measure * 50;
+  width: $measure * 60;
+  @include backgroundColor(d,d);
+  border-radius: $border-radius-b;
+  overflow: hidden;
+  white-space: pre-line;
+  box-shadow: 0 4px 8px 0 
+  rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  @include mobile {
+    width: 100%;
+    max-height: none;
+  }
+
+  &--header {
+    min-height: $measure * 20;
+    overflow: hidden;
+    border: solid $measure * .75;
+    @include borderColor(d,d);
+    border-top-left-radius: $border-radius-b;
+    border-top-right-radius: $border-radius-b;
+    border-bottom: none;
+
+
+  }
+
+  &--body {
+    height: $measure * 17;
+    padding: $measure * 2;
+    overflow: scroll;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &--head {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: $measure * 2;
+
+      @include mobile {
+        flex-direction: column;
+      }
+    }
+
+    & p {
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      @include mobile {
+        height: fit-content;
+      }
+    }
+
+    @include mobile {
+      height: auto;
+    }
+  }
+
+  &--footer {
+    display: flex;
+    width: 100%;
+    margin-top: auto;
+    min-height: $measure * 5;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
+
+
+.card {
+  @include card();
+}
+
+.card-a {
+  @include card();
+  max-height: none;
+
+  &--body {
+    max-height: none;
+    height: fit-content;
+  }
+}
+
+.card-b {
+  @include card();
+  max-height: none;
+  min-width: 60vw;
+  width: 100%;
+
+  &--body {
+    max-height: none;
+    height: fit-content;
+
+  }
+}
+
+.card-c {
+  @include card();
+
+  &--header {
+    min-height: $measure * 35;
+  }
+
+  &--body {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    & h3 {
+      font-size: 2rem;
+      width: 100%;
+    }
+  }
+}
