@@ -21,7 +21,7 @@ function ProjectCardGroup(payload: CardGroupPayload) {
     const list: LinkPayload[] = [];
     if (url) {
       list.push({
-        href: url, target: "_blank",
+        href: url, target: url[0] != "/" ? "_blank" : "_self",
         text: "Learn More",
         textClassname: "fa-solid fa-circle-up fa-rotate-by",
         textstyle:

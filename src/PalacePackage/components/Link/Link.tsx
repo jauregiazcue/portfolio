@@ -9,17 +9,27 @@ import {
   type LinksPayload
 } from "@/PalacePackage/utils/interfaces/payload";
 import "./Link.scss";
+
+import { Link as RouterLink } from 'react-router';
 //-------------------------------------------------
 
 function actualLink(payload: ActualLinkPayload) {
   const { text, textClassname, key, href, onClick, ...props } = payload;
-  return <a key={key}
-    {...onClick ? { ["onClick"]: onClick } : { ["href"]: href }} {...props}>
+  if (onClick) {
+    return <a key={key}
+      {...{ ["onClick"]: onClick }} {...props}>
+      {text ?
+        <i>{text}</i> :
+        <i className={textClassname}></i>
+      }
+    </a>
+  }
+  return <RouterLink key={key} to={href ? (href) : ""} {...props}>
     {text ?
       <i>{text}</i> :
       <i className={textClassname}></i>
     }
-  </a>
+  </RouterLink>
 }
 
 //---------------------COMPONENT---------------------

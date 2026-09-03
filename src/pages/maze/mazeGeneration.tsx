@@ -17,8 +17,6 @@ class Maze {
     if (!size) size = this.size;
 
     size = size <= 0 ? 10 : size;
-    console.log("Hello ? ");
-    console.log("Type: " + type);
     this.maze = this.genMaze(type, size, size);
     this.getJSON();
   }
@@ -27,7 +25,6 @@ class Maze {
     // Make dimensions odd
     width -= width % 2; width++;
     height -= height % 2; height++;
-    console.log("Hi");
     switch (type) {
       case GenType.aldous: return aldousBroderMaze(width, height);
       case GenType.binaryTree: return binaryTreeMaze(width, height);
@@ -74,7 +71,6 @@ class Maze {
 
 
   draw(ctx: CanvasRenderingContext2D) {
-    console.log("Draw");
     const canvas = ctx.canvas;
     const width = canvas.width;
     const height = canvas.height;

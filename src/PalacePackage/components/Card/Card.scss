@@ -15,7 +15,7 @@
   rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
   @include mobile {
-    width: 100%;
+    width: 90vw;
     max-height: none;
   }
 
@@ -32,7 +32,7 @@
   }
 
   &--body {
-    height: $measure * 17;
+    height: $measure * 20;
     padding: $measure * 2;
     overflow: scroll;
     overflow-x: hidden;
@@ -108,11 +108,11 @@
   @include card();
 
   &--header {
-    min-height: $measure * 35;
+    min-height: $measure * 40;
   }
 
   &--body {
-    height: fit-content;
+    height: $measure * 10;
     display: flex;
     align-items: center;
     & h3 {

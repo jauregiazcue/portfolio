@@ -6,8 +6,6 @@ import {
 } from "@/PalacePackage/utils/interfaces/payload";
 
 import { useNavigate, useOutlet } from "react-router";
-import Header from "@/PalacePackage/components/Header/Header";
-import { Link as RouterLink } from 'react-router';
 import Link from "@/PalacePackage/components/Link/Link";
 
 //---------------------COMPONENT---------------------
@@ -18,33 +16,13 @@ function PageHeader() {
   const outlet = useOutlet();
   if (!outlet) navigate("/about/tools");
 
-  const headerLeft = <RouterLink to={{ pathname: "/", hash: "#hero" }}>
-    <h1>Kai Jauregi</h1>
-  </RouterLink>;
-
-  /* const headerCenter = <>
-    <ol>
-      <li><RouterLink to={"/tools"}>
-        <h3>Tools</h3>
-      </RouterLink></li>
-      <li>
-        <RouterLink to={"/projects"}>
-          <h3>Projects</h3>
-        </RouterLink>
-      </li>
-    </ol>
-  </>; */
-
-  const headerRight = <Link type={LinkType.header} list={[
-    { href: "#contact", text: "Contact" },
-  ]} />;
-
+  
   return (
     <>
-      <Header left={headerLeft} /* center={headerCenter} */ right={headerRight} id="header">
-
-      </Header>
-
+      <Link type={LinkType.header} list={[
+        { href: { pathname: "/", hash: "#hero" }, textClassname: "fa-solid fa-house" },
+        { href: "#contact", textClassname: "fa-solid fa-address-book" },
+      ]} />;
       {outlet}
     </>
   )

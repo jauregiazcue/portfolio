@@ -10,7 +10,7 @@ import CardGroup from '@/PalacePackage/components/CardGroup/CardGroup';
 import type { ProjectCardPayload } from '@/utils/payload';
 
 //---------------------COMPONENT---------------------
-function ExperiencesCardGroup(payload: CardGroupPayload) {
+function ExperienceCardGroup(payload: CardGroupPayload) {
   function setObject(object: ProjectCardPayload) {
     const { title, description, year } = object;
     const head: React.ReactNode = <>
@@ -29,4 +29,4 @@ function ExperiencesCardGroup(payload: CardGroupPayload) {
     { payload, setObject } as CardGroupParentPayload);
 }
 
-export default ExperiencesCardGroup;
+export default ExperienceCardGroup;

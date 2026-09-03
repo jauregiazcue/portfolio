@@ -35,7 +35,6 @@ function Maze() {
     if (!ctx) return;
 
     if (maze.size < 10) { maze.errorDraw(ctx); return; }
-    console.log(mazeType);
     maze.init(mazeType);
     setJSON(maze.jsonString);
   }
@@ -56,7 +55,6 @@ function Maze() {
   }
 
   function OnSelectChange(event: ChangeEvent<HTMLSelectElement>) {
-    console.log(event.target.value);
     setMazeType(Number(event.target.value) as GenType);
   }
 

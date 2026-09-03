@@ -10,7 +10,7 @@ import CardGroup from '@/PalacePackage/components/CardGroup/CardGroup';
 import type { StudiesCardPayload } from '@/utils/payload';
 
 //---------------------COMPONENT---------------------
-function StudiesCardGroup(payload: CardGroupPayload) {
+function StudyCardGroup(payload: CardGroupPayload) {
   function setObject(object: StudiesCardPayload) {
     const { title, subtitle, year, place } = object;
     if (window.innerWidth >= 810) {
@@ -43,4 +43,4 @@ function StudiesCardGroup(payload: CardGroupPayload) {
     { payload, setObject } as CardGroupParentPayload);
 }
 
-export default StudiesCardGroup;
+export default StudyCardGroup;

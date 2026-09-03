@@ -17,8 +17,8 @@ import pdf_es from "@assets/Kai_Jauregi_CV_es.pdf";
 import Hero from "@/PalacePackage/components/Hero/Hero";
 import Link from "@/PalacePackage/components/Link/Link";
 import ProjectCardGroup from "@/components/CardGroup/ProjectCardGroup";
-import StudiesCardGroup from "@/components/CardGroup/StudiesCardGroup";
-import ExperiencesCardGroup from "@/components/CardGroup/ExperiencesCardGroup";
+import StudyCardGroup from "@/components/CardGroup/StudyCardGroup";
+import ExperienceCardGroup from "@/components/CardGroup/ExperienceCardGroup";
 
 
 //---------------------COMPONENT---------------------
@@ -93,10 +93,10 @@ function Portfolio() {
       <ProjectCardGroup title="Projects" id="project" quantity={8} linkToMore="/about/projects"
         csv={dataPath} type={CardGenType.grid} />
 
-      <ExperiencesCardGroup title="Professional Experiences" id="experience"
+      <ExperienceCardGroup title="Professional Experiences" id="experience"
         csv={experiencePath} type={CardGenType.list} />
 
-      <StudiesCardGroup title="Studies" id="Studies"
+      <StudyCardGroup title="Studies" id="Studies"
         csv={studiesPath} type={CardGenType.list} />
     </>
   )

@@ -129,7 +129,7 @@ export interface LinksPayload extends Payload {
 }
 
 export interface LinkPayload {
-  href?: string,
+  href?: string | { pathname: string, search?: string, hash?: string },
   text?: string,
   textClassname?: string,
   textstyle?: CSSProperties,
