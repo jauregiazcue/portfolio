@@ -5,7 +5,6 @@ import { fileURLToPath } from "url";
 export default defineConfig({
 
   plugins: [react()],
-  base: "./",
   resolve: {
     alias: {
       "@": fileURLToPath(new URL('./src', import.meta.url)),
@@ -16,4 +15,6 @@ export default defineConfig({
       "@interfaces":  fileURLToPath(new URL('./src/utils/interfaces', import.meta.url)),
     },
   },
+  // do /portfolio if github page, do "" if kaijauregi.com
+  base: "",
 });
