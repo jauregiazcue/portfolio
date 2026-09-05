@@ -90,7 +90,7 @@ function Portfolio() {
         <Link list={data} type={LinkType.simple} />
       </Hero>
 
-      <ProjectCardGroup title="Projects" id="project" quantity={8} linkToMore="/about/projects"
+      <ProjectCardGroup title="Projects" id="project" quantity={8} linkToMore="/projects"
         csv={dataPath} type={CardGenType.grid} />
 
       <ExperienceCardGroup title="Professional Experiences" id="experience"

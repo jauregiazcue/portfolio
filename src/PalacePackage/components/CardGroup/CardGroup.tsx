@@ -11,7 +11,7 @@ import {
   type CardPayload
 } from '@/PalacePackage/utils/interfaces/payload';
 
-import fetchCSV from '@/PalacePackage/utils/tools/fetchCSV';
+import { fetchCSV } from '@/PalacePackage/utils/tools/fetchCSV';
 
 import Card from '@/PalacePackage/components/Card/Card';
 import List from '@/PalacePackage/components/List/List';
@@ -28,11 +28,11 @@ function CardGroup<T>(payload: CardGroupParentPayload) {
     (payload.payload.quantity != undefined ? payload.payload.quantity : 0));
 
   useEffect(() => {
-    fetchCSV<T>(csv, setObjects).then(()=> {
-      if(quantity == 0) setQuantity(objects.length);
+    fetchCSV<T>({file: csv, setObject: setObjects}).then(() => {
+      if (quantity == 0) setQuantity(objects.length);
     });
-    
-  }, [csv,quantity,objects]);
+
+  }, [csv, quantity, objects]);
 
 
   if (type == CardGenType.grid) {
@@ -48,10 +48,10 @@ function CardGroup<T>(payload: CardGroupParentPayload) {
           }
           if (index == quantity) {
             return <RouterLink to={linkToMore ? linkToMore : "/missingLinkFromDeveloper"} key={index}>
-            <Card key={index}
-              type={CardType.bigImage}
-              body={<h3>Check Out More!</h3>}
-              image={"./more.png"} />
+              <Card key={index}
+                type={CardType.bigImage}
+                body={<h3>Check Out More!</h3>}
+                image={"./more.png"} />
             </RouterLink>
           }
 
@@ -66,7 +66,7 @@ function CardGroup<T>(payload: CardGroupParentPayload) {
   });
 
   return <>
-    <Title id={id} title={title}/>
+    <Title id={id} title={title} />
     <Stack>
       <List list={cardList} />
     </Stack>

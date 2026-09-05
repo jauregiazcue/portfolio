@@ -9,7 +9,7 @@ import {
   type CardPayload
 } from '@/PalacePackage/utils/interfaces/payload';
 
-import fetchCSV from '@/PalacePackage/utils/tools/fetchCSV';
+import {fetchCSV} from '@/PalacePackage/utils/tools/fetchCSV';
 
 import List from '@/PalacePackage/components/List/List';
 import Stack from '@/PalacePackage/components/Stack/Stack';

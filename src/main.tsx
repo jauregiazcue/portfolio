@@ -21,18 +21,18 @@ const router = createHashRouter([
       index: true,
       element: <Portfolio />,
     }, {
-      path: "/about",
+      path: "",
       element: <PageHeader />,
       children: [{
-        path: "/about/tools",
+        path: "/tools",
         element: <Projects />,
       },
       {
-        path: "/about/projects",
+        path: "/projects",
         element: <Projects />,
       },
       {
-        path: "/about/maze",
+        path: "/maze",
         element: <Maze />,
       }]
     },

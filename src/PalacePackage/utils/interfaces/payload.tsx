@@ -1,4 +1,5 @@
 import type { CSSProperties, PropsWithChildren } from "react";
+import type { Sheet } from "read-excel-file/browser";
 
 //-----------------------------------------------
 //---------------------TYPES---------------------
@@ -29,9 +30,6 @@ const HeroType = {
   centerFocus: "hero-b"
 }
 
-
-
-
 type LinkType = (typeof LinkType)[keyof typeof LinkType];
 type CardType = (typeof CardType)[keyof typeof CardType];
 type CardGenType = (typeof CardGenType)[keyof typeof CardGenType];
@@ -40,6 +38,7 @@ type HeroType = (typeof HeroType)[keyof typeof HeroType];
 export { LinkType,CardType,CardGenType,HeroType };
 
 
+//--------------------------------------------------
 export interface Payload {
   id?: string,
   className?: string,
@@ -47,6 +46,18 @@ export interface Payload {
 }
 
 export interface PayloadWithChildren extends Payload, PropsWithChildren { }
+
+//--------------------------------------------------
+export interface FetchPayload<T> { 
+  file: string, 
+  setObject: React.Dispatch<React.SetStateAction<T[]>>
+}
+
+export interface EXELFetchPayload<T> extends FetchPayload<T>{ 
+  excelToObjectPayload<T>(rows: Sheet<number>[]): {
+    objectPayload:T[]
+  }
+}
 
 //--------------------------------------------------
 //---------------------Card-------------------------
