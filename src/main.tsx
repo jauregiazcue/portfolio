@@ -3,7 +3,7 @@ import "@style/clean.scss"
 import "@style/font.scss"
 
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter } from "react-router";
+import { createHashRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Portfolio from './pages/Portfolio';
 import { Link as RouterLink } from 'react-router';
@@ -12,7 +12,7 @@ import Page from './components/PageParents/Page';
 import PageHeader from './components/PageParents/PageHeader';
 import Maze from './pages/maze/Maze';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
 
   {
     path: "/",
