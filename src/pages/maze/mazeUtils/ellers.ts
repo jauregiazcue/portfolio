@@ -96,4 +96,3 @@ export function ellersMaze(width: number, height: number) {
     return maze;
 
 }
-

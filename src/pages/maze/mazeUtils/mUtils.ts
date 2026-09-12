@@ -26,7 +26,7 @@ function neighbours(maze: number[][], rowCoords: number, columnCords: number) {
 
 function indexOfSet(sets: number[][][], cell: number[]) {
     for (let set = 0; set < sets.length; set++) {
-        if (indexOfCoord(sets[set], cell))
+        if (indexOfCoord(sets[set], cell) != -1)
             return set;
     }
     return -1;
@@ -39,7 +39,6 @@ function indexOfCoord(set: number[][], cell: number[]) {
     }
     return -1;
 }
-
 
 function complete(maze: number[][]) {
     for (let row = 1; row < maze.length; row += 2) {
